@@ -1,0 +1,727 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf610
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Georgia;\f2\fmodern\fcharset0 Courier;
+\f3\fnil\fcharset0 Menlo-Regular;\f4\fnil\fcharset0 Consolas;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;\red0\green0\blue0;
+\red100\green108\blue125;\red34\green34\blue34;\red246\green246\blue239;\red157\green101\blue255;\red224\green213\blue97;
+\red88\green209\blue235;\red10\green92\blue255;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c100000\c100000\c100000;\cssrgb\c0\c0\c0\c7451;
+\cssrgb\c46667\c50196\c56471;\cssrgb\c17647\c17647\c17647;\cssrgb\c97255\c97255\c94902;\cssrgb\c68235\c50588\c100000;\cssrgb\c90196\c85882\c45490;
+\cssrgb\c40000\c85098\c93725;\cssrgb\c0\c46667\c100000;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}}
+\margl1440\margr1440\vieww13380\viewh20180\viewkind0
+\deftab720
+\pard\pardeftab720\li840\ri840\sl720\sa400\partightenfactor0
+
+\f0\b\fs60 \cf2 \cb3 \expnd0\expndtw0\kerning0
+More Problems!\cb1 \
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0\fs40 \cf2 \cb3 The following problems do not have specs and cover many different topics. You'll want to follow the prompt for each problem and make sure your implementation satisfies the behavior in the given examples. Create a\'a0
+\f2 \cb4 .rb
+\f1 \cb3 \'a0file to work in and test your code manually by running\'a0
+\f2 \cb4 ruby <your-file-name>.rb
+\f1 \cb3 !\cb1 \
+\pard\pardeftab720\li840\ri840\sl560\sa400\partightenfactor0
+
+\f0\b\fs48 \cf2 \cb3 General Problems\cb1 \
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\fs40 \cf2 \cb3 no_dupes?\cb1 \
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 \cb3 Write a method\'a0
+\f2 \cb4 no_dupes?(arr)
+\f1 \cb3 \'a0that accepts an array as an arg and returns an new array containing the elements that were not repeated in the array.\cb1 \
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f3\fs32 \cf5 \cb6 # Examples
+\f4 \cf7 \
+no_dupes
+\f3 ?([\cf8 1\cf7 ,
+\f4  
+\f3 \cf8 1\cf7 ,
+\f4  
+\f3 \cf8 2\cf7 ,
+\f4  
+\f3 \cf8 1\cf7 ,
+\f4  
+\f3 \cf8 3\cf7 ,
+\f4  
+\f3 \cf8 2\cf7 ,
+\f4  
+\f3 \cf8 4\cf7 ])
+\f4          
+\f3 \cf5 # => [3, 4]
+\f4 \cf7 \
+no_dupes
+\f3 ?([\cf9 'x'\cf7 ,
+\f4  
+\f3 \cf9 'x'\cf7 ,
+\f4  
+\f3 \cf9 'y'\cf7 ,
+\f4  
+\f3 \cf9 'z'\cf7 ,
+\f4  
+\f3 \cf9 'z'\cf7 ])
+\f4      
+\f3 \cf5 # => ['y']
+\f4 \cf7 \
+no_dupes
+\f3 ?([\cf10 true\cf7 ,
+\f4  
+\f3 \cf10 true\cf7 ,
+\f4  
+\f3 \cf10 true\cf7 ])
+\f4             
+\f3 \cf5 # => []
+\f4 \cf7 \
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b\fs40 \cf2 \cb3 \
+no_consecutive_repeats?\cb1 \
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 \cb3 Write a method\'a0
+\f2 \cb4 no_consecutive_repeats?(arr)
+\f1 \cb3 \'a0that accepts an array as an arg. The method should return true if an element never appears consecutively in the array; it should return false otherwise.\cb1 \
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f3\fs32 \cf5 \cb6 # Examples
+\f4 \cf7 \
+no_consecutive_repeats
+\f3 ?([\cf9 'cat'\cf7 ,
+\f4  
+\f3 \cf9 'dog'\cf7 ,
+\f4  
+\f3 \cf9 'mouse'\cf7 ,
+\f4  
+\f3 \cf9 'dog'\cf7 ])
+\f4      
+\f3 \cf5 # => true
+\f4 \cf7 \
+no_consecutive_repeats
+\f3 ?([\cf9 'cat'\cf7 ,
+\f4  
+\f3 \cf9 'dog'\cf7 ,
+\f4  
+\f3 \cf9 'dog'\cf7 ,
+\f4  
+\f3 \cf9 'mouse'\cf7 ])
+\f4      
+\f3 \cf5 # => false
+\f4 \cf7 \
+no_consecutive_repeats
+\f3 ?([\cf8 10\cf7 ,
+\f4  
+\f3 \cf8 42\cf7 ,
+\f4  
+\f3 \cf8 3\cf7 ,
+\f4  
+\f3 \cf8 7\cf7 ,
+\f4  
+\f3 \cf8 10\cf7 ,
+\f4  
+\f3 \cf8 3\cf7 ])
+\f4               
+\f3 \cf5 # => true
+\f4 \cf7 \
+no_consecutive_repeats
+\f3 ?([\cf8 10\cf7 ,
+\f4  
+\f3 \cf8 42\cf7 ,
+\f4  
+\f3 \cf8 3\cf7 ,
+\f4  
+\f3 \cf8 3\cf7 ,
+\f4  
+\f3 \cf8 10\cf7 ,
+\f4  
+\f3 \cf8 3\cf7 ])
+\f4               
+\f3 \cf5 # => false
+\f4 \cf7 \
+no_consecutive_repeats
+\f3 ?([\cf9 'x'\cf7 ])
+\f4                               
+\f3 \cf5 # => true
+\f4 \cf7 \
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b\fs40 \cf2 \cb3 \
+char_indices\cb1 \
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 \cb3 Write a method\'a0
+\f2 \cb4 char_indices(str)
+\f1 \cb3 \'a0that takes in a string as an arg. The method should return a hash containing characters as keys. The value associated with each key should be an array containing the indices where that character is found.\cb1 \
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f3\fs32 \cf5 \cb6 # Examples
+\f4 \cf7 \
+char_indices
+\f3 (\cf9 'mississippi'\cf7 )
+\f4    
+\f3 \cf5 # => \{"m"=>[0], "i"=>[1, 4, 7, 10], "s"=>[2, 3, 5, 6], "p"=>[8, 9]\}
+\f4 \cf7 \
+char_indices
+\f3 (\cf9 'classroom'\cf7 )
+\f4      
+\f3 \cf5 # => \{"c"=>[0], "l"=>[1], "a"=>[2], "s"=>[3, 4], "r"=>[5], "o"=>[6, 7], "m"=>[8]\}
+\f4 \cf7 \
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b\fs40 \cf2 \cb3 \
+longest_streak\cb1 \
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 \cb3 Write a method\'a0
+\f2 \cb4 longest_streak(str)
+\f1 \cb3 \'a0that accepts a string as an arg. The method should return the longest streak of consecutive characters in the string. If there are any ties, return the streak that occurs later in the string.\cb1 \
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f3\fs32 \cf5 \cb6 # Examples
+\f4 \cf7 \
+longest_streak
+\f3 (\cf9 'a'\cf7 )
+\f4            
+\f3 \cf5 # => 'a'
+\f4 \cf7 \
+longest_streak
+\f3 (\cf9 'accccbbb'\cf7 )
+\f4     
+\f3 \cf5 # => 'cccc'
+\f4 \cf7 \
+longest_streak
+\f3 (\cf9 'aaaxyyyyyzz'\cf7 )
+\f4  
+\f3 \cf5 # => 'yyyyy
+\f4 \cf7 \
+longest_streak
+\f3 (\cf9 'aaabbb'\cf7 )
+\f4       
+\f3 \cf5 # => 'bbb'
+\f4 \cf7 \
+longest_streak
+\f3 (\cf9 'abc'\cf7 )
+\f4          
+\f3 \cf5 # => 'c'
+\f4 \cf7 \
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b\fs40 \cf2 \cb3 \
+bi_prime?\cb1 \
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 \cb3 Write a method\'a0
+\f2 \cb4 bi_prime?(num)
+\f1 \cb3 \'a0that accepts a number as an arg and returns a boolean indicating whether or not the number is a bi-prime. A bi-prime is a positive integer that can be obtained by multiplying two prime numbers.\cb1 \
+\cb3 For Example:\cb1 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl680\sa100\partightenfactor0
+\ls1\ilvl0
+\f2 \cf2 \cb4 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+14
+\f1 \cb3 \'a0is a bi-prime because\'a0
+\f2 \cb4 2 * 7
+\f1 \cb1 \
+\ls1\ilvl0
+\f2 \cb4 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+22
+\f1 \cb3 \'a0is a bi-prime because\'a0
+\f2 \cb4 2 * 11
+\f1 \cb1 \
+\ls1\ilvl0
+\f2 \cb4 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+25
+\f1 \cb3 \'a0is a bi-prime because\'a0
+\f2 \cb4 5 * 5
+\f1 \cb1 \
+\ls1\ilvl0
+\f2 \cb4 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+24
+\f1 \cb3 \'a0is not a bi-prime because no two prime numbers have a product of\'a0
+\f2 \cb4 24
+\f1 \cb1 \
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f3\fs32 \cf5 \cb6 # Examples
+\f4 \cf7 \
+bi_prime
+\f3 ?(\cf8 14\cf7 )
+\f4    
+\f3 \cf5 # => true
+\f4 \cf7 \
+bi_prime
+\f3 ?(\cf8 22\cf7 )
+\f4    
+\f3 \cf5 # => true
+\f4 \cf7 \
+bi_prime
+\f3 ?(\cf8 25\cf7 )
+\f4    
+\f3 \cf5 # => true
+\f4 \cf7 \
+bi_prime
+\f3 ?(\cf8 94\cf7 )
+\f4    
+\f3 \cf5 # => true
+\f4 \cf7 \
+bi_prime
+\f3 ?(\cf8 24\cf7 )
+\f4    
+\f3 \cf5 # => false
+\f4 \cf7 \
+bi_prime
+\f3 ?(\cf8 64\cf7 )
+\f4    
+\f3 \cf5 # => false
+\f4 \cf7 \
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b\fs40 \cf2 \cb3 \
+vigenere_cipher\cb1 \
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 \cb3 A Caesar cipher takes a word and encrypts it by offsetting each letter in the word by a fixed number, called the key. Given a key of 3, for example: a -> d, p -> s, and y -> b.\cb1 \
+\cb3 A Vigenere Cipher is a Caesar cipher, but instead of a single key, a sequence of keys is used. For example, if we encrypt "bananasinpajamas" with the key sequence\'a0{\field{\*\fldinst{HYPERLINK "https://open.appacademy.io/learn/full-stack-online/software-engineering-foundations/recap-exercise-3"}}{\fldrslt \cf11 1, 2, 3}}, then the result would be "ccqbpdtkqqcmbodt":\cb1 \
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f3\fs32 \cf5 \cb6 # Message:  b a n a n a s i n p a j a m a s
+\f4 \cf7 \
+
+\f3 \cf5 # Keys:     1 2 3 1 2 3 1 2 3 1 2 3 1 2 3 1
+\f4 \cf7 \
+
+\f3 \cf5 # Result:   c c q b p d t k q q c m b o d t
+\f4 \cf7 \
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\fs40 \cf2 \cb3 Write a method\'a0
+\f2 \cb4 vigenere_cipher(message, keys)
+\f1 \cb3 \'a0that accepts a string and a key-sequence as args, returning the encrypted message. Assume that the message consists of only lowercase alphabetic characters.\cb1 \
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f3\fs32 \cf5 \cb6 # Examples
+\f4 \cf7 \
+vigenere_cipher
+\f3 (\cf9 "toerrishuman"\cf7 ,
+\f4  
+\f3 [\cf8 1\cf7 ])
+\f4         
+\f3 \cf5 # => "upfssjtivnbo"
+\f4 \cf7 \
+vigenere_cipher
+\f3 (\cf9 "toerrishuman"\cf7 ,
+\f4  
+\f3 [\cf8 1\cf7 ,
+\f4  
+\f3 \cf8 2\cf7 ])
+\f4      
+\f3 \cf5 # => "uqftsktjvobp"
+\f4 \cf7 \
+vigenere_cipher
+\f3 (\cf9 "toerrishuman"\cf7 ,
+\f4  
+\f3 [\cf8 1\cf7 ,
+\f4  
+\f3 \cf8 2\cf7 ,
+\f4  
+\f3 \cf8 3\cf7 ])
+\f4   
+\f3 \cf5 # => "uqhstltjxncq"
+\f4 \cf7 \
+vigenere_cipher
+\f3 (\cf9 "zebra"\cf7 ,
+\f4  
+\f3 [\cf8 3\cf7 ,
+\f4  
+\f3 \cf8 0\cf7 ])
+\f4             
+\f3 \cf5 # => "ceerd"
+\f4 \cf7 \
+vigenere_cipher
+\f3 (\cf9 "yawn"\cf7 ,
+\f4  
+\f3 [\cf8 5\cf7 ,
+\f4  
+\f3 \cf8 1\cf7 ])
+\f4              
+\f3 \cf5 # => "dbbo"
+\f4 \cf7 \
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b\fs40 \cf2 \cb3 \
+vowel_rotate\cb1 \
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 \cb3 Write a method\'a0
+\f2 \cb4 vowel_rotate(str)
+\f1 \cb3 \'a0that accepts a string as an arg and returns the string where every vowel is replaced with the vowel the appears before it sequentially in the original string. The first vowel of the string should be replaced with the last vowel.\cb1 \
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f3\fs32 \cf5 \cb6 # Examples
+\f4 \cf7 \
+vowel_rotate
+\f3 (\cf9 'computer'\cf7 )
+\f4       
+\f3 \cf5 # => "cempotur"
+\f4 \cf7 \
+vowel_rotate
+\f3 (\cf9 'oranges'\cf7 )
+\f4        
+\f3 \cf5 # => "erongas"
+\f4 \cf7 \
+vowel_rotate
+\f3 (\cf9 'headphones'\cf7 )
+\f4     
+\f3 \cf5 # => "heedphanos"
+\f4 \cf7 \
+vowel_rotate
+\f3 (\cf9 'bootcamp'\cf7 )
+\f4       
+\f3 \cf5 # => "baotcomp"
+\f4 \cf7 \
+vowel_rotate
+\f3 (\cf9 'awesome'\cf7 )
+\f4        
+\f3 \cf5 # => "ewasemo"
+\f4 \cf7 \
+\pard\pardeftab720\li840\ri840\sl560\sa400\partightenfactor0
+
+\f0\b\fs48 \cf2 \cb3 \
+Proc Problems\cb1 \
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\fs40 \cf2 \cb3 String#select\cb1 \
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 \cb3 Extend the string class by defining a\'a0
+\f2 \cb4 String#select
+\f1 \cb3 \'a0method that accepts a block. The method should return a new string containing characters of the original string that return true when passed into the block. If no block is passed, then return the empty string. Do not use the built-in\'a0
+\f2 \cb4 Array#select
+\f1 \cb3 \'a0in your solution.\cb1 \
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f3\fs32 \cf5 \cb6 # Examples
+\f4 \cf7 \
+
+\f3 \cf9 "app academy"\cf7 .
+\f4 select 
+\f3 \{
+\f4  
+\f3 |
+\f4 ch
+\f3 |
+\f4  
+\f3 !\cf9 "aeiou"\cf7 .
+\f4 include
+\f3 ?(
+\f4 ch
+\f3 )
+\f4  
+\f3 \}
+\f4    
+\f3 \cf5 # => "pp cdmy"
+\f4 \cf7 \
+
+\f3 \cf9 "HELLOworld"\cf7 .
+\f4 select 
+\f3 \{
+\f4  
+\f3 |
+\f4 ch
+\f3 |
+\f4  ch 
+\f3 ==
+\f4  ch
+\f3 .
+\f4 upcase 
+\f3 \}
+\f4           
+\f3 \cf5 # => "HELLO"
+\f4 \cf7 \
+
+\f3 \cf9 "HELLOworld"\cf7 .
+\f4 select          
+\f3 \cf5 # => ""
+\f4 \cf7 \
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b\fs40 \cf2 \cb3 \
+String#map!\cb1 \
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 \cb3 Extend the string class by defining a\'a0
+\f2 \cb4 String#map!
+\f1 \cb3 \'a0method that accepts a block. The method should modify the existing string by replacing every character with the result of calling the block, passing in the original character and it's index. Do not use the built-in\'a0
+\f2 \cb4 Array#map
+\f1 \cb3 \'a0or\'a0
+\f2 \cb4 Array#map!
+\f1 \cb3 \'a0in your solution.\cb1 \
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f3\fs32 \cf5 \cb6 # Examples
+\f4 \cf7 \
+word_1 
+\f3 =
+\f4  
+\f3 \cf9 "Lovelace"
+\f4 \cf7 \
+word_1
+\f3 .
+\f4 map
+\f3 !
+\f4  
+\f3 \cf10 do
+\f4 \cf7  
+\f3 |
+\f4 ch
+\f3 |
+\f4  \
+    
+\f3 \cf10 if
+\f4 \cf7  ch 
+\f3 ==
+\f4  
+\f3 \cf9 'e'
+\f4 \cf7 \
+        
+\f3 \cf9 '3'
+\f4 \cf7 \
+    
+\f3 \cf10 elsif
+\f4 \cf7  ch 
+\f3 ==
+\f4  
+\f3 \cf9 'a'
+\f4 \cf7 \
+        
+\f3 \cf9 '4'
+\f4 \cf7 \
+    
+\f3 \cf10 else
+\f4 \cf7 \
+        ch\
+    
+\f3 \cf10 end
+\f4 \cf7 \
+
+\f3 \cf10 end
+\f4 \cf7 \
+p word_1        
+\f3 \cf5 # => "Lov3l4c3"
+\f4 \cf7 \
+\
+word_2 
+\f3 =
+\f4  
+\f3 \cf9 "Dijkstra"
+\f4 \cf7 \
+word_2
+\f3 .
+\f4 map
+\f3 !
+\f4  
+\f3 \cf10 do
+\f4 \cf7  
+\f3 |
+\f4 ch
+\f3 ,
+\f4  i
+\f3 |
+\f4 \
+    
+\f3 \cf10 if
+\f4 \cf7  i
+\f3 .
+\f4 even
+\f3 ?
+\f4 \
+        ch
+\f3 .
+\f4 upcase\
+    
+\f3 \cf10 else
+\f4 \cf7 \
+        ch
+\f3 .
+\f4 downcase\
+    
+\f3 \cf10 end
+\f4 \cf7 \
+
+\f3 \cf10 end
+\f4 \cf7 \
+p word_2        
+\f3 \cf5 # => "DiJkStRa"
+\f4 \cf7 \
+\pard\pardeftab720\li840\ri840\sl560\sa400\partightenfactor0
+
+\f0\b\fs48 \cf2 \cb3 \
+Recursion Problems\cb1 \
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\fs40 \cf2 \cb3 multiply\cb1 \
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 \cb3 Write a method\'a0
+\f2 \cb4 multiply(a, b)
+\f1 \cb3 \'a0that takes in two numbers and returns their product.\cb1 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl680\sa100\partightenfactor0
+\ls2\ilvl0\cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+You must solve this recursively (no loops!)\cb1 \
+\ls2\ilvl0\cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+You must not use the multiplication (*) operator\cb1 \
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f3\fs32 \cf5 \cb6 # Examples
+\f4 \cf7 \
+multiply
+\f3 (\cf8 3\cf7 ,
+\f4  
+\f3 \cf8 5\cf7 )
+\f4         
+\f3 \cf5 # => 15
+\f4 \cf7 \
+multiply
+\f3 (\cf8 5\cf7 ,
+\f4  
+\f3 \cf8 3\cf7 )
+\f4         
+\f3 \cf5 # => 15
+\f4 \cf7 \
+multiply
+\f3 (\cf8 2\cf7 ,
+\f4  
+\f3 \cf8 4\cf7 )
+\f4         
+\f3 \cf5 # => 8
+\f4 \cf7 \
+multiply
+\f3 (\cf8 0\cf7 ,
+\f4  
+\f3 \cf8 10\cf7 )
+\f4        
+\f3 \cf5 # => 0
+\f4 \cf7 \
+multiply
+\f3 (-\cf8 3\cf7 ,
+\f4  
+\f3 -\cf8 6\cf7 )
+\f4       
+\f3 \cf5 # => 18
+\f4 \cf7 \
+multiply
+\f3 (\cf8 3\cf7 ,
+\f4  
+\f3 -\cf8 6\cf7 )
+\f4        
+\f3 \cf5 # => -18
+\f4 \cf7 \
+multiply
+\f3 (-\cf8 3\cf7 ,
+\f4  
+\f3 \cf8 6\cf7 )
+\f4        
+\f3 \cf5 # => -18
+\f4 \cf7 \
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b\fs40 \cf2 \cb3 \
+lucas_sequence\cb1 \
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 \cb3 The Lucas Sequence is a sequence of numbers. The first number of the sequence is 2. The second number of the Lucas Sequence is 1. To generate the next number of the sequence, we add up the previous two numbers. For example, the first six numbers of the sequence are: 2, 1, 3, 4, 7, 11, ...\cb1 \
+\cb3 Write a method\'a0
+\f2 \cb4 lucasSequence
+\f1 \cb3 \'a0that accepts a number representing a length as an arg. The method should return an array containing the Lucas Sequence up to the given length. Solve this recursively.\cb1 \
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f3\fs32 \cf5 \cb6 # Examples
+\f4 \cf7 \
+lucas_sequence
+\f3 (\cf8 0\cf7 )
+\f4    
+\f3 \cf5 # => []
+\f4 \cf7 \
+lucas_sequence
+\f3 (\cf8 1\cf7 )
+\f4    
+\f3 \cf5 # => [2]    
+\f4 \cf7 \
+lucas_sequence
+\f3 (\cf8 2\cf7 )
+\f4    
+\f3 \cf5 # => [2, 1]
+\f4 \cf7 \
+lucas_sequence
+\f3 (\cf8 3\cf7 )
+\f4    
+\f3 \cf5 # => [2, 1, 3]
+\f4 \cf7 \
+lucas_sequence
+\f3 (\cf8 6\cf7 )
+\f4    
+\f3 \cf5 # => [2, 1, 3, 4, 7, 11]
+\f4 \cf7 \
+lucas_sequence
+\f3 (\cf8 8\cf7 )
+\f4    
+\f3 \cf5 # => [2, 1, 3, 4, 7, 11, 18, 29]
+\f4 \cf7 \
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b\fs40 \cf2 \cb3 \
+prime_factorization\cb1 \
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://en.wikipedia.org/wiki/Fundamental_theorem_of_arithmetic"}}{\fldrslt 
+\f1\b0 \cf11 \cb3 The Fundamental Theorem of Arithmetic}}
+\f1\b0 \cb3 \'a0states that every positive integer is either a prime or can be represented as a product of prime numbers.\cb1 \
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+\cf2 \cb3 Write a method\'a0
+\f2 \cb4 prime_factorization(num)
+\f1 \cb3 \'a0that accepts a number and returns an array representing the prime factorization of the given number. This means that the array should contain only prime numbers that multiply together to the given num. The array returned should contain numbers in ascending order. Do this recursively.\cb1 \
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f3\fs32 \cf5 \cb6 # Examples
+\f4 \cf7 \
+prime_factorization
+\f3 (\cf8 12\cf7 )
+\f4      
+\f3 \cf5 # => [2, 2, 3]
+\f4 \cf7 \
+prime_factorization
+\f3 (\cf8 24\cf7 )
+\f4      
+\f3 \cf5 # => [2, 2, 2, 3]
+\f4 \cf7 \
+prime_factorization
+\f3 (\cf8 25\cf7 )
+\f4      
+\f3 \cf5 # => [5, 5]
+\f4 \cf7 \
+prime_factorization
+\f3 (\cf8 60\cf7 )
+\f4      
+\f3 \cf5 # => [2, 2, 3, 5]
+\f4 \cf7 \
+prime_factorization
+\f3 (\cf8 7\cf7 )
+\f4       
+\f3 \cf5 # => [7]
+\f4 \cf7 \
+prime_factorization
+\f3 (\cf8 11\cf7 )
+\f4      
+\f3 \cf5 # => [11]
+\f4 \cf7 \
+prime_factorization
+\f3 (\cf8 2017\cf7 )
+\f4    
+\f3 \cf5 # => [2017]
+\f4 \cf7 \
+\pard\pardeftab720\sl260\qc\partightenfactor0
+
+\f0\b\fs21 \cf2 \cb3 \
+}
