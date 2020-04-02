@@ -1,0 +1,863 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf610
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Georgia;\f2\fmodern\fcharset0 Courier;
+\f3\fnil\fcharset0 Menlo-Regular;\f4\fnil\fcharset0 Consolas;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;\red0\green0\blue0;
+\red246\green246\blue239;\red34\green34\blue34;\red152\green224\blue36;\red224\green213\blue97;\red10\green92\blue255;
+\red157\green101\blue255;\red88\green209\blue235;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c100000\c100000\c100000;\cssrgb\c0\c0\c0\c7451;
+\cssrgb\c97255\c97255\c94902;\cssrgb\c17647\c17647\c17647;\cssrgb\c65098\c88627\c18039;\cssrgb\c90196\c85882\c45490;\cssrgb\c0\c46667\c100000;
+\cssrgb\c68235\c50588\c100000;\cssrgb\c40000\c85098\c93725;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{circle\}}{\leveltext\leveltemplateid102\'01\uc0\u9702 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{square\}}{\leveltext\leveltemplateid103\'01\uc0\u9642 ;}{\levelnumbers;}\fi-360\li2160\lin2160 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid201\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid3}
+{\list\listtemplateid4\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid301\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid4}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\li840\ri840\sl860\sa400\partightenfactor0
+
+\f0\b\fs72 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Tic-Tac-Toe\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0\fs40 \cf2 Let's write a Tic-Tac-Toe game! Read the entire instructions before getting started. You'll be creating this entire project from scratch, no skeleton. We'll build three iterations of the game, each adding an interesting twist on the gameplay:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl440\sa100\partightenfactor0
+\ls1\ilvl0\cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Version 1 - Basic 3x3 grid game with 2 human players\cb1 \
+\ls1\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Version 2 - Dynamic sized grid with 2 or more human players\cb1 \
+\ls1\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Version 3 - Dynamic sized grid with 2 or more human or computer players\cb1 \
+\pard\pardeftab720\li840\ri840\sl720\sa400\partightenfactor0
+
+\f0\b\fs60 \cf2 \cb3 Version 1: Make it work\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0\fs40 \cf2 Below we have recommendations on how to design your game. For simplicity, we'll give the grid the dimensions of classic tic-tac-toe, 3x3. This can later be refactored for a dynamic grid size. Let's establish some guidelines that will help our game take shape later.\
+Programmatically, we'll use a 2-dimensional array to present the\'a0
+\i grid
+\i0 . Our players will have unique symbols for gameplay. We'll refer to those as\'a0
+\i marks
+\i0 . An empty position on the grid will be represented with an underscore\'a0
+\f2 \cb4 '_'
+\f1 \cb3 . Below is an example of a grid:\
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f3\fs32 \cf5 \cb6 \strokec5 [
+\f4 \
+    
+\f3 [\cf7 \strokec7 :X\cf5 \strokec5 ,
+\f4  
+\f3 \cf7 \strokec7 :O\cf5 \strokec5 ,
+\f4  
+\f3 \cf8 \strokec8 '_'\cf5 \strokec5 ],
+\f4 \
+    
+\f3 [\cf7 \strokec7 :O\cf5 \strokec5 ,
+\f4  
+\f3 \cf7 \strokec7 :X\cf5 \strokec5 ,
+\f4  
+\f3 \cf8 \strokec8 '_'\cf5 \strokec5 ],
+\f4 \
+    
+\f3 [\cf8 \strokec8 '_'\cf5 \strokec5 ,
+\f4  
+\f3 \cf8 \strokec8 '_'\cf5 \strokec5 ,
+\f4  
+\f3 \cf7 \strokec7 :X\cf5 \strokec5 ],
+\f4 \
+
+\f3 ]
+\f4 \
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\fs40 \cf2 \cb3 \strokec2 To refer to a\'a0
+\i position
+\i0 \'a0of the grid, we'll use an array containing the row and column indices. For example, the position of the first row, second column would be\'a0
+\f2 \cb4 [0, 1]
+\f1 \cb3 ; this is the location of a\'a0
+\f2 \cb4 :O
+\f1 \cb3 .\
+\pard\pardeftab720\li840\ri840\sl560\sa400\partightenfactor0
+
+\f0\b\fs48 \cf2 Directory structure\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0\fs40 \cf2 We'll be building 3 classes to construct our basic game. Begin by creating a\'a0
+\f2 \cb4 tic_tac_toe_v1
+\f1 \cb3 \'a0directory with the following structure:\
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f4\fs32 \cf5 \cb6 \strokec5 tic_tac_toe_v1/\
+\uc0\u9500 \u9472 \u9472  board.rb\
+\uc0\u9500 \u9472 \u9472  human_player.rb\
+\uc0\u9492 \u9472 \u9472  game.rb\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\fs40 \cf2 \cb3 \strokec2 Once we have the basic game down, we'll implement some fun additional features! Ready?\
+\pard\pardeftab720\li840\ri840\sl560\sa400\partightenfactor0
+
+\f0\b\fs48 \cf2 Board\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0\fs40 \cf2 The\'a0
+\f2 \cb4 Board
+\f1 \cb3 \'a0class is responsible for adding a player's marks, checking for winners, and printing the game board. A board instance must have an attribute to represent the grid. For simplicity, give the grid the dimensions of classic tic-tac-toe, 3x3.\
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b \cf2 Board#initialize\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 A\'a0
+\f2 \cb4 Board
+\f1 \cb3 \'a0instance must have an instance variable to represent the game grid. For now,\'a0
+\f2 \cb4 Board#initialize
+\f1 \cb3 \'a0does not need to accept any arguments. Initialize the grid so that all positions are empty; this means that every position should contain an underscore (
+\f2 \cb4 '_'
+\f1 \cb3 ).\
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b \cf2 Board#valid?(position)\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 This method should return a boolean indicating whether or not the specified position is valid for the board, meaning the position is not "out of bounds."\
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b \cf2 Board#empty?(position)\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 This method should return a boolean indicating whether or not the specified position does not contain a player's mark.\
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b \cf2 Board#place_mark(position, mark)\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 This method should assign the given mark to the specified position of the grid. It should raise an error when the position is not\'a0
+\f2 \cb4 #valid?
+\f1 \cb3 \'a0or not\'a0
+\f2 \cb4 #empty?
+\f1 \cb3 .\
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b \cf2 Checkpoint - Board yet?\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 At this point you've written a few Board methods that are critical to the gameplay. Now's a good opportunity to pause and test our code for correctness. A quick way to test is to use pry.\
+You should\'a0
+\f2 \cb4 cd
+\f1 \cb3 \'a0into the project folder and run\'a0
+\f2 \cb4 pry
+\f1 \cb3 . Then, use\'a0
+\f2 \cb4 load 'board.rb'
+\f1 \cb3 \'a0to load your code into the environment, this should return\'a0
+\f2 \cb4 true
+\f1 \cb3 \'a0if the file was successfully loaded. From there, play around with your class by creating an instance and calling some methods on it! If you edit the file you are going to have to load it into the environment again.\
+Here are a few lines that we executed to test\'a0
+\i our
+\i0 \'a0code, feel free to try\'a0
+\i your own
+\i0 \'a0scenarios:\
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f4\fs32 \cf5 \cb6 \strokec5 [1] pry(main)> load 'board.rb'\
+=> true\
+\
+[2] pry(main)> b = Board.new\
+=> #<Board:0x @grid=[["_", "_", "_"], ["_", "_", "_"], ["_", "_", "_"]]>\
+\
+[3] pry(main)> b.place_mark([-1, 2], :X) # this should fail\
+RuntimeError: invalid mark\
+from board.rb:28:in `place_mark'\
+\
+[4] pry(main)> b.place_mark([1, 2], :X)\
+=> :X\
+\
+[5] pry(main)> b\
+=> #<Board:0x @grid=[["_", "_", "_"], ["_", "_", :X], ["_", "_", "_"]]>\
+\
+[6] pry(main)> b.place_mark([1, 3], :X) # this should fail\
+RuntimeError: invalid mark\
+from board.rb:28:in `place_mark'\
+\
+[7] pry(main)> b.place_mark([0, 0], :O)\
+=> :O\
+\
+[8] pry(main)> b\
+=> #<Board:0x @grid=[[:O, "_", "_"], ["_", "_", :X], ["_", "_", "_"]]>\
+\
+[9] pry(main)> b.place_mark([0, 0], :X) # this should fail\
+RuntimeError: invalid mark\
+from board.rb:28:in `place_mark'\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\fs40 \cf2 \cb3 \strokec2 Once you feel confident with your code, move forward. As a programmer, you should test your code often as you write. If you continue to write code on top of broken code, you may accumulate a deficit of bugs that will be hard to isolate later on. Be methodical! You should be testing your code often, and not just when we tell you!\
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b \cf2 Board#print\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 This method should simply print out the board and all of the marks that have been placed on it. Feel free to style the printing as much as you'd like, but be sure to print out each row of the board on a new line. This will help us visualize the board better as we debug or even play the game!\
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b \cf2 Board#win_row?(mark)\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 This method should return a boolean indicating whether or not the given mark has completely filled up any row of the grid.\
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b \cf2 Board#win_col?(mark)\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 This method should return a boolean indicating whether or not the given mark has completely filled up any column of the grid.\
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b \cf2 Board#win_diagonal?(mark)\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 This method should return a boolean indicating whether or not the given mark has completely filled up either diagonal of the grid.\
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b \cf2 Board#win?(mark)\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 This method should return a boolean indicating whether or not the given mark has filled any full row, column, or diagonal.\
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b \cf2 Board#empty_positions?\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 This method should return a boolean indicating whether or not there is at least one empty position on the grid.\
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b \cf2 Checkpoint - You're all winners\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 If you haven't already, take a moment to use pry to test your win-checking logic. Use your\'a0
+\f2 \cb4 #place_mark
+\f1 \cb3 \'a0to set the board up and\'a0
+\f2 \cb4 #print
+\f1 \cb3 \'a0to visually verify any winners. We'll leave it to you to decide reasonable test scenarios. As a rule of thumb for methods with boolean returns, be sure to test for "false-positives" and "false-negatives". In other words, verify that\'a0
+\f2 \cb4 #win?
+\f1 \cb3 \'a0and the related methods return true when they should\'a0
+\b and
+\b0 \'a0return false when they should. Don't forget to test your\'a0
+\f2 \cb4 #empty_positions?
+\f1 \cb3 \'a0method as well!\
+\pard\pardeftab720\li840\ri840\sl560\sa400\partightenfactor0
+
+\f0\b\fs48 \cf2 HumanPlayer\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0\fs40 \cf2 The\'a0
+\f2 \cb4 HumanPlayer
+\f1 \cb3 \'a0class is responsible for holding information about the user and prompting them to enter a position for gameplay.\
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b \cf2 HumanPlayer#initialize(mark_value)\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 We'll allow a player to use any mark they like, so an instance of\'a0
+\f2 \cb4 HumanPlayer
+\f1 \cb3 \'a0should have a instance variable to store their mark. The value of this mark should be provided as an argument when creating a new player. Consider adding a getter method for the player's mark, this may be useful later!\
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b \cf2 HumanPlayer#get_position\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 This method should prompt and allow the user to enter a valid\'a0
+\f2 \cb4 row col
+\f1 \cb3 \'a0position. We recommend that you ask the user to enter the position as two numbers with a space between them. Your method should return their entered position as an array of the form\'a0
+\f2 \cb4 [row, col]
+\f1 \cb3 \'a0so that it is compatible with the design of our previous\'a0
+\f2 \cb4 Board
+\f1 \cb3 \'a0methods. For usability, raise an error when they fail to enter a position in the specified format, such as if they only enter a single number, use letters, or have too many spaces.\
+No need to verify if the position they entered is a valid position in this class. That validation requires knowledge of the board and we want to keep our concerns separated. Besides, you previously implemented that logic in\'a0
+\f2 \cb4 Board#valid?
+\f1 \cb3 \'a0and\'a0
+\f2 \cb4 Board#empty?
+\f1 \cb3 .\
+It's also helpful if you state the player's mark when asking them to enter a move, so we know whose turn it is.\
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b \cf2 Checkpoint - Test often, we're only human after all\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 This is a great time to test your work! Load your\'a0
+\f2 \cb4 HumanPlayer
+\f1 \cb3 \'a0class into pry and test it. Here is how we tested our player:\
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f4\fs32 \cf5 \cb6 \strokec5 [1] pry(main)> load 'human_player.rb'\
+=> true\
+\
+[2] pry(main)> player_1 = HumanPlayer.new(:X)\
+=> #<HumanPlayer:0x @mark=:X>\
+\
+[3] pry(main)> player_1.mark\
+=> :X\
+\
+[4] pry(main)> player_1.get_position\
+Player X, enter two numbers representing a position in the format `row col`\
+0 2\
+=> [0, 2]\
+\
+[5] pry(main)> player_1.get_position\
+Player X, enter two numbers representing a position in the format `row col`\
+12 4\
+=> [12, 4]\
+\
+[6] pry(main)> player_1.get_position\
+Player X, enter two numbers representing a position in the format `row col`\
+1 2 3\
+RuntimeError: sorry, that was invalid :(\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\fs40 \cf2 \cb3 \strokec2 Before you move on, double check that your\'a0
+\f2 \cb4 Player#get_position
+\f1 \cb3 \'a0returns an array of\'a0
+\i numbers
+\i0 , and not an array of strings. This will save you a ton of headaches later!\
+\pard\pardeftab720\li840\ri840\sl560\sa400\partightenfactor0
+
+\f0\b\fs48 \cf2 Game\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0\fs40 \cf2 The\'a0
+\f2 \cb4 Game
+\f1 \cb3 \'a0class will be the main class that houses the instances of\'a0
+\f2 \cb4 Board
+\f1 \cb3 \'a0and\'a0
+\f2 \cb4 HumanPlayer
+\f1 \cb3 \'a0required for gameplay. It will be responsible for passing data between the board and players. It will also serve to contain the main game loop.\
+Be sure to\'a0
+\f2 \cb4 require
+\f1 \cb3 \'a0your\'a0
+\f2 \cb4 board.rb
+\f1 \cb3 \'a0and\'a0
+\f2 \cb4 human_player.rb
+\f1 \cb3 \'a0files into\'a0
+\f2 \cb4 game.rb
+\f1 \cb3 .\
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b \cf2 Game#initialize(player_1_mark, player_2_mark)\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 An instance of\'a0
+\f2 \cb4 Game
+\f1 \cb3 \'a0should have instance variables for player one, player two, and the board. Design the\'a0
+\f2 \cb4 #initialize
+\f1 \cb3 \'a0method to accept the mark values to be used for the players.\
+You should also initialize an instance variable to contain the current player. By default, player one should begin as the current player.\
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b \cf2 Game#switch_turn\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 This method should set the current player to the other player. Calling this method repeatedly should switch the current player back and forth between the two players.\
+This method is critical for gameplay so be sure to test it in pry. Here is how our switching mechanic performs:\
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f4\fs32 \cf5 \cb6 \strokec5 [1] pry(main)> load 'game.rb'\
+=> true\
+\
+[2] pry(main)> game = Game.new(:X, :O)\
+=> #<Game:0x0\
+ @current_player=#<HumanPlayer:0x @mark=:X>,\
+ @board=#<Board:0x @grid=[["_", "_", "_"], ["_", "_", "_"], ["_", "_", "_"]]>,\
+ @player_1=#<HumanPlayer:0x @mark=:X>,\
+ @player_2=#<HumanPlayer:0x @mark=:O>>\
+\
+[3] pry(main)> game.switch_turn\
+=> #<HumanPlayer:0x @mark=:O>\
+\
+[4] pry(main)> game\
+=> #<Game:0x00007f8b5ac725f8\
+ @current_player=#<HumanPlayer:0x @mark=:O>,\
+ @board=#<Board:0x @grid=[["_", "_", "_"], ["_", "_", "_"], ["_", "_", "_"]]>,\
+ @player_1=#<HumanPlayer:0x @mark=:X>,\
+ @player_2=#<HumanPlayer:0x @mark=:O>>\
+\
+[5] pry(main)> game.switch_turn\
+=> #<HumanPlayer:0x @mark=:X>\
+\
+[6] pry(main)> game\
+=> #<Game:0x00007f8b5ac725f8\
+ @current_player=#<HumanPlayer:0x @mark=:X>,\
+ @player_1=#<HumanPlayer:0x @mark=:X>,\
+ @player_2=#<HumanPlayer:0x @mark=:O>>\
+ @board=#<Board:0x @grid=[["_", "_", "_"], ["_", "_", "_"], ["_", "_", "_"]]>,\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\fs40 \cf2 \cb3 \strokec2 Notice how\'a0
+\f2 \cb4 @current_player
+\f1 \cb3 \'a0changes when we call\'a0
+\f2 \cb4 #switch_turn
+\f1 \cb3 . With that, we now have all the mechanics needed to put the game together!\
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b \cf2 Game#play\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 This method will contain the main game loop. Here is some psuedocode for the loop:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl440\sa100\partightenfactor0
+\ls2\ilvl0\cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 while there exists empty positions on the board\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sl440\sa100\partightenfactor0
+\ls2\ilvl1\cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 print the board\cb1 \
+\ls2\ilvl1\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 get a position from the current player\cb1 \
+\ls2\ilvl1\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 place their mark at that position of the board\cb1 \
+\ls2\ilvl1\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 check if that user has won\
+\pard\tx1660\tx2160\pardeftab720\li2160\fi-2160\sl440\sa100\partightenfactor0
+\ls2\ilvl2\cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9642 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 if they win, print out a 'victory' message saying who won and return to end the game\cb1 \
+\ls2\ilvl2\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9642 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 otherwise they did not win, so switch turns\cb1 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl440\sa100\partightenfactor0
+\ls2\ilvl0\cf2 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 if we finish the while loop without returning, that means there are no more empty positions on the board and noone has won, so print a 'draw' message\cb1 \
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+\cf2 \cb3 Test your game in pry. Play a few games by creating an instance of\'a0
+\f2 \cb4 Game
+\f1 \cb3 \'a0and invoking\'a0
+\f2 \cb4 #play
+\f1 \cb3 \'a0on it. After a game is over, be sure to create a\'a0
+\i new
+\i0 \'a0instance of\'a0
+\f2 \cb4 Game
+\f1 \cb3 \'a0to play again, this is the only way to get a fresh board. Some scenarios to test are: player one winning, player two winning, and a draw.\
+If any errors are raised during gameplay, your game loop and\'a0
+\f2 \cb4 #play
+\f1 \cb3 \'a0method will end immediately, so you'll have to start a new game and retry!\
+\pard\pardeftab720\li840\ri840\sl720\sa400\partightenfactor0
+
+\f0\b\fs60 \cf2 Version 2: Make it scalable\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0\fs40 \cf2 Make a copy of your entire\'a0
+\f2 \cb4 tic_tac_toe_v1
+\f1 \cb3 \'a0directory and rename it\'a0
+\f2 \cb4 tic_tac_toe_v2
+\f1 \cb3 . Open the version 2 in your editor and terminal so we can refactor it to support more features. This will be our new working directory.\
+Our goal for this version is to make the game scale on two fronts:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl440\sa100\partightenfactor0
+\ls3\ilvl0\cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	1.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 support a dynamic board size\cb1 \
+\ls3\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	2.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 support more than two players\cb1 \
+\pard\pardeftab720\li840\ri840\sl560\sa400\partightenfactor0
+
+\f0\b\fs48 \cf2 \cb3 Board size refactor\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0\fs40 \cf2 We need to change a few things to support any size board. We'll mention a few general todos, but you may need to change more if you hard-coded a 3x3 size in your first iteration.\
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b \cf2 Board#initialize\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 Refactor this method to accept a number argument,\'a0
+\b n
+\b0 . The grid should be set to a 2-dimensional array with size '
+\b n
+\b0 \'a0x\'a0
+\b n
+\b0 ', instead of '3 x 3'. It's worth noting that the grid will always be a square (meaning its height is equal to its width). This will somewhat simplify things as we refactor our other methods.\
+Consider refactoring these critical board methods if they contain any hardcoded values:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl460\sa100\partightenfactor0
+\ls4\ilvl0
+\f2 \cf2 \cb4 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 #valid?
+\f1 \cb1 \
+\ls4\ilvl0
+\f2 \cb4 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 #print
+\f1 \cb1 \
+\ls4\ilvl0
+\f2 \cb4 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 #win_row?
+\f1 \cb1 \
+\ls4\ilvl0
+\f2 \cb4 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 #win_col?
+\f1 \cb1 \
+\ls4\ilvl0
+\f2 \cb4 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 #win_diagonal
+\f1 \cb1 \
+\ls4\ilvl0
+\f2 \cb4 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 #win?
+\f1 \cb1 \
+\ls4\ilvl0
+\f2 \cb4 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 #empty_positions?
+\f1 \cb1 \
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b \cf2 \cb3 Checkpoint - Test the fruits of your labor(ed)\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 Load\'a0
+\f2 \cb4 board.rb
+\f1 \cb3 \'a0using pry. Create different sized boards and invoke\'a0
+\b all
+\b0 \'a0board methods on them. Here are our initial tests, but you should be much more thorough:\
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f4\fs32 \cf5 \cb6 \strokec5 [1] pry(main)> load 'board.rb'\
+=> true\
+\
+[2] pry(main)> small = Board.new(4)\
+=> #<Board:0x\
+ @grid=[\
+   ["_", "_", "_", "_"],\
+   ["_", "_", "_", "_"],\
+   ["_", "_", "_", "_"],\
+   ["_", "_", "_", "_"]]\
+   >\
+\
+[3] pry(main)> large = Board.new(6)\
+=> #<Board:0x\
+ @grid=\
+  [["_", "_", "_", "_", "_", "_"],\
+   ["_", "_", "_", "_", "_", "_"],\
+   ["_", "_", "_", "_", "_", "_"],\
+   ["_", "_", "_", "_", "_", "_"],\
+   ["_", "_", "_", "_", "_", "_"],\
+   ["_", "_", "_", "_", "_", "_"]]>\
+\
+[4] pry(main)> small.valid?([3, 3])\
+=> true\
+\
+[5] pry(main)> small.valid?([5, 5])\
+=> false\
+\
+[6] pry(main)> large.valid?([5, 5])\
+=> true\
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b\fs40 \cf2 \cb3 \strokec2 Game#initialize\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 Refactor this method to also accept a number for the board size as the first argument.\
+That\'a0
+\i should
+\i0 \'a0be all we need to refactor, since we designed our version 1 to avoid as much coupling to\'a0
+\f2 \cb4 Board
+\f1 \cb3 \'a0as possible. However, take a moment to scan the rest of your\'a0
+\f2 \cb4 Game
+\f1 \cb3 \'a0and\'a0
+\f2 \cb4 HumanPlayer
+\f1 \cb3 \'a0class to be sure.\
+Use pry to play a few games of varying size to completion before continuing further.\
+\pard\pardeftab720\li840\ri840\sl560\sa400\partightenfactor0
+
+\f0\b\fs48 \cf2 Number of players refactor\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0\fs40 \cf2 Adding support for any number of players should require a decent refactor of the\'a0
+\f2 \cb4 Game
+\f1 \cb3 \'a0class, but no major changes to\'a0
+\f2 \cb4 HumanPlayer
+\f1 \cb3 . The only logic that should change is how we decide\'a0
+\i which
+\i0 \'a0player should move, but the capabilities of any single player remains unchanged.\
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b \cf2 Game#initialize\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 An instance of\'a0
+\f2 \cb4 Game
+\f1 \cb3 \'a0will now need to track an array of many players instead of just two. Make this an instance variable. Allow your\'a0
+\f2 \cb4 #initialize
+\f1 \cb3 \'a0to accept any number of mark values. The number of marks passed to\'a0
+\f2 \cb4 #initialize
+\f1 \cb3 \'a0will decide how many players are in the game.\
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b \cf2 Game#switch_turn\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 For our switching logic, we'll use a "Round Robin" strategy. This means that players continually take turns in the same order. For example, if we had players A, B, and C, then the turns would be ABCABCABC... until the game is over.\
+For simplicity, we'll always designate whoever is at the front of the array as the current player. Consider using\'a0
+\f2 \cb4 Array#rotate!
+\f1 \cb3 \'a0to accomplish this.\
+Test the switching logic in isolation using pry. Here is how our class works:\
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f4\fs32 \cf5 \cb6 \strokec5 [1] pry(main)> load 'game.rb'\
+=> true\
+\
+[2] pry(main)> g = Game.new(4, 'A', 'B', 'C')\
+=> #<Game:0x\
+ @board=\
+  #<Board:0x\
+   @grid=[["_", "_", "_", "_"],\
+          ["_", "_", "_", "_"],\
+          ["_", "_", "_", "_"],\
+          ["_", "_", "_", "_"]]>,\
+ @current_player=#<HumanPlayer:0x @mark="A">,\
+ @players=\
+  [#<HumanPlayer:0x @mark="A">,\
+   #<HumanPlayer:0x @mark="B">,\
+   #<HumanPlayer:0x @mark="C">]>\
+\
+[3] pry(main)> g.switch_turn\
+=> #<HumanPlayer:0x @mark="B">\
+\
+[4] pry(main)> g.switch_turn\
+=> #<HumanPlayer:0x @mark="C">\
+\
+[5] pry(main)> g\
+=> #<Game:0x\
+ @board=\
+  #<Board:0x\
+   @grid=[["_", "_", "_", "_"],\
+          ["_", "_", "_", "_"],\
+          ["_", "_", "_", "_"],\
+          ["_", "_", "_", "_"]]>,\
+ @current_player=#<HumanPlayer:0x @mark="C">,\
+ @players=\
+  [#<HumanPlayer:0x @mark="C">,\
+   #<HumanPlayer:0x @mark="A">,\
+   #<HumanPlayer:0x @mark="B">]>\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\fs40 \cf2 \cb3 \strokec2 After you see that the current player is switching properly, you should be able to play your game! Play a few rounds of varying size for good measure. Pretty neat, huh?\
+\pard\pardeftab720\li840\ri840\sl720\sa400\partightenfactor0
+
+\f0\b\fs60 \cf2 Version 3: Rise of the machines\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0\fs40 \cf2 Make a copy of your entire\'a0
+\f2 \cb4 tic_tac_toe_v2
+\f1 \cb3 \'a0directory and rename it\'a0
+\f2 \cb4 tic_tac_toe_v3
+\f1 \cb3 . Open the version 3 in your editor and terminal so we can refactor it to support more features. This will be our new working directory.\
+Our goal for this version is to implement a simple\'a0
+\f2 \cb4 ComputerPlayer
+\f1 \cb3 \'a0class that will play randomly. We will also add some improved error handling for our existing\'a0
+\f2 \cb4 HumanPlayer
+\f1 \cb3 s.\
+Let's begin by adding a new file in our working directory to house\'a0
+\f2 \cb4 ComputerPlayer
+\f1 \cb3 :\
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f4\fs32 \cf5 \cb6 \strokec5 tic_tac_toe_v3/\
+\uc0\u9500 \u9472 \u9472  computer_player.rb\
+\uc0\u9500 \u9472 \u9472  human_player.rb\
+\uc0\u9500 \u9472 \u9472  board.rb\
+\uc0\u9492 \u9472 \u9472  game.rb\
+\pard\pardeftab720\li840\ri840\sl560\sa400\partightenfactor0
+
+\f0\b\fs48 \cf2 \cb3 \strokec2 Refactoring for random positions\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0\fs40 \cf2 Our\'a0
+\f2 \cb4 ComputerPlayer
+\f1 \cb3 \'a0artificial intelligence will be naive. When it is their turn, a computer will play a random position on the board. However, we'll want ensure that the computers will choose a position that is legal according to\'a0
+\f2 \cb4 Board#empty?
+\f1 \cb3 \'a0and\'a0
+\f2 \cb4 Board#valid?
+\f1 \cb3 . To implement this we,\'a0
+\i could
+\i0 \'a0just continually "guess and check" random positions until a legal position is stumbled upon, but this is a rather wasteful strategy. Instead, it would be much more wise to provide a list of legal positions to the\'a0
+\f2 \cb4 ComputerPlayer
+\f1 \cb3 \'a0from which they may randomly select.\
+Here is where we must make a design decision founded on object oriented principles. We should try our best to keep all board and position related logic inside of\'a0
+\f2 \cb4 Board
+\f1 \cb3 . Although our new major feature is\'a0
+\f2 \cb4 ComputerPlayer
+\f1 \cb3 , it is apparent that the\'a0
+\f2 \cb4 Board
+\f1 \cb3 \'a0class also needs to provide additional information for a\'a0
+\f2 \cb4 ComputerPlayer
+\f1 \cb3 \'a0to consume.\
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b \cf2 Board#legal_positions\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 This method should return an array containing all positions of the board that are legal to place a new mark on. That is, the returned positions should not already contain a mark and also be "in-bounds" on the grid.\
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b \cf2 ComputerPlayer#initialize\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 An instance of\'a0
+\f2 \cb4 ComputerPlayer
+\f1 \cb3 \'a0should have the same interface as a\'a0
+\f2 \cb4 HumanPlayer
+\f1 \cb3 . This means that both classes should have the same method names, but may implement these methods using different logic. Having a consistent interface for all types of players will allow us to use computers and humans interchangeably in a game with no annoying side-effects. The\'a0
+\f2 \cb4 #initialize
+\f1 \cb3 \'a0for a computer should be identical to that of a human.\
+The programming paradigm we leverage here is known as\'a0{\field{\*\fldinst{HYPERLINK "https://en.wikipedia.org/wiki/Duck_typing"}}{\fldrslt \cf9 \strokec9 duck typing}}. If an object walks like a duck and quacks like a duck, then we can use it as a duck for all intents and purposes. In our game, we have duck typed\'a0
+\f2 \cb4 HumanPlayer
+\f1 \cb3 \'a0and\'a0
+\f2 \cb4 ComputerPlayer
+\f1 \cb3 .\
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b \cf2 ComputerPlayer#get_position(legal_positions)\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 Assume that this method takes in an array of positions as an argument. The method should return a random position from the array. To make gameplay clear, print a message saying the computer's mark along with the position they chose.\
+Unlike our new\'a0
+\f2 \cb4 ComputerPlayer#get_position
+\f1 \cb3 , you may recall that our old\'a0
+\f2 \cb4 HumanPlayer#get_position
+\f1 \cb3 \'a0did not accept any argument. This discrepancy in interface will cause issues. We'll reconcile this difference next.\
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b \cf2 HumanPlayer#get_position(legal_positions)\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 Refactor this method to accept an array of positions as an argument. If the user enters a position that is not inside of the array argument, tell them that their choice was illegal and prompt them to enter another. This method should continue to prompt the user until they make a legal choice.\
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b \cf2 Checkpoint - Turing's test\'86\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 Before we go any further, let's take a moment to verify the behavior of all of the methods we created or refactored. We'll test them in isolation of one another before we connect them together.\
+Here's is the pry workflow we used to test our board:\
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f4\fs32 \cf5 \cb6 \strokec5 [1] pry(main)> load 'board.rb'\
+=> true\
+\
+[2] pry(main)> my_board = Board.new(2)\
+=> #<Board:0x @grid=[["_", "_"], ["_", "_"]]>\
+\
+[3] pry(main)> my_board.legal_positions\
+=> [[0, 0], [0, 1], [1, 0], [1, 1]]\
+\
+[4] pry(main)> my_board.place_mark([0, 1], :Z)\
+=> :Z\
+\
+[5] my_board.legal_positions\
+=> [[0, 0], [1, 0], [1, 1]]\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\fs40 \cf2 \cb3 \strokec2 Let's also test our humans. Since\'a0
+\f2 \cb4 #getPositions
+\f1 \cb3 \'a0simply expects an array as its argument, we can pass in some "mock" data that doesn't really come from any board. Don't forget that\'a0
+\b abstraction
+\b0 \'a0is a pillar of object oriented programming. Our\'a0
+\f2 \cb4 #getPositions
+\f1 \cb3 \'a0just cares about being given an array, it doesn't care exactly where that array comes from:\
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f4\fs32 \cf5 \cb6 \strokec5 [1] pry(main)> load 'human_player.rb'\
+=> true\
+\
+[2] pry(main)> dave = HumanPlayer.new(:X)\
+=> #<HumanPlayer:0x @mark=:X>\
+\
+[3] pry(main)> positions = [[1, 2], [3, 4], [4, 3]]\
+=> [[1, 2], [3, 4], [4, 3]]\
+\
+[4] pry(main)> dave.get_position(positions)\
+Player X, enter two numbers representing a position in the format `row col`\
+3 4\
+=> [3, 4]\
+\
+[5] pry(main)> dave.get_position(positions)\
+Player X, enter two numbers representing a position in the format `row col`\
+2 5\
+[2, 5] is not a legal position\
+Player X, enter two numbers representing a position in the format `row col`\
+1 2\
+=> [1, 2]\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\fs40 \cf2 \cb3 \strokec2 Finally, let's verify our AI:\
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f4\fs32 \cf5 \cb6 \strokec5 [1] pry(main)> load 'computer_player.rb'\
+=> true\
+\
+[2] pry(main)> hal_9000 = ComputerPlayer.new(:Y)\
+=> #<ComputerPlayer:0x @mark=:Y>\
+\
+[3] pry(main)> positions = [[1, 2], [3, 4], [4, 3]]\
+=> [[1, 2], [3, 4], [4, 3]]\
+\
+[4] pry(main)> hal_9000.get_position(positions)\
+Computer Y chose position [1, 2]\
+=> [1, 2]\
+\
+[5] pry(main)> hal_9000.get_position(positions)\
+Computer Y chose position [3, 4]\
+=> [3, 4]\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\fs40 \cf2 \cb3 \strokec2 Do any other testing that you see fit before moving on.\
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b \cf2 Game#initialize\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 Refactor this method to accept an option hash instead of an arbitrary number of marks (we previously implemented that in version 2). A hash is a great choice here because we now need to communicate two details per player: their mark and whether they are human or computer. We also have the upshot of hash keys necessarily being unique. This is convenient because for proper gameplay we must have unique marks among the players!\
+Assume that the keys of the hash are the marks and the values are booleans. Interpret false as a human and true as a computer. The order of players in the hash should dictate the order that they take their turns. For example, the following game would entail three players of X (human), Y (computer), and Z (human) playing on a 4 by 4 board:\
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f4\fs32 \cf5 \cb6 \strokec5 [1] pry(main)> load 'game.rb'\
+=> true\
+\
+[2] pry(main)> Game.new(4, X: false, Y: true, Z: false)\
+=> #<Game:0x\
+ @players=\
+  [#<HumanPlayer:0x @mark=:X>,\
+   #<ComputerPlayer:0x @mark=:Y>,\
+   #<HumanPlayer:0x @mark=:Z>]>,\
+ @current_player=#<HumanPlayer:0x @mark=:X>,\
+ @board=\
+  #<Board:0x\
+   @grid=[["_", "_", "_", "_"], ["_", "_", "_", "_"], ["_", "_", "_", "_"], ["_", "_", "_", "_"]]>\
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b\fs40 \cf2 \cb3 \strokec2 Game#play\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 Only one more refactor and we'll have our final product! Refactor this method slightly to account for our new argument required for\'a0
+\f2 \cb4 #get_position
+\f1 \cb3 . That is, be sure to pass in the board's legal positions for the player to choose from.\
+That's it. Play some diverse games with computers and humans to test your work. You've done some\'a0
+\i amazing
+\i0 \'a0object oriented programming if you've gotten to this point. Sit back, relax, and reward yourself by running this snippet in pry:\
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f4\fs32 \cf5 \cb6 \strokec5 load 
+\f3 \cf8 \strokec8 'game.rb'
+\f4 \cf5 \strokec5 \
+machine_civil_war 
+\f3 =
+\f4  
+\f3 \cf10 \strokec10 Game\cf5 \strokec5 .\cf11 \strokec11 new\cf5 \strokec5 (\cf10 \strokec10 10\cf5 \strokec5 ,
+\f4  h
+\f3 :
+\f4  
+\f3 \cf11 \strokec11 true\cf5 \strokec5 ,
+\f4  u
+\f3 :
+\f4  
+\f3 \cf11 \strokec11 true\cf5 \strokec5 ,
+\f4  e
+\f3 :
+\f4  
+\f3 \cf11 \strokec11 true\cf5 \strokec5 )
+\f4 \
+machine_civil_war
+\f3 .
+\f4 play\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\fs40 \cf2 \cb3 \strokec2 No skynet anytime soon.\
+}

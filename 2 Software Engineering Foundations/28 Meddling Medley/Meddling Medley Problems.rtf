@@ -1,0 +1,869 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf610
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Georgia;\f2\fmodern\fcharset0 Courier;
+\f3\fnil\fcharset0 Consolas;\f4\fnil\fcharset0 Menlo-Regular;\f5\fswiss\fcharset0 Helvetica-Light;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;\red10\green92\blue255;
+\red0\green0\blue0;\red246\green246\blue239;\red34\green34\blue34;\red224\green213\blue97;\red100\green108\blue125;
+\red157\green101\blue255;\red88\green209\blue235;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c100000\c100000\c100000;\cssrgb\c0\c46667\c100000;
+\cssrgb\c0\c0\c0\c7451;\cssrgb\c97255\c97255\c94902;\cssrgb\c17647\c17647\c17647;\cssrgb\c90196\c85882\c45490;\cssrgb\c46667\c50196\c56471;
+\cssrgb\c68235\c50588\c100000;\cssrgb\c40000\c85098\c93725;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{circle\}}{\leveltext\leveltemplateid2\'01\uc0\u9702 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{circle\}}{\leveltext\leveltemplateid102\'01\uc0\u9702 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}
+{\list\listtemplateid4\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid301\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid4}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}}
+\margl1440\margr1440\vieww13020\viewh15520\viewkind0
+\deftab720
+\pard\pardeftab720\li840\ri840\sl860\sa400\partightenfactor0
+
+\f0\b\fs72 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Meddling Medley\cb1 \
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0\fs40 \cf2 \cb3 This problem set will test your knowledge about the last few topics you explored. Like usual, the difficulty will ramp up as work through the set. Ready? Let's do it.\cb1 \
+\cb3 The solution is available\'a0{\field{\*\fldinst{HYPERLINK "https://aao-alpha.s3-us-west-1.amazonaws.com/assets/topics/additional_problems/meddling_medley_solution.rb.zip"}}{\fldrslt \cf4 \strokec4 here}}, but please do not look at it until you have attempted all of the problems!\cb1 \
+\pard\pardeftab720\li840\ri840\sl720\sa400\partightenfactor0
+
+\f0\b\fs60 \cf2 \cb3 Phase 1: Modest problems.\cb1 \
+\pard\pardeftab720\li840\ri840\sl560\sa400\partightenfactor0
+
+\fs48 \cf2 \cb3 duos\cb1 \
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0\fs40 \cf2 \cb3 Write a method\'a0
+\f2 \cb5 duos
+\f1 \cb3 \'a0that accepts a string as an argument and returns the count of the number of times the same character appears consecutively in the given string.\cb1 \
+\cb3 Examples\cb1 \
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f3\fs32 \cf6 \cb7 \strokec6 p duos
+\f4 (\cf8 \strokec8 'bootcamp'\cf6 \strokec6 )
+\f3       
+\f4 \cf9 \strokec9 # 1
+\f3 \cf6 \strokec6 \
+p duos
+\f4 (\cf8 \strokec8 'wxxyzz'\cf6 \strokec6 )
+\f3         
+\f4 \cf9 \strokec9 # 2
+\f3 \cf6 \strokec6 \
+p duos
+\f4 (\cf8 \strokec8 'hoooraay'\cf6 \strokec6 )
+\f3       
+\f4 \cf9 \strokec9 # 3
+\f3 \cf6 \strokec6 \
+p duos
+\f4 (\cf8 \strokec8 'dinosaurs'\cf6 \strokec6 )
+\f3      
+\f4 \cf9 \strokec9 # 0
+\f3 \cf6 \strokec6 \
+p duos
+\f4 (\cf8 \strokec8 'e'\cf6 \strokec6 )
+\f3              
+\f4 \cf9 \strokec9 # 0
+\f3 \cf6 \strokec6 \
+\pard\pardeftab720\li840\ri840\sl560\sa400\partightenfactor0
+
+\f0\b\fs48 \cf2 \cb3 \strokec2 \
+sentence_swap\cb1 \
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0\fs40 \cf2 \cb3 Write a method\'a0
+\f2 \cb5 sentence_swap
+\f1 \cb3 \'a0that accepts a sentence and a hash as arguments. The method should return a new sentence where every word is replaced with it's corresponding value in the hash. If a word does not exist as a key of the hash, then it should remain unchanged.\cb1 \
+\cb3 Examples\cb1 \
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f3\fs32 \cf6 \cb7 \strokec6 p sentence_swap
+\f4 (\cf8 \strokec8 'anything you can do I can do'\cf6 \strokec6 ,
+\f3 \
+    
+\f4 \cf8 \strokec8 'anything'\cf6 \strokec6 =>\cf8 \strokec8 'nothing'\cf6 \strokec6 ,
+\f3  
+\f4 \cf8 \strokec8 'do'\cf6 \strokec6 =>\cf8 \strokec8 'drink'\cf6 \strokec6 ,
+\f3  
+\f4 \cf8 \strokec8 'can'\cf6 \strokec6 =>\cf8 \strokec8 'shall'
+\f3 \cf6 \strokec6 \
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f4 \cf6 )
+\f3  
+\f4 \cf9 \strokec9 # 'nothing you shall drink I shall drink'
+\f3 \cf6 \strokec6 \
+\
+p sentence_swap
+\f4 (\cf8 \strokec8 'what a sad ad'\cf6 \strokec6 ,
+\f3 \
+    
+\f4 \cf8 \strokec8 'cat'\cf6 \strokec6 =>\cf8 \strokec8 'dog'\cf6 \strokec6 ,
+\f3  
+\f4 \cf8 \strokec8 'sad'\cf6 \strokec6 =>\cf8 \strokec8 'happy'\cf6 \strokec6 ,
+\f3  
+\f4 \cf8 \strokec8 'what'\cf6 \strokec6 =>\cf8 \strokec8 'make'
+\f3 \cf6 \strokec6 \
+
+\f4 )
+\f3  
+\f4 \cf9 \strokec9 # 'make a happy ad'
+\f3 \cf6 \strokec6 \
+\
+p sentence_swap
+\f4 (\cf8 \strokec8 'keep coding okay'\cf6 \strokec6 ,
+\f3 \
+    
+\f4 \cf8 \strokec8 'coding'\cf6 \strokec6 =>\cf8 \strokec8 'running'\cf6 \strokec6 ,
+\f3  
+\f4 \cf8 \strokec8 'kay'\cf6 \strokec6 =>\cf8 \strokec8 'pen'
+\f3 \cf6 \strokec6 \
+
+\f4 )
+\f3  
+\f4 \cf9 \strokec9 # 'keep running okay'
+\f3 \cf6 \strokec6 \
+\pard\pardeftab720\li840\ri840\sl560\sa400\partightenfactor0
+
+\f0\b\fs48 \cf2 \cb3 \strokec2 \
+hash_mapped\cb1 \
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0\fs40 \cf2 \cb3 Write a method\'a0
+\f2 \cb5 hash_mapped
+\f1 \cb3 \'a0that accepts a hash, a proc, and a block. The method should return a new hash where each key is the result of the original key when given to the\'a0
+\b block
+\b0 . Each value of the new hash should be the result of the original values when passed into the\'a0
+\b proc
+\b0 .\cb1 \
+\cb3 Examples\cb1 \
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f3\fs32 \cf6 \cb7 \strokec6 double 
+\f4 =
+\f3  
+\f4 \cf10 \strokec10 Proc\cf6 \strokec6 .\cf11 \strokec11 new
+\f3 \cf6 \strokec6  
+\f4 \{
+\f3  
+\f4 |
+\f3 n
+\f4 |
+\f3  n 
+\f4 *
+\f3  
+\f4 \cf10 \strokec10 2
+\f3 \cf6 \strokec6  
+\f4 \}
+\f3 \
+p hash_mapped
+\f4 (\{\cf8 \strokec8 'a'\cf6 \strokec6 =>\cf10 \strokec10 4\cf6 \strokec6 ,
+\f3  
+\f4 \cf8 \strokec8 'x'\cf6 \strokec6 =>\cf10 \strokec10 7\cf6 \strokec6 ,
+\f3  
+\f4 \cf8 \strokec8 'c'\cf6 \strokec6 =>-\cf10 \strokec10 3\cf6 \strokec6 \},
+\f3  double
+\f4 )
+\f3  
+\f4 \{
+\f3  
+\f4 |
+\f3 k
+\f4 |
+\f3  k
+\f4 .
+\f3 upcase 
+\f4 +
+\f3  
+\f4 \cf8 \strokec8 '!!'
+\f3 \cf6 \strokec6  
+\f4 \}
+\f3 \
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f4 \cf9 \strokec9 # \{"A!!"=>8, "X!!"=>14, "C!!"=>-6\}
+\f3 \cf6 \strokec6 \
+\
+first 
+\f4 =
+\f3  
+\f4 \cf10 \strokec10 Proc\cf6 \strokec6 .\cf11 \strokec11 new
+\f3 \cf6 \strokec6  
+\f4 \{
+\f3  
+\f4 |
+\f3 a
+\f4 |
+\f3  a
+\f4 [\cf10 \strokec10 0\cf6 \strokec6 ]
+\f3  
+\f4 \}
+\f3 \
+p hash_mapped
+\f4 (\{-\cf10 \strokec10 5\cf6 \strokec6 =>[\cf8 \strokec8 'q'\cf6 \strokec6 ,
+\f3  
+\f4 \cf8 \strokec8 'r'\cf6 \strokec6 ,
+\f3  
+\f4 \cf8 \strokec8 's'\cf6 \strokec6 ],
+\f3  
+\f4 \cf10 \strokec10 6\cf6 \strokec6 =>[\cf8 \strokec8 'w'\cf6 \strokec6 ,
+\f3  
+\f4 \cf8 \strokec8 'x'\cf6 \strokec6 ]\},
+\f3  first
+\f4 )
+\f3  
+\f4 \{
+\f3  
+\f4 |
+\f3 n
+\f4 |
+\f3  n 
+\f4 *
+\f3  n 
+\f4 \}
+\f3 \
+
+\f4 \cf9 \strokec9 # \{25=>"q", 36=>"w"\}
+\f3 \cf6 \strokec6 \
+\pard\pardeftab720\li840\ri840\sl560\sa400\partightenfactor0
+
+\f0\b\fs48 \cf2 \cb3 \strokec2 \
+counted_characters\cb1 \
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0\fs40 \cf2 \cb3 Write a method\'a0
+\f2 \cb5 counted_characters
+\f1 \cb3 \'a0that accepts a string as an argument. The method should return an array containing the characters of the string that appeared\'a0
+\b more than twice
+\b0 . The characters in the output array should appear in the same order they occur in the input string.\cb1 \
+\cb3 Examples\cb1 \
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f3\fs32 \cf6 \cb7 \strokec6 p counted_characters
+\f4 (\cf8 \strokec8 "that's alright folks"\cf6 \strokec6 )
+\f3  
+\f4 \cf9 \strokec9 # ["t"]
+\f3 \cf6 \strokec6 \
+p counted_characters
+\f4 (\cf8 \strokec8 "mississippi"\cf6 \strokec6 )
+\f3  
+\f4 \cf9 \strokec9 # ["i", "s"]
+\f3 \cf6 \strokec6 \
+p counted_characters
+\f4 (\cf8 \strokec8 "hot potato soup please"\cf6 \strokec6 )
+\f3  
+\f4 \cf9 \strokec9 # ["o", "t", " ", "p"]
+\f3 \cf6 \strokec6 \
+p counted_characters
+\f4 (\cf8 \strokec8 "runtime"\cf6 \strokec6 )
+\f3  
+\f4 \cf9 \strokec9 # []
+\f3 \cf6 \strokec6 \
+\pard\pardeftab720\li840\ri840\sl560\sa400\partightenfactor0
+
+\f0\b\fs48 \cf2 \cb3 \strokec2 triplet_true?\cb1 \
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0\fs40 \cf2 \cb3 Write a method\'a0
+\f2 \cb5 triplet_true?
+\f1 \cb3 \'a0that accepts a string as an argument and returns a boolean indicating whether or not the string contains three of the same character consecutively.\cb1 \
+\cb3 Examples\cb1 \
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f3\fs32 \cf6 \cb7 \strokec6 p triplet_true
+\f4 (\cf8 \strokec8 'caaabb'\cf6 \strokec6 )
+\f3         
+\f4 \cf9 \strokec9 # true
+\f3 \cf6 \strokec6 \
+p triplet_true
+\f4 (\cf8 \strokec8 'terrrrrible'\cf6 \strokec6 )
+\f3    
+\f4 \cf9 \strokec9 # true
+\f3 \cf6 \strokec6 \
+p triplet_true
+\f4 (\cf8 \strokec8 'runninggg'\cf6 \strokec6 )
+\f3      
+\f4 \cf9 \strokec9 # true
+\f3 \cf6 \strokec6 \
+p triplet_true
+\f4 (\cf8 \strokec8 'bootcamp'\cf6 \strokec6 )
+\f3       
+\f4 \cf9 \strokec9 # false
+\f3 \cf6 \strokec6 \
+p triplet_true
+\f4 (\cf8 \strokec8 'e'\cf6 \strokec6 )
+\f3              
+\f4 \cf9 \strokec9 # false
+\f3 \cf6 \strokec6 \
+\pard\pardeftab720\li840\ri840\sl560\sa400\partightenfactor0
+
+\f0\b\fs48 \cf2 \cb3 \strokec2 \
+energetic_encoding\cb1 \
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0\fs40 \cf2 \cb3 Write a method\'a0
+\f2 \cb5 energetic_encoding
+\f1 \cb3 \'a0that accepts a string and a hash as arguments. The method should return a new string where characters of the original string are replaced with the corresponding values in the hash. If a character is not a key of the hash, then it should be replaced with a question mark ('?'). Space characters (' ') should remain unchanged.\cb1 \
+\cb3 Examples\cb1 \
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f3\fs32 \cf6 \cb7 \strokec6 p energetic_encoding
+\f4 (\cf8 \strokec8 'sent sea'\cf6 \strokec6 ,
+\f3 \
+    
+\f4 \cf8 \strokec8 'e'\cf6 \strokec6 =>\cf8 \strokec8 'i'\cf6 \strokec6 ,
+\f3  
+\f4 \cf8 \strokec8 's'\cf6 \strokec6 =>\cf8 \strokec8 'z'\cf6 \strokec6 ,
+\f3  
+\f4 \cf8 \strokec8 'n'\cf6 \strokec6 =>\cf8 \strokec8 'm'\cf6 \strokec6 ,
+\f3  
+\f4 \cf8 \strokec8 't'\cf6 \strokec6 =>\cf8 \strokec8 'p'\cf6 \strokec6 ,
+\f3  
+\f4 \cf8 \strokec8 'a'\cf6 \strokec6 =>\cf8 \strokec8 'u'
+\f3 \cf6 \strokec6 \
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f4 \cf6 )
+\f3  
+\f4 \cf9 \strokec9 # 'zimp ziu'
+\f3 \cf6 \strokec6 \
+\
+p energetic_encoding
+\f4 (\cf8 \strokec8 'cat'\cf6 \strokec6 ,
+\f3 \
+    
+\f4 \cf8 \strokec8 'a'\cf6 \strokec6 =>\cf8 \strokec8 'o'\cf6 \strokec6 ,
+\f3  
+\f4 \cf8 \strokec8 'c'\cf6 \strokec6 =>\cf8 \strokec8 'k'
+\f3 \cf6 \strokec6 \
+
+\f4 )
+\f3  
+\f4 \cf9 \strokec9 # 'ko?'
+\f3 \cf6 \strokec6 \
+\
+p energetic_encoding
+\f4 (\cf8 \strokec8 'hello world'\cf6 \strokec6 ,
+\f3 \
+    
+\f4 \cf8 \strokec8 'o'\cf6 \strokec6 =>\cf8 \strokec8 'i'\cf6 \strokec6 ,
+\f3  
+\f4 \cf8 \strokec8 'l'\cf6 \strokec6 =>\cf8 \strokec8 'r'\cf6 \strokec6 ,
+\f3  
+\f4 \cf8 \strokec8 'e'\cf6 \strokec6 =>\cf8 \strokec8 'a'
+\f3 \cf6 \strokec6 \
+
+\f4 )
+\f3  
+\f4 \cf9 \strokec9 # '?arri ?i?r?'
+\f3 \cf6 \strokec6 \
+\
+p energetic_encoding
+\f4 (\cf8 \strokec8 'bike'\cf6 \strokec6 ,
+\f3  
+\f4 \{\})
+\f3  
+\f4 \cf9 \strokec9 # '????'
+\f3 \cf6 \strokec6 \
+\pard\pardeftab720\li840\ri840\sl560\sa400\partightenfactor0
+
+\f0\b\fs48 \cf2 \cb3 \strokec2 \
+uncompress\cb1 \
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0\fs40 \cf2 \cb3 Write a method\'a0
+\f2 \cb5 uncompress
+\f1 \cb3 \'a0that accepts a string as an argument. The string will be formatted so every letter is followed by a number. The method should return an "uncompressed" version of the string where every letter is repeated multiple times given based on the number that appears directly after the letter.\cb1 \
+\cb3 Examples\cb1 \
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f3\fs32 \cf6 \cb7 \strokec6 uncompress
+\f4 (\cf8 \strokec8 'a2b4c1'\cf6 \strokec6 )
+\f3  
+\f4 \cf9 \strokec9 # 'aabbbbc'
+\f3 \cf6 \strokec6 \
+uncompress
+\f4 (\cf8 \strokec8 'b1o2t1'\cf6 \strokec6 )
+\f3  
+\f4 \cf9 \strokec9 # 'boot'
+\f3 \cf6 \strokec6 \
+uncompress
+\f4 (\cf8 \strokec8 'x3y1x2z4'\cf6 \strokec6 )
+\f3  
+\f4 \cf9 \strokec9 # 'xxxyxxzzzz'
+\f3 \cf6 \strokec6 \
+\pard\pardeftab720\li840\ri840\sl720\sa400\partightenfactor0
+
+\f0\b\fs60 \cf2 \cb3 \strokec2 \
+Phase 2: More difficult, maybe?\cb1 \
+\pard\pardeftab720\li840\ri840\sl560\sa400\partightenfactor0
+
+\fs48 \cf2 \cb3 conjunct_select\cb1 \
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0\fs40 \cf2 \cb3 Write a method\'a0
+\f2 \cb5 conjunct_select
+\f1 \cb3 \'a0that accepts an array and one or more procs as arguments. The method should return a new array containing the elements that return true when passed into all of the given procs.\cb1 \
+\cb3 Examples\cb1 \
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f3\fs32 \cf6 \cb7 \strokec6 is_positive 
+\f4 =
+\f3  
+\f4 \cf10 \strokec10 Proc\cf6 \strokec6 .\cf11 \strokec11 new
+\f3 \cf6 \strokec6  
+\f4 \{
+\f3  
+\f4 |
+\f3 n
+\f4 |
+\f3  n 
+\f4 >
+\f3  
+\f4 \cf10 \strokec10 0
+\f3 \cf6 \strokec6  
+\f4 \}
+\f3 \
+is_odd 
+\f4 =
+\f3  
+\f4 \cf10 \strokec10 Proc\cf6 \strokec6 .\cf11 \strokec11 new
+\f3 \cf6 \strokec6  
+\f4 \{
+\f3  
+\f4 |
+\f3 n
+\f4 |
+\f3  n
+\f4 .
+\f3 odd
+\f4 ?
+\f3  
+\f4 \}
+\f3 \
+less_than_ten 
+\f4 =
+\f3  
+\f4 \cf10 \strokec10 Proc\cf6 \strokec6 .\cf11 \strokec11 new
+\f3 \cf6 \strokec6  
+\f4 \{
+\f3  
+\f4 |
+\f3 n
+\f4 |
+\f3  n 
+\f4 <
+\f3  
+\f4 \cf10 \strokec10 10
+\f3 \cf6 \strokec6  
+\f4 \}
+\f3 \
+\
+p conjunct_select
+\f4 ([\cf10 \strokec10 4\cf6 \strokec6 ,
+\f3  
+\f4 \cf10 \strokec10 8\cf6 \strokec6 ,
+\f3  
+\f4 -\cf10 \strokec10 2\cf6 \strokec6 ,
+\f3  
+\f4 \cf10 \strokec10 11\cf6 \strokec6 ,
+\f3  
+\f4 \cf10 \strokec10 7\cf6 \strokec6 ,
+\f3  
+\f4 -\cf10 \strokec10 3\cf6 \strokec6 ,
+\f3  
+\f4 \cf10 \strokec10 13\cf6 \strokec6 ],
+\f3  is_positive
+\f4 )
+\f3  
+\f4 \cf9 \strokec9 # [4, 8, 11, 7, 13]
+\f3 \cf6 \strokec6 \
+p conjunct_select
+\f4 ([\cf10 \strokec10 4\cf6 \strokec6 ,
+\f3  
+\f4 \cf10 \strokec10 8\cf6 \strokec6 ,
+\f3  
+\f4 -\cf10 \strokec10 2\cf6 \strokec6 ,
+\f3  
+\f4 \cf10 \strokec10 11\cf6 \strokec6 ,
+\f3  
+\f4 \cf10 \strokec10 7\cf6 \strokec6 ,
+\f3  
+\f4 -\cf10 \strokec10 3\cf6 \strokec6 ,
+\f3  
+\f4 \cf10 \strokec10 13\cf6 \strokec6 ],
+\f3  is_positive
+\f4 ,
+\f3  is_odd
+\f4 )
+\f3  
+\f4 \cf9 \strokec9 # [11, 7, 13]
+\f3 \cf6 \strokec6 \
+p conjunct_select
+\f4 ([\cf10 \strokec10 4\cf6 \strokec6 ,
+\f3  
+\f4 \cf10 \strokec10 8\cf6 \strokec6 ,
+\f3  
+\f4 -\cf10 \strokec10 2\cf6 \strokec6 ,
+\f3  
+\f4 \cf10 \strokec10 11\cf6 \strokec6 ,
+\f3  
+\f4 \cf10 \strokec10 7\cf6 \strokec6 ,
+\f3  
+\f4 -\cf10 \strokec10 3\cf6 \strokec6 ,
+\f3  
+\f4 \cf10 \strokec10 13\cf6 \strokec6 ],
+\f3  is_positive
+\f4 ,
+\f3  is_odd
+\f4 ,
+\f3  less_than_ten
+\f4 )
+\f3  
+\f4 \cf9 \strokec9 # [7]
+\f3 \cf6 \strokec6 \
+\pard\pardeftab720\li840\ri840\sl560\sa400\partightenfactor0
+
+\f0\b\fs48 \cf2 \cb3 \strokec2 \
+convert_pig_latin\cb1 \
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0\fs40 \cf2 \cb3 Write a method\'a0
+\f2 \cb5 convert_pig_latin
+\f1 \cb3 \'a0that accepts a sentence as an argument. The method should translate the sentence according to the following rules:\cb1 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl680\sa100\partightenfactor0
+\ls1\ilvl0\cf2 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 words that are shorter than 3 characters are unchanged\cb1 \
+\ls1\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 words that are 3 characters or longer are translated according to the following rules:\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sl680\sa100\partightenfactor0
+\ls1\ilvl1\cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 if the word begins with a vowel, simply add 'yay' to the end of the word (example: 'eat'->'eatyay')\cb1 \
+\ls1\ilvl1\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 if the word begins with a non-vowel, move all letters that come before the word's first vowel to the end of the word and add 'ay' (example: 'trash'->'ashtray')\cb1 \
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+\cf2 \cb3 Note that if words are capitalized in the original sentence, they should remain capitalized in the translated sentence. Vowels are the letters a, e, i, o, u.\cb1 \
+\cb3 Examples\cb1 \
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f3\fs32 \cf6 \cb7 \strokec6 p convert_pig_latin
+\f4 (\cf8 \strokec8 'We like to eat bananas'\cf6 \strokec6 )
+\f3  
+\f4 \cf9 \strokec9 # "We ikelay to eatyay ananasbay"
+\f3 \cf6 \strokec6 \
+p convert_pig_latin
+\f4 (\cf8 \strokec8 'I cannot find the trash'\cf6 \strokec6 )
+\f3  
+\f4 \cf9 \strokec9 # "I annotcay indfay ethay ashtray"
+\f3 \cf6 \strokec6 \
+p convert_pig_latin
+\f4 (\cf8 \strokec8 'What an interesting problem'\cf6 \strokec6 )
+\f3  
+\f4 \cf9 \strokec9 # "Atwhay an interestingyay oblempray"
+\f3 \cf6 \strokec6 \
+p convert_pig_latin
+\f4 (\cf8 \strokec8 'Her family flew to France'\cf6 \strokec6 )
+\f3  
+\f4 \cf9 \strokec9 # "Erhay amilyfay ewflay to Ancefray"
+\f3 \cf6 \strokec6 \
+p convert_pig_latin
+\f4 (\cf8 \strokec8 'Our family flew to France'\cf6 \strokec6 )
+\f3  
+\f4 \cf9 \strokec9 # "Ouryay amilyfay ewflay to Ancefray"
+\f3 \cf6 \strokec6 \
+\pard\pardeftab720\li840\ri840\sl560\sa400\partightenfactor0
+
+\f0\b\fs48 \cf2 \cb3 \strokec2 \
+reverberate\cb1 \
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0\fs40 \cf2 \cb3 Write a method\'a0
+\f2 \cb5 reverberate
+\f1 \cb3 \'a0that accepts a sentence as an argument. The method should translate the sentence according to the following rules:\cb1 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl680\sa100\partightenfactor0
+\ls2\ilvl0\cf2 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 words that are shorter than 3 characters are unchanged\cb1 \
+\ls2\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 words that are 3 characters or longer are translated according to the following rules:\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sl680\sa100\partightenfactor0
+\ls2\ilvl1\cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 if the word ends with a vowel, simply repeat the word twice (example: 'like'->'likelike')\cb1 \
+\ls2\ilvl1\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 if the word ends with a non-vowel, repeat all letters that come after the word's last vowel, including the last vowel itself (example: 'trash'->'trashash')\cb1 \
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+\cf2 \cb3 Note that if words are capitalized in the original sentence, they should remain capitalized in the translated sentence. Vowels are the letters a, e, i, o, u.\cb1 \
+\cb3 Examples\cb1 \
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f3\fs32 \cf6 \cb7 \strokec6 p reverberate
+\f4 (\cf8 \strokec8 'We like to go running fast'\cf6 \strokec6 )
+\f3  
+\f4 \cf9 \strokec9 # "We likelike to go runninging fastast"
+\f3 \cf6 \strokec6 \
+p reverberate
+\f4 (\cf8 \strokec8 'He cannot find the trash'\cf6 \strokec6 )
+\f3  
+\f4 \cf9 \strokec9 # "He cannotot findind thethe trashash"
+\f3 \cf6 \strokec6 \
+p reverberate
+\f4 (\cf8 \strokec8 'Pasta is my favorite dish'\cf6 \strokec6 )
+\f3  
+\f4 \cf9 \strokec9 # "Pastapasta is my favoritefavorite dishish"
+\f3 \cf6 \strokec6 \
+p reverberate
+\f4 (\cf8 \strokec8 'Her family flew to France'\cf6 \strokec6 )
+\f3  
+\f4 \cf9 \strokec9 # "Herer familyily flewew to Francefrance"
+\f3 \cf6 \strokec6 \
+\pard\pardeftab720\li840\ri840\sl560\sa400\partightenfactor0
+
+\f0\b\fs48 \cf2 \cb3 \strokec2 \
+disjunct_select\cb1 \
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0\fs40 \cf2 \cb3 Write a method\'a0
+\f2 \cb5 disjunct_select
+\f1 \cb3 \'a0that accepts an array and one or more procs as arguments. The method should return a new array containing the elements that return true when passed into at least one of the given procs.\cb1 \
+\cb3 Examples\cb1 \
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f3\fs32 \cf6 \cb7 \strokec6 longer_four 
+\f4 =
+\f3  
+\f4 \cf10 \strokec10 Proc\cf6 \strokec6 .\cf11 \strokec11 new
+\f3 \cf6 \strokec6  
+\f4 \{
+\f3  
+\f4 |
+\f3 s
+\f4 |
+\f3  s
+\f4 .
+\f3 length 
+\f4 >
+\f3  
+\f4 \cf10 \strokec10 4
+\f3 \cf6 \strokec6  
+\f4 \}
+\f3 \
+contains_o 
+\f4 =
+\f3  
+\f4 \cf10 \strokec10 Proc\cf6 \strokec6 .\cf11 \strokec11 new
+\f3 \cf6 \strokec6  
+\f4 \{
+\f3  
+\f4 |
+\f3 s
+\f4 |
+\f3  s
+\f4 .
+\f3 include
+\f4 ?(\cf8 \strokec8 'o'\cf6 \strokec6 )
+\f3  
+\f4 \}
+\f3 \
+starts_a 
+\f4 =
+\f3  
+\f4 \cf10 \strokec10 Proc\cf6 \strokec6 .\cf11 \strokec11 new
+\f3 \cf6 \strokec6  
+\f4 \{
+\f3  
+\f4 |
+\f3 s
+\f4 |
+\f3  s
+\f4 [\cf10 \strokec10 0\cf6 \strokec6 ]
+\f3  
+\f4 ==
+\f3  
+\f4 \cf8 \strokec8 'a'
+\f3 \cf6 \strokec6  
+\f4 \}
+\f3 \
+\
+p disjunct_select
+\f4 ([\cf8 \strokec8 'ace'\cf6 \strokec6 ,
+\f3  
+\f4 \cf8 \strokec8 'dog'\cf6 \strokec6 ,
+\f3  
+\f4 \cf8 \strokec8 'apple'\cf6 \strokec6 ,
+\f3  
+\f4 \cf8 \strokec8 'teeming'\cf6 \strokec6 ,
+\f3  
+\f4 \cf8 \strokec8 'boot'\cf6 \strokec6 ,
+\f3  
+\f4 \cf8 \strokec8 'zip'\cf6 \strokec6 ],
+\f3 \
+    longer_four
+\f4 ,
+\f3 \
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f4 \cf6 )
+\f3  
+\f4 \cf9 \strokec9 # ["apple", "teeming"]
+\f3 \cf6 \strokec6 \
+\
+p disjunct_select
+\f4 ([\cf8 \strokec8 'ace'\cf6 \strokec6 ,
+\f3  
+\f4 \cf8 \strokec8 'dog'\cf6 \strokec6 ,
+\f3  
+\f4 \cf8 \strokec8 'apple'\cf6 \strokec6 ,
+\f3  
+\f4 \cf8 \strokec8 'teeming'\cf6 \strokec6 ,
+\f3  
+\f4 \cf8 \strokec8 'boot'\cf6 \strokec6 ,
+\f3  
+\f4 \cf8 \strokec8 'zip'\cf6 \strokec6 ],
+\f3 \
+    longer_four
+\f4 ,
+\f3 \
+    contains_o\
+
+\f4 )
+\f3  
+\f4 \cf9 \strokec9 # ["dog", "apple", "teeming", "boot"]
+\f3 \cf6 \strokec6 \
+\
+p disjunct_select
+\f4 ([\cf8 \strokec8 'ace'\cf6 \strokec6 ,
+\f3  
+\f4 \cf8 \strokec8 'dog'\cf6 \strokec6 ,
+\f3  
+\f4 \cf8 \strokec8 'apple'\cf6 \strokec6 ,
+\f3  
+\f4 \cf8 \strokec8 'teeming'\cf6 \strokec6 ,
+\f3  
+\f4 \cf8 \strokec8 'boot'\cf6 \strokec6 ,
+\f3  
+\f4 \cf8 \strokec8 'zip'\cf6 \strokec6 ],
+\f3 \
+    longer_four
+\f4 ,
+\f3 \
+    contains_o
+\f4 ,
+\f3 \
+    starts_a\
+
+\f4 )
+\f3  
+\f4 \cf9 \strokec9 # ["ace", "dog", "apple", "teeming", "boot"]
+\f3 \cf6 \strokec6 \
+\pard\pardeftab720\li840\ri840\sl560\sa400\partightenfactor0
+
+\f0\b\fs48 \cf2 \cb3 \strokec2 \
+alternating_vowel\cb1 \
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0\fs40 \cf2 \cb3 Write a method\'a0
+\f2 \cb5 alternating_vowel
+\f1 \cb3 \'a0that accepts a sentence as an argument. The method should return a new sentence where the words alternate between having their first or last vowel removed. For example:\cb1 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl680\sa100\partightenfactor0
+\ls3\ilvl0\cf2 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 the 1st word should be missing its first vowel\cb1 \
+\ls3\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 the 2nd word should be missing its last vowel\cb1 \
+\ls3\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 the 3rd word should be missing its first vowel\cb1 \
+\ls3\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 the 4th word should be missing its last vowel\cb1 \
+\ls3\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 ... and so on\cb1 \
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+\cf2 \cb3 Note that words that contain no vowels should remain unchanged. Vowels are the letters a, e, i, o, u.\cb1 \
+\cb3 Examples\cb1 \
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f3\fs32 \cf6 \cb7 \strokec6 p alternating_vowel
+\f4 (\cf8 \strokec8 'panthers are great animals'\cf6 \strokec6 )
+\f3  
+\f4 \cf9 \strokec9 # "pnthers ar grat animls"
+\f3 \cf6 \strokec6 \
+p alternating_vowel
+\f4 (\cf8 \strokec8 'running panthers are epic'\cf6 \strokec6 )
+\f3  
+\f4 \cf9 \strokec9 # "rnning panthrs re epc"
+\f3 \cf6 \strokec6 \
+p alternating_vowel
+\f4 (\cf8 \strokec8 'code properly please'\cf6 \strokec6 )
+\f3  
+\f4 \cf9 \strokec9 # "cde proprly plase"
+\f3 \cf6 \strokec6 \
+p alternating_vowel
+\f4 (\cf8 \strokec8 'my forecast predicts rain today'\cf6 \strokec6 )
+\f3  
+\f4 \cf9 \strokec9 # "my forecst prdicts ran tday"
+\f3 \cf6 \strokec6 \
+\pard\pardeftab720\li840\ri840\sl560\sa400\partightenfactor0
+
+\f0\b\fs48 \cf2 \cb3 \strokec2 \
+silly_talk\cb1 \
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0\fs40 \cf2 \cb3 Write a method\'a0
+\f2 \cb5 silly_talk
+\f1 \cb3 \'a0that accepts a sentence as an argument. The method should translate each word of the sentence according to the following rules:\cb1 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl680\sa100\partightenfactor0
+\ls4\ilvl0\cf2 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 if the word ends with a vowel, simply repeat that vowel at the end of the word (example: 'code'->'codee')\cb1 \
+\ls4\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 if the word ends with a non-vowel, every vowel of the word should be followed by 'b' and that same vowel (example: 'siren'->'sibireben')\cb1 \
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+\cf2 \cb3 Note that if words are capitalized in the original sentence, they should remain capitalized in the translated sentence. Vowels are the letters a, e, i, o, u.\cb1 \
+\cb3 Examples\cb1 \
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f3\fs32 \cf6 \cb7 \strokec6 p silly_talk
+\f4 (\cf8 \strokec8 'Kids like cats and dogs'\cf6 \strokec6 )
+\f3  
+\f4 \cf9 \strokec9 # "Kibids likee cabats aband dobogs"
+\f3 \cf6 \strokec6 \
+p silly_talk
+\f4 (\cf8 \strokec8 'Stop that scooter'\cf6 \strokec6 )
+\f3  
+\f4 \cf9 \strokec9 # "Stobop thabat scobooboteber"
+\f3 \cf6 \strokec6 \
+p silly_talk
+\f4 (\cf8 \strokec8 'They can code'\cf6 \strokec6 )
+\f3  
+\f4 \cf9 \strokec9 # "Thereby caban codee"
+\f3 \cf6 \strokec6 \
+p silly_talk
+\f4 (\cf8 \strokec8 'He flew to Italy'\cf6 \strokec6 )
+\f3  
+\f4 \cf9 \strokec9 # "Hee flebew too Ibitabaly"
+\f3 \cf6 \strokec6 \
+\pard\pardeftab720\li840\ri840\sl560\sa400\partightenfactor0
+
+\f0\b\fs48 \cf2 \cb3 \strokec2 \
+compress\cb1 \
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0\fs40 \cf2 \cb3 Write a method\'a0
+\f2 \cb5 compress
+\f1 \cb3 \'a0that accepts a string as an argument. The method should return a "compressed" version of the string where streaks of consecutive letters are translated to a single appearance of the letter followed by the number of times it appears in the streak. If a letter does not form a streak (meaning that it appears alone), then do not add a number after it.\cb1 \
+\cb3 Examples\cb1 \
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f3\fs32 \cf6 \cb7 \strokec6 p compress
+\f4 (\cf8 \strokec8 'aabbbbc'\cf6 \strokec6 )
+\f3    
+\f4 \cf9 \strokec9 # "a2b4c"
+\f3 \cf6 \strokec6 \
+p compress
+\f4 (\cf8 \strokec8 'boot'\cf6 \strokec6 )
+\f3       
+\f4 \cf9 \strokec9 # "bo2t"
+\f3 \cf6 \strokec6 \
+p compress
+\f4 (\cf8 \strokec8 'xxxyxxzzzz'\cf6 \strokec6 )\cf9 \strokec9 # "x3yx2z4"
+\f3 \cf6 \strokec6 \
+\pard\pardeftab720\sl280\partightenfactor0
+
+\f5\fs24\fsmilli12250 \cf2 \cb3 \strokec2 \
+\pard\pardeftab720\sl260\partightenfactor0
+
+\fs21 \cf2 \cb1 \
+}
