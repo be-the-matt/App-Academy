@@ -1,0 +1,1527 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf610
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Georgia;\f2\fmodern\fcharset0 Courier;
+\f3\fnil\fcharset0 Consolas;\f4\fnil\fcharset0 Menlo-Regular;\f5\fnil\fcharset77 ZapfDingbatsITC;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red0\green0\blue0;\red246\green246\blue239;
+\red34\green34\blue34;\red157\green101\blue255;\red224\green213\blue97;\red100\green108\blue125;\red10\green92\blue255;
+\red88\green209\blue235;\red152\green224\blue36;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c0\c0\c0\c7451;\cssrgb\c97255\c97255\c94902;
+\cssrgb\c17647\c17647\c17647;\cssrgb\c68235\c50588\c100000;\cssrgb\c90196\c85882\c45490;\cssrgb\c46667\c50196\c56471;\cssrgb\c0\c46667\c100000;
+\cssrgb\c40000\c85098\c93725;\cssrgb\c65098\c88627\c18039;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid1\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{circle\}}{\leveltext\leveltemplateid102\'01\uc0\u9702 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid201\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid3}
+{\list\listtemplateid4\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid301\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{circle\}}{\leveltext\leveltemplateid302\'01\uc0\u9702 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listname ;}\listid4}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}}
+\margl1440\margr1440\vieww11840\viewh20180\viewkind0
+\deftab720
+\pard\pardeftab720\li840\ri840\sl860\sa400\partightenfactor0
+
+\f0\b\fs72 \cf2 \expnd0\expndtw0\kerning0
+Todo Board Project\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0\fs40 \cf2 In this project, we'll be creating a Todo Board to track tasks that need to be completed. You'll be creating this entire project from scratch, no skeleton or specs!\
+We'll be writing two phases of this project, with the second expanding functionality with a refactor:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl680\sa100\partightenfactor0
+\ls1\ilvl0\cf2 \kerning1\expnd0\expndtw0 {\listtext	1.	}\expnd0\expndtw0\kerning0
+A board that manages a single todo list\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	2.	}\expnd0\expndtw0\kerning0
+A board that manages multiple todo lists with extended features for lists and items\
+\pard\pardeftab720\li840\ri840\sl720\sa400\partightenfactor0
+
+\f0\b\fs60 \cf2 \
+Background\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0\fs40 \cf2 Let's go over the basic structure of our application, a\'a0
+\f2 \cb3 TodoBoard
+\f1 \cb1 . We expect a single "user" to have their own\'a0
+\f2 \cb3 TodoBoard
+\f1 \cb1 . In it's final form, a\'a0
+\f2 \cb3 TodoBoard
+\f1 \cb1 \'a0can contain many\'a0
+\f2 \cb3 List
+\f1 \cb1 s. For example, perhaps a user wants one list to track bugs that they must fix in a program and another list to track things to pick up at the grocery store. A\'a0
+\f2 \cb3 List
+\f1 \cb1 \'a0can contain many\'a0
+\f2 \cb3 Item
+\f1 \cb1 s. A single\'a0
+\f2 \cb3 Item
+\f1 \cb1 \'a0represents a task to be done. For example, the previously mentioned grocery store list may have an\'a0
+\f2 \cb3 Item
+\f1 \cb1 \'a0reminding the user to buy cheese.\
+Begin by creating a\'a0
+\f2 \cb3 todo_board
+\f1 \cb1 \'a0directory to house your project. This will be our working directory. Create the following files:\
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f3\fs32 \cf4 \cb5 todo_board/\
+\uc0\u9500 \u9472 \u9472  item.rb\
+\uc0\u9500 \u9472 \u9472  list.rb\
+\uc0\u9492 \u9472 \u9472  todo_board.rb\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\fs40 \cf2 \cb1 We'll produce our code in a bottom-up fashion, this means we'll begin with the "smallest" component first. In the instructions below, we'll use\'a0
+\f2 \cb3 ::method_name
+\f1 \cb1 \'a0to refer to class methods and\'a0
+\f2 \cb3 #method_name
+\f1 \cb1 \'a0to refer to instance methods.\
+\pard\pardeftab720\li840\ri840\sl720\sa400\partightenfactor0
+
+\f0\b\fs60 \cf2 Phase 1: One true list\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0\fs40 \cf2 Our first iteration of this project will have the\'a0
+\f2 \cb3 TodoBoard
+\f1 \cb1 \'a0only manage a single\'a0
+\f2 \cb3 List
+\f1 \cb1 \'a0which contains many\'a0
+\f2 \cb3 Item
+\f1 \cb1 s.\
+\pard\pardeftab720\li840\ri840\sl560\sa400\partightenfactor0
+
+\f0\b\fs48 \cf2 Item\
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\fs40 \cf2 Item::valid_date?(date_string)\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 This method should accept a string and return a boolean indicating if it is valid date of the form\'a0
+\f2 \cb3 YYYY-MM-DD
+\f1 \cb1 \'a0where\'a0
+\f2 \cb3 Y
+\f1 \cb1 ,\'a0
+\f2 \cb3 M
+\f1 \cb1 , and\'a0
+\f2 \cb3 D
+\f1 \cb1 \'a0are numbers, such as\'a0
+\f2 \cb3 1912-06-23
+\f1 \cb1 . The month should be a number from 1 to 12 and the day should be a number from 1 to 31. Here are examples of the expected behavior:\
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f4\fs32 \cf6 \cb5 Item\cf4 .
+\f3 valid_date
+\f4 ?(\cf7 '2019-10-25'\cf4 )
+\f3  
+\f4 \cf8 # true
+\f3 \cf4 \
+
+\f4 \cf6 Item\cf4 .
+\f3 valid_date
+\f4 ?(\cf7 '1912-06-23'\cf4 )
+\f3  
+\f4 \cf8 # true
+\f3 \cf4 \
+
+\f4 \cf6 Item\cf4 .
+\f3 valid_date
+\f4 ?(\cf7 '2018-13-20'\cf4 )
+\f3  
+\f4 \cf8 # false
+\f3 \cf4 \
+
+\f4 \cf6 Item\cf4 .
+\f3 valid_date
+\f4 ?(\cf7 '2018-12-32'\cf4 )
+\f3  
+\f4 \cf8 # false
+\f3 \cf4 \
+
+\f4 \cf6 Item\cf4 .
+\f3 valid_date
+\f4 ?(\cf7 '10-25-2019'\cf4 )
+\f3  
+\f4 \cf8 # false
+\f3 \cf4 \
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\fs40 \cf2 \cb1 For simplicity, we'll be using well-formed strings to represent our dates. However, if we were building this application for real users, then we would use a more robust solution like Ruby's\'a0{\field{\*\fldinst{HYPERLINK "https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html"}}{\fldrslt \cf9 Date}}\'a0objects. This would allow us to implement advanced features like time of day, timezone, and other niceties. We'll save that battle for another day.\
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b \cf2 Item#initialize(title, deadline, description)\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 This method should accept a title, deadline, and a description as arguments. These three pieces of data should be stored as instance variables of an\'a0
+\f2 \cb3 Item
+\f1 \cb1 . If the deadline is not a valid date, raise an error.\
+For example, here are examples of two items being created successfully and one invalid item:\
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f4\fs32 \cf6 \cb5 Item\cf4 .\cf10 new\cf4 (\cf7 'Fix login page'\cf4 ,
+\f3  
+\f4 \cf7 '2019-10-25'\cf4 ,
+\f3  
+\f4 \cf7 'The page loads too slow.'\cf4 )
+\f3 \
+\
+
+\f4 \cf6 Item\cf4 .\cf10 new\cf4 (
+\f3 \
+    
+\f4 \cf7 'Buy Cheese'\cf4 ,
+\f3 \
+    
+\f4 \cf7 '2019-10-21'\cf4 ,
+\f3 \
+    
+\f4 \cf7 'We require American, Swiss, Feta, and Mozzarella cheese for the Happy hour!'
+\f3 \cf4 \
+
+\f4 )
+\f3 \
+\
+
+\f4 \cf6 Item\cf4 .\cf10 new\cf4 (
+\f3 \
+    
+\f4 \cf7 'Fix checkout page'\cf4 ,
+\f3 \
+    
+\f4 \cf7 '10-25-2019'\cf4 ,
+\f3 \
+    
+\f4 \cf7 'The font is too small.'
+\f3 \cf4 \
+
+\f4 )
+\f3  
+\f4 \cf8 # raises error due to invalid date
+\f3 \cf4 \
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b\fs40 \cf2 \cb1 \
+Item#title\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 This method should return the item's title.\
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b \cf2 Item#title=(new_title)\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 This method should set the item's title.\
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b \cf2 Item#deadline\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 This method should return the item's deadline.\
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b \cf2 Item#deadline=(new_deadline)\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 This method should set the item's deadline. However, if the new deadline is not a valid date, then it should raise an error and not change the deadline.\
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b \cf2 Item#description\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 This method should return the item's description.\
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b \cf2 Item#description=(new_description)\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 This method should set the item's description.\
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b \cf2 Checkpoint - Using pry to test\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 At this point we've written all the methods we'll need for an item. Before moving on, we should test our work to avoid accumulating a deficit of buggy code that will be difficult to fix later. Let's use pry to test our work quickly.\
+You should\'a0
+\f2 \cb3 cd
+\f1 \cb1 \'a0into the project folder and run pry. Then, use\'a0
+\f2 \cb3 load 'item.rb'
+\f1 \cb1 \'a0to load your code into the environment, this should return\'a0
+\f2 \cb3 true
+\f1 \cb1 \'a0if the file was successfully loaded. From there, play around with your class by creating an instance and calling some methods on it! If you edit the file you are going to have to load it into the environment again.\
+Here is how we can\'a0
+\i begin
+\i0 \'a0to test our items, but you should be more thorough:\
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f3\fs32 \cf4 \cb5 [1] pry(main)> load 'item.rb'\
+=> true\
+\
+[2] pry(main)> my_item = Item.new('Fix login page', '2019-10-42', 'It loads slow.')\
+RuntimeError: deadline is not valid\
+\
+[3] pry(main)> my_item = Item.new('Fix login page', '2019-10-22', 'It loads slow.')\
+=> #<Item:0x\
+        @deadline="2019-10-22",\
+        @description="It loads slow.",\
+        @title="Fix login page">\
+\
+[4] pry(main)> my_item.title\
+=> "Fix login page"\
+\
+[5] pry(main)> my_item.description = 'It loads waaaaaay too slow!'\
+=> "It loads waaaaaay too slow!"\
+\
+[6] pry(main)> my_item\
+=> #<Item:0x\
+        @deadline="2019-10-22",\
+        @description="It loads waaaaaay too slow!",\
+        @title="Fix login page">\
+\
+[7] pry(main)> my_item.deadline = "10-23-2019"\
+RuntimeError: deadline is not valid\
+\
+[8] pry(main)> my_item.deadline\
+=> "2019-10-22"\
+\
+[9] pry(main)> my_item.deadline = "2019-10-23"\
+=> "2019-10-23"\
+\
+[10] pry(main)> my_item.deadline\
+=> "2019-10-23"\
+\
+[11] pry(main)> my_item\
+=> #<Item:0x\
+    @deadline="2019-10-23",\
+    @description="It loads waaaaaay too slow!",\
+     @title="Fix login page">\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\fs40 \cf2 \cb1 As you work through the rest of this project, be sure to test your code often and not just when we tell you to!\
+\pard\pardeftab720\li840\ri840\sl560\sa400\partightenfactor0
+
+\f0\b\fs48 \cf2 List\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0\fs40 \cf2 An instance of\'a0
+\f2 \cb3 List
+\f1 \cb1 \'a0may contain many items. To do this, our\'a0
+\f2 \cb3 List
+\f1 \cb1 \'a0will have an underlying array. A list will also have a label.\
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b \cf2 List#initialize(label)\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 This method should accept a label as an argument and store the label of the list as an instance variable. Also initialize instance variable called\'a0
+\f2 \cb3 items
+\f1 \cb1 \'a0to an empty array. The array will eventually contain instances of
+\f2 \cb3 Item
+\f1 \cb1 .\
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b \cf2 List#label\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 This method should return the list's label.\
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b \cf2 list#label=(new_label)\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 This method should set the list's label.\
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b \cf2 List#add_item(title, deadline, description)\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 This method should accept a title, deadline, and optional description as arguments. This method should create a new\'a0
+\f2 \cb3 Item
+\f1 \cb1 \'a0with the given information and add it to the end of the\'a0
+\f2 \cb3 items
+\f1 \cb1 \'a0array. When no description is passed in, the new item should have an empty description. If the given deadline is not valid, then no item should be added and the method should return\'a0
+\f2 \cb3 false
+\f1 \cb1 . If the item is successfully added, then the method should return\'a0
+\f2 \cb3 true
+\f1 \cb1 . Don't forget to require your 'item.rb' file into 'list.rb'.\
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b \cf2 List#size\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 This method should return the number of items currently in the list.\
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b \cf2 List#valid_index?(index)\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 This method should return a boolean indicating whether or not the given number is a valid position in the list. The first item of the list has index 0, the second item has index 1, and so on. A number is not a valid index if it is negative or too large given the current amount of items in the list.\
+Here's some food for thought. This method is similar to\'a0
+\f2 \cb3 Item::valid_date?
+\f1 \cb1 . However, why did we decide to make\'a0
+\f2 \cb3 Item::valid_date?
+\f1 \cb1 \'a0a class method but\'a0
+\f2 \cb3 List#valid_index?
+\f1 \cb1 \'a0an instance method? The reason is that\'a0
+\f2 \cb3 #valid_index?
+\f1 \cb1 \'a0requires knowledge about a specific\'a0
+\f2 \cb3 List
+\f1 \cb1 \'a0instance. That is, an index may be valid or invalid depending on the size of the list it is to be used on. On the flip side,\'a0
+\f2 \cb3 valid_date?
+\f1 \cb1 \'a0does not require any knowledge of a specific\'a0
+\f2 \cb3 Item
+\f1 \cb1 . That is, we do not need to know any information about any item to know if the date is formatted correctly. Ah, such practical design decisions!\
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b \cf2 List#swap(index_1, index_2)\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 This method should swap the position of the items at the given indices in the list. If either index is invalid, then don't swap any items and return\'a0
+\f2 \cb3 false
+\f1 \cb1 . If the indices are valid, then swap the items and return\'a0
+\f2 \cb3 true
+\f1 \cb1 .\
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b \cf2 Bracket method for list\'a0
+\f2\b0 \cb3 List#[](index)
+\f0\b \cb1 \
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 This method should return the item of the list that is stored at the given index. If the index is invalid, then return\'a0
+\f2 \cb3 nil
+\f1 \cb1 . It is important that we define access to items of the list with a custom bracket method and not expose a reader or writer for the instance variable directly (
+\f2 \cb3 @items
+\f1 \cb1 ). This is to prevent a user from manually manipulating the list in silly ways, like adding non\'a0
+\f2 \cb3 Item
+\f1 \cb1 \'a0instances to the list or having empty entries in the list. We encourage users to only manipulate the list according to the rules and methods that\'a0
+\i we
+\i0 \'a0have defined.\
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b \cf2 List#priority\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 This method should return the item at the the top of the list.\
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b \cf2 Checkpoint - Basic list functionality\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 At this point, we have written a few methods that are critical to our application. Let's test these thoroughly in pry before moving on. As always, here are some basic scenarios that we used to test our\'a0
+\f2 \cb3 List
+\f1 \cb1 , but you should be more exhaustive:\
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f3\fs32 \cf4 \cb5 [1] pry(main)> load 'list.rb'\
+=> true\
+\
+[2] pry(main)> my_list = List.new('Groceries')\
+=> #<List:0x @items=[], @label="Groceries">\
+\
+[3] pry(main)> my_list.size\
+=> 0\
+\
+[4] pry(main)> my_list.add_item('cheese', '2019-10-25', 'Get American and Feta for good measure.')\
+=> true\
+\
+[5] pry(main)> my_list.add_item('toothpaste', '2019-10-25')\
+=> true\
+\
+[6] pry(main)> my_list.add_item('shampoo', '10-24-2019') # invalid date\
+=> false\
+\
+[7] pry(main)> my_list.add_item('shampoo', '2019-10-24')\
+=> true\
+\
+[8] pry(main)> my_list.add_item('candy', '2019-10-31', '4 bags should be enough')\
+=> true\
+\
+[9] pry(main)> my_list\
+=> #<List:0x\
+ @items=\
+  [#<Item:0x @title="cheese", @deadline="2019-10-25", @description="Get American and Feta for good measure.">,\
+   #<Item:0x @title="toothpaste", @deadline="2019-10-25", @description="">,\
+   #<Item:0x @title="shampoo", @deadline="2019-10-24", @description="">,\
+   #<Item:0x @title="candy", @deadline="2019-10-31", @description="4 bags should be enough">],\
+ @label="Groceries">\
+\
+[10] pry(main)> my_list.size\
+=> 4\
+\
+[11] pry(main)> my_list.priority\
+=> #<Item:0x @title="cheese", @deadline="2019-10-25", @description="Get American and Feta for good measure.">\
+\
+[12] pry(main)> my_list.swap(0,  2)\
+=> true\
+\
+[13] pry(main)> my_list.priority\
+=> #<Item:0x @title="shampoo", @deadline="2019-10-24", @description="">\
+\
+[14] pry(main)> my_list\
+=> #<List:0x\
+ @items=\
+  [#<Item:0x @title="shampoo", @deadline="2019-10-24", @description="">,\
+   #<Item:0x @title="toothpaste", @deadline="2019-10-25", @description="">,\
+   #<Item:0x @title="cheese", @deadline="2019-10-25", @description="Get American and Feta for good measure.">,\
+   #<Item:0x @title="candy", @deadline="2019-10-31", @description="4 bags should be enough">],\
+ @label="Groceries">\
+\
+[15] pry(main)> my_list.swap(1,  7) # invalid index 7\
+=> false\
+\
+[16] pry(main)> my_list[1]\
+=> #<Item:0x @title="toothpaste", @deadline="2019-10-25", @description="">\
+\
+[17] pry(main)> my_list[3]\
+=> #<Item:0x @title="candy", @deadline="2019-10-31", @description="4 bags should be enough">\
+\
+[18] pry(main)> my_list.swap(1,  3)\
+=> true\
+\
+[19] pry(main)> my_list[1]\
+=> #<Item:0x @title="candy", @deadline="2019-10-31", @description="4 bags should be enough">\
+\
+[20] pry(main)> my_list[3]\
+=> #<Item:0x @title="toothpaste", @deadline="2019-10-25", @description="">\
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b\fs40 \cf2 \cb1 \
+List#print\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 This method should print the label of the list and each item's title and deadline. For usability, also print the position of each item in the list. For example, here is a nice way to format the output:\
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f3\fs32 \cf4 \cb5 ------------------------------------------\
+                GROCERIES\
+------------------------------------------\
+Index | Item                 | Deadline\
+------------------------------------------\
+0     | cheese               | 2019-10-25\
+1     | toothpaste           | 2019-10-25\
+2     | shampoo              | 2019-10-24\
+3     | candy                | 2019-10-31\
+------------------------------------------\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\fs40 \cf2 \cb1 You don't need to spend too much time making the formatting pretty like we did above. However, if you are interested, we used\'a0{\field{\*\fldinst{HYPERLINK "https://ruby-doc.org/core-2.2.0/String.html#method-i-ljust"}}{\fldrslt \cf9 String#ljust}}\'a0to pad strings with spaces to ensure that the columns have equal length. We also used\'a0{\field{\*\fldinst{HYPERLINK "http://ruby-for-beginners.rubymonstas.org/bonus/string_interpolation.html"}}{\fldrslt \cf9 string interpolation}}\'a0to avoid tedious concatenations.\
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b \cf2 List#print_full_item(index)\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 This method should print all information for the item at the given index, including the title, deadline, and description. The method should not print anything if the index not valid. Here is how we formatted our output for\'a0
+\f2 \cb3 #print_full_item
+\f1 \cb1 :\
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f3\fs32 \cf4 \cb5 ------------------------------------------\
+candy                           2019-10-31\
+4 bags should be enough\
+------------------------------------------\
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b\fs40 \cf2 \cb1 \
+List#print_priority\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 The method should print all information for the item at the top of the list.\
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b \cf2 List#up(index, amount)\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 This method should move the item at the given index up the list by continually swapping it with the item directly above it the given amount of times. If the given index is not valid, then it should return false without modifying the list. If the index is valid, then it should return true. When the specified item needs to move up further, but is already at the top of the list, then it should remain at the top. If an amount is not passed in, then move the item up 1 position.\
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b \cf2 List#down(index, amount)\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 This method should move the item at the given index down the list by continually swapping it with the item directly below it the given amount of times. If the given index is not valid, then it should return false without modifying the list. If the index is valid, then it should should return true. When the specified item needs to move down further, but is already at the bottom of the list, then it should remain at the bottom. If an amount is not passed in, then move the item down 1 position.\
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b \cf2 Checkpoint - Up, down, all around\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 The last few methods required some complex logic. Let's verify their functionality in pry before we go any further down the rabbit hole. Create a list with some items and try moving them around with\'a0
+\f2 \cb3 #up
+\f1 \cb1 \'a0and\'a0
+\f2 \cb3 #down
+\f1 \cb1 , use\'a0
+\f2 \cb3 #print
+\f1 \cb1 \'a0frequently to check the outcome. Here is how we began to test our list:\
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f3\fs32 \cf4 \cb5 [1] pry(main)> load 'list.rb'\
+=> true\
+\
+[2] pry(main)> l = List.new('Groceries')\
+=> #<List:0x00007fac66bedf38 @items=[], @label="Groceries">\
+\
+[3] pry(main)> l.add_item('cheese', '2019-10-25')\
+=> true\
+\
+[4] pry(main)> l.add_item('toothpaste', '2019-10-25')\
+=> true\
+\
+[5] pry(main)> l.add_item('shampoo', '2019-10-24')\
+=> true\
+\
+[6] pry(main)> l.add_item('candy', '2019-10-31')\
+=> true\
+\
+[7] pry(main)> l.print\
+------------------------------------------\
+                GROCERIES\
+------------------------------------------\
+Index | Item                 | Deadline\
+------------------------------------------\
+0     | cheese               | 2019-10-25\
+1     | toothpaste           | 2019-10-25\
+2     | shampoo              | 2019-10-24\
+3     | candy                | 2019-10-31\
+------------------------------------------\
+=> nil\
+\
+[8] pry(main)> l.down(0)\
+=> true\
+\
+[9] pry(main)> l.print\
+------------------------------------------\
+                GROCERIES\
+------------------------------------------\
+Index | Item                 | Deadline\
+------------------------------------------\
+0     | toothpaste           | 2019-10-25\
+1     | cheese               | 2019-10-25\
+2     | shampoo              | 2019-10-24\
+3     | candy                | 2019-10-31\
+------------------------------------------\
+=> nil\
+\
+[10] pry(main)> l.down(0, 2)\
+=> true\
+\
+[11] pry(main)> l.print\
+------------------------------------------\
+                GROCERIES\
+------------------------------------------\
+Index | Item                 | Deadline\
+------------------------------------------\
+0     | cheese               | 2019-10-25\
+1     | shampoo              | 2019-10-24\
+2     | toothpaste           | 2019-10-25\
+3     | candy                | 2019-10-31\
+------------------------------------------\
+=> nil\
+\
+[12] pry(main)> l.up(3, 10)\
+=> true\
+\
+[13] pry(main)> l.print\
+------------------------------------------\
+                GROCERIES\
+------------------------------------------\
+Index | Item                 | Deadline\
+------------------------------------------\
+0     | candy                | 2019-10-31\
+1     | cheese               | 2019-10-25\
+2     | shampoo              | 2019-10-24\
+3     | toothpaste           | 2019-10-25\
+------------------------------------------\
+=> nil\
+\
+[14] pry(main)> l.up(7, 3) # invalid index 7\
+=> false\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\fs40 \cf2 \cb1 Our lists are looking pretty great! Only one more method to implement on this class.\
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b \cf2 List#sort_by_date!\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 This method should sort the items in the list according to their deadlines. The method should mutate the list's underlying array.\
+We can use Ruby's\'a0{\field{\*\fldinst{HYPERLINK "https://ruby-doc.org/core-2.5.0/Array.html#method-i-sort_by-21"}}{\fldrslt \cf9 Array#sort_by!}}\'a0to perform this task. In general, the\'a0
+\f2 \cb3 Array#sort_by!
+\f1 \cb1 \'a0method is called on an array and will sort the array in place according to the criteria specified by the block. Here is an example:\
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f3\fs32 \cf4 \cb5 dogs 
+\f4 =
+\f3  
+\f4 [
+\f3 \
+    
+\f4 \{
+\f3 name
+\f4 :
+\f3  
+\f4 \cf7 'Dezik'\cf4 ,
+\f3  age
+\f4 :
+\f3  
+\f4 \cf6 5\cf4 \},
+\f3 \
+    
+\f4 \{
+\f3 name
+\f4 :
+\f3  
+\f4 \cf7 'Tsygan'\cf4 ,
+\f3  age
+\f4 :
+\f3  
+\f4 \cf6 6\cf4 \},
+\f3 \
+    
+\f4 \{
+\f3 name
+\f4 :
+\f3  
+\f4 \cf7 'Lisa'\cf4 ,
+\f3  age
+\f4 :
+\f3  
+\f4 \cf6 3\cf4 \}
+\f3 \
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f4 \cf4 ]
+\f3 \
+\
+dogs
+\f4 .
+\f3 sort_by
+\f4 !
+\f3  
+\f4 \{
+\f3  
+\f4 |
+\f3 dog
+\f4 |
+\f3  dog
+\f4 [\cf11 :age\cf4 ]
+\f3  
+\f4 \}
+\f3 \
+p dogs 
+\f4 \cf8 #
+\f3 \cf4 \
+
+\f4 \cf8 # [ \{:name=>"Lisa", :age=>3\},
+\f3 \cf4 \
+
+\f4 \cf8 #   \{:name=>"Dezik", :age=>5\},
+\f3 \cf4 \
+
+\f4 \cf8 #   \{:name=>"Tsygan", :age=>6\} ]
+\f3 \cf4 \
+\
+dogs
+\f4 .
+\f3 sort_by
+\f4 !
+\f3  
+\f4 \{
+\f3  
+\f4 |
+\f3 dog
+\f4 |
+\f3  dog
+\f4 [\cf11 :name\cf4 ]
+\f3  
+\f4 \}
+\f3 \
+p dogs 
+\f4 \cf8 #
+\f3 \cf4 \
+
+\f4 \cf8 # [ \{:name=>"Dezik", :age=>5\},
+\f3 \cf4 \
+
+\f4 \cf8 #   \{:name=>"Lisa", :age=>3\},
+\f3 \cf4 \
+
+\f4 \cf8 #   \{:name=>"Tsygan", :age=>6\} ]
+\f3 \cf4 \
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\fs40 \cf2 \cb1 It's worth mentioning that when the block for\'a0
+\f2 \cb3 Array#sort_by!
+\f1 \cb1 \'a0returns a number, the array will be sorted in increasing order according to those number values. When the block returns a string, the array will be sorted in "alphabetical" order according to those string values. If a string contains a numeric character, it can still be interpreted as having an "alphabetical" order. That is, the character '1' comes before the character '2', alphabetically.\
+Up until this point, we've been very strict in enforcing what strings are stored as deadlines in our items. Now we get reap the benefit! Here is how your method might behave:\
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f3\fs32 \cf4 \cb5 [1] pry(main)> load 'list.rb'\
+=> true\
+\
+[2] pry(main)> l = List.new('Groceries')\
+=> #<List:0x @items=[], @label="Groceries">\
+\
+[3] pry(main)> l.add_item('cheese', '2019-10-25')\
+=> true\
+\
+[4] pry(main)> l.add_item('toothpaste', '2019-10-25')\
+=> true\
+\
+[5] pry(main)> l.add_item('shampoo', '2019-10-24')\
+=> true\
+\
+[6] pry(main)> l.add_item('candy', '2019-10-31')\
+=> true\
+\
+[7] pry(main)> l.print\
+------------------------------------------\
+                GROCERIES\
+------------------------------------------\
+Index | Item                 | Deadline\
+------------------------------------------\
+0     | cheese               | 2019-10-25\
+1     | toothpaste           | 2019-10-25\
+2     | shampoo              | 2019-10-24\
+3     | candy                | 2019-10-31\
+------------------------------------------\
+=> nil\
+\
+[8] pry(main)> l.sort_by_date!\
+=> [#<Item:0x @deadline="2019-10-24", @description="", @title="shampoo">,\
+ #<Item:0x @deadline="2019-10-25", @description="", @title="cheese">,\
+ #<Item:0x @deadline="2019-10-25", @description="", @title="toothpaste">,\
+ #<Item:0x @deadline="2019-10-31", @description="", @title="candy">]\
+\
+[9] pry(main)> l.print\
+------------------------------------------\
+                GROCERIES\
+------------------------------------------\
+Index | Item                 | Deadline\
+------------------------------------------\
+0     | shampoo              | 2019-10-24\
+1     | cheese               | 2019-10-25\
+2     | toothpaste           | 2019-10-25\
+3     | candy                | 2019-10-31\
+------------------------------------------\
+=> nil\
+\pard\pardeftab720\li840\ri840\sl560\sa400\partightenfactor0
+
+\f0\b\fs48 \cf2 \cb1 \
+TodoBoard\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0\fs40 \cf2 This is where things comes together. The\'a0
+\f2 \cb3 TodoBoard
+\f1 \cb1 \'a0class will be responsible for receiving user input and performing the correct action on the stored list. In this phase of the app, the board will only manage a single list. Because of this, you may find it trivial to implement these board methods since they simply delegate responsibility to the list methods. We design it in this way in order to have an extensible class that we can easily refactor for more features in phase two.\
+You should be using many\'a0
+\f2 \cb3 List
+\f1 \cb1 \'a0methods in the following steps. There is a method to the madness!\
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b \cf2 TodoBoard#initialize(label)\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 For now, a\'a0
+\f2 \cb3 TodoBoard
+\f1 \cb1 \'a0will only need create a single\'a0
+\f2 \cb3 List
+\f1 \cb1 \'a0with the given label and store it as an instance variable.\
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b \cf2 TodoBoard#get_command\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 This method should prompt the user to enter a command and perform the appropriate action on the list. The user may enter any of the following commands with arguments separated with spaces:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl680\sa100\partightenfactor0
+\ls2\ilvl0
+\f2 \cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+mktodo <title> <deadline> <optional description>\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sl680\sa100\partightenfactor0
+\ls2\ilvl1
+\f1 \cf2 \cb1 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+makes a todo with the given information\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl680\sa100\partightenfactor0
+\ls2\ilvl0
+\f2 \cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+up <index> <optional amount>\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sl680\sa100\partightenfactor0
+\ls2\ilvl1
+\f1 \cf2 \cb1 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+raises the todo up the list\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl680\sa100\partightenfactor0
+\ls2\ilvl0
+\f2 \cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+down <index> <optional amount>\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sl680\sa100\partightenfactor0
+\ls2\ilvl1
+\f1 \cf2 \cb1 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+lowers the todo down the list\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl680\sa100\partightenfactor0
+\ls2\ilvl0
+\f2 \cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+swap <index_1> <index_2>\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sl680\sa100\partightenfactor0
+\ls2\ilvl1
+\f1 \cf2 \cb1 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+swaps the position of todos\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl680\sa100\partightenfactor0
+\ls2\ilvl0
+\f2 \cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+sort\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sl680\sa100\partightenfactor0
+\ls2\ilvl1
+\f1 \cf2 \cb1 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+sorts the todos by date\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl680\sa100\partightenfactor0
+\ls2\ilvl0
+\f2 \cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+priority\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sl680\sa100\partightenfactor0
+\ls2\ilvl1
+\f1 \cf2 \cb1 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+prints the todo at the top of the list\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl680\sa100\partightenfactor0
+\ls2\ilvl0
+\f2 \cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+print <optional index>\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sl680\sa100\partightenfactor0
+\ls2\ilvl1
+\f1 \cf2 \cb1 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+prints all todos if no index is provided\
+\ls2\ilvl1\kerning1\expnd0\expndtw0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+prints full information of the specified todo if an index is provided\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl680\sa100\partightenfactor0
+\ls2\ilvl0
+\f2 \cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+quit\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sl680\sa100\partightenfactor0
+\ls2\ilvl1
+\f1 \cf2 \cb1 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+returns false\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+\cf2 For every command except\'a0
+\f2 \cb3 quit
+\f1 \cb1 , the method should return true after performing the command. We will leverage this boolean later to control if we should ask the user for another command or exit.\
+We recommend you use the splat operator\'a0
+\f2 \cb3 *
+\f1 \cb1 \'a0to easily handle the variable number of user arguments. We'll also require a lot of conditional logic to implement the command handling. For scenarios like this, using a\'a0{\field{\*\fldinst{HYPERLINK "https://ruby-doc.org/docs/keywords/1.9/Object.html#method-i-case"}}{\fldrslt \cf9 case statement}}\'a0is much more preferable than a verbose chain of elsifs. For example, here is how we might write a partial\'a0
+\f2 \cb3 #get_command
+\f1 \cb1 \'a0that only supports\'a0
+\f2 \cb3 mktodo
+\f1 \cb1 \'a0and\'a0
+\f2 \cb3 quit
+\f1 \cb1 :\
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f4\fs32 \cf10 \cb5 class
+\f3 \cf4  
+\f4 \cf11 TodoBoard
+\f3 \cf4 \
+    
+\f4 \cf8 # ...
+\f3 \cf4 \
+    
+\f4 \cf10 def
+\f3 \cf4  
+\f4 \cf11 get_command
+\f3 \cf4 \
+        print 
+\f4 \cf7 "\\nEnter a command: "
+\f3 \cf4 \
+        cmd
+\f4 ,
+\f3  
+\f4 *
+\f3 args 
+\f4 =
+\f3  gets
+\f4 .
+\f3 chomp
+\f4 .
+\f3 split
+\f4 (\cf7 ' '\cf4 )
+\f3 \
+\
+        
+\f4 \cf10 case
+\f3 \cf4  cmd\
+        
+\f4 \cf10 when
+\f3 \cf4  
+\f4 \cf7 'mktodo'
+\f3 \cf4 \
+            
+\f4 @list.
+\f3 add_item
+\f4 (*
+\f3 args
+\f4 )
+\f3 \
+        
+\f4 \cf10 when
+\f3 \cf4  
+\f4 \cf7 'quit'
+\f3 \cf4 \
+            
+\f4 \cf10 return
+\f3 \cf4  
+\f4 \cf10 false
+\f3 \cf4 \
+        
+\f4 \cf10 else
+\f3 \cf4 \
+            print 
+\f4 \cf7 "Sorry, that command is not recognized."
+\f3 \cf4 \
+        
+\f4 \cf10 end
+\f3 \cf4 \
+\
+        
+\f4 \cf10 true
+\f3 \cf4 \
+    
+\f4 \cf10 end
+\f3 \cf4 \
+
+\f4 \cf10 end
+\f3 \cf4 \
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\fs40 \cf2 \cb1 A small detail we can worry about later is that the user will enter their command with spaces separating their arguments. This will cause issues if they use any spaces within the text for the todo's title or description. We'll ignore this caveat for now.\
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b \cf2 TodoBoard#run\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 This method will contain our main loop that will keep prompting the user until\'a0
+\f2 \cb3 #get_command
+\f1 \cb1 \'a0returns false.\
+Use pry to test by calling\'a0
+\f2 \cb3 #run
+\f1 \cb1 \'a0on a board. Then, you can enter commands to test the app. Here is a list of commands that we entered to check out our board.\
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f3\fs32 \cf4 \cb5 mktodo cheese 2019-10-25 foooooood\
+mktodo toothpaste 2019-10-23\
+mktodo candy 2019-10-31 sugar-free\
+mktodo shampoo 2019-10-25\
+print\
+sort\
+print\
+swap 0 3\
+print\
+print 1\
+priority\
+down 0\
+print\
+up 3 2\
+print\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\fs40 \cf2 \cb1 Here is what that workflow looked like on our\'a0
+\f2 \cb3 TodoBoard
+\f1 \cb1 :\
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f3\fs32 \cf4 \cb5 [1] pry(main)> load 'todo_board.rb'\
+=> true\
+\
+[2] pry(main)> my_board = TodoBoard.new('groceries')\
+=> #<TodoBoard:0x @list=#<List:0x @items=[], @label="groceries">>\
+\
+[3] pry(main)> my_board.run\
+\
+Enter a command: mktodo cheese 2019-10-25 foooooood\
+Enter a command: mktodo toothpaste 2019-10-23\
+Enter a command: mktodo candy 2019-10-31 sugar-free\
+Enter a command: mktodo shampoo 2019-10-25\
+Enter a command: print\
+------------------------------------------\
+                GROCERIES\
+------------------------------------------\
+Index | Item                 | Deadline\
+------------------------------------------\
+0     | cheese               | 2019-10-25\
+1     | toothpaste           | 2019-10-23\
+2     | candy                | 2019-10-31\
+3     | shampoo              | 2019-10-25\
+------------------------------------------\
+\
+Enter a command: sort\
+\
+Enter a command: print\
+------------------------------------------\
+                GROCERIES\
+------------------------------------------\
+Index | Item                 | Deadline\
+------------------------------------------\
+0     | toothpaste           | 2019-10-23\
+1     | cheese               | 2019-10-25\
+2     | shampoo              | 2019-10-25\
+3     | candy                | 2019-10-31\
+------------------------------------------\
+\
+Enter a command: swap 0 3\
+\
+Enter a command: print\
+------------------------------------------\
+                GROCERIES\
+------------------------------------------\
+Index | Item                 | Deadline\
+------------------------------------------\
+0     | candy                | 2019-10-31\
+1     | cheese               | 2019-10-25\
+2     | shampoo              | 2019-10-25\
+3     | toothpaste           | 2019-10-23\
+------------------------------------------\
+\
+Enter a command: print 1\
+------------------------------------------\
+cheese                          2019-10-25\
+foooooood\
+------------------------------------------\
+\
+Enter a command: priority\
+------------------------------------------\
+candy                           2019-10-31\
+sugar-free\
+------------------------------------------\
+\
+Enter a command: lower 0\
+Sorry, that command is not recognized.\
+Enter a command: down 0\
+\
+Enter a command: print\
+------------------------------------------\
+                GROCERIES\
+------------------------------------------\
+Index | Item                 | Deadline\
+------------------------------------------\
+0     | cheese               | 2019-10-25\
+1     | candy                | 2019-10-31\
+2     | shampoo              | 2019-10-25\
+3     | toothpaste           | 2019-10-23\
+------------------------------------------\
+\
+Enter a command: up 3 2\
+\
+Enter a command: print\
+------------------------------------------\
+                GROCERIES\
+------------------------------------------\
+Index | Item                 | Deadline\
+------------------------------------------\
+0     | cheese               | 2019-10-25\
+1     | toothpaste           | 2019-10-23\
+2     | candy                | 2019-10-31\
+3     | shampoo              | 2019-10-25\
+------------------------------------------\
+\
+Enter a command: printerino\
+Sorry, that command is not recognized.\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\fs40 \cf2 \cb1 You should take a moment to test all of the different commands on your board.\'a0
+\b You must have a fully working Phase 1 before moving onto Phase 2. Otherwise, you are going to have a bad time.
+\b0 \
+\pard\pardeftab720\li840\ri840\sl720\sa400\partightenfactor0
+
+\f0\b\fs60 \cf2 Phase 2: So little time, so much todo\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0\fs40 \cf2 In this phase of the project, we'll refactor our code to support the following features:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl680\sa100\partightenfactor0
+\ls3\ilvl0\cf2 \kerning1\expnd0\expndtw0 {\listtext	1.	}\expnd0\expndtw0\kerning0
+marking items as done\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 {\listtext	2.	}\expnd0\expndtw0\kerning0
+deleting items\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 {\listtext	3.	}\expnd0\expndtw0\kerning0
+managing multiple lists in a single board\
+\pard\pardeftab720\li840\ri840\sl560\sa400\partightenfactor0
+
+\f0\b\fs48 \cf2 \
+Extending items and lists\
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\fs40 \cf2 Item#initialize(title, deadline, description)\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 Refactor this existing method to also initialize a boolean instance variable to track whether or not the item is "done". An item should be not "done" by default.\
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b \cf2 Item#toggle, List#toggle_item(index)\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 This new method should "flip" the current state the item. That is, if the item is done, then change it to not done; if it is not done, then change it to done.\
+Don't expose a writer method for the instance variable that tracks the done state. We want to properly encapsulate all of the data within an item. Imagine that the user is out to break your program! If they could write to the instance variable, they could assign it to some non-boolean value. Encapsulation means that the user can only manipulate the data in ways that the\'a0
+\i programmer
+\i0 \'a0intends.\
+We need to fully integrate this new feature into our app. Create a corresponding\'a0
+\f2 \cb3 List#toggle_item(index)
+\f1 \cb1 \'a0and modify\'a0
+\f2 \cb3 TodoBoard#get_command
+\f1 \cb1 \'a0to allow a user to utilize this new feature with the input command\'a0
+\f2 \cb3 toggle <index>
+\f1 \cb1 .\
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b \cf2 List#print, #print_full, #print_priority\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 Since our items contains a new field, update the output of these methods to also print out a column indicating whether or not the item is done.\
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b \cf2 List#remove_item(index)\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 This method should permanently delete the item of the list at the given index. If the index is invalid, the method should return false. If the deletion is successful, then the method should return true. Implement this method so that there are no awkward gaps in the list after an item is removed. Allow a user to utilize this new feature by supporting the input command\'a0
+\f2 \cb3 rm <index>
+\f1 \cb1 .\
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b \cf2 List#purge\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 This method should remove all items that are currently marked as done. Correctly implementing this may be tricky.\
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b \cf2 Checkpoint - Are we "done" yet?\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 You know the drill. Test your code thoroughly before moving forward! Here is how we tested ours:\
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f3\fs32 \cf4 \cb5 [1] pry(main)> import 'todo_board.rb'\
+[2] pry(main)> my_board = TodoBoard.new('cool-tech-to-learn')\
+=> #<TodoBoard:0x\
+ @list=\
+  #<List:0x\
+   @items=[],\
+   @label="cool-tech-to-learn">>\
+[3] pry(main)> my_board.run\
+\
+Enter a command: mktodo ruby 2019-12-04\
+Enter a command: mktodo sql 2019-12-20\
+Enter a command: mktodo rails 2020-01-06\
+Enter a command: mktodo javascript 2020-01-08\
+Enter a command: mktodo react 2020-02-08\
+Enter a command: mktodo redux 2020-02-15\
+Enter a command: print\
+-------------------------------------------------\
+                COOL-TECH-TO-LEARN\
+-------------------------------------------------\
+Index | Item                 | Deadline   | Done\
+-------------------------------------------------\
+0     | ruby                 | 2019-12-04 | [ ]\
+1     | sql                  | 2019-12-20 | [ ]\
+2     | rails                | 2020-01-06 | [ ]\
+3     | javascript           | 2020-01-08 | [ ]\
+4     | react                | 2020-02-08 | [ ]\
+5     | redux                | 2020-02-15 | [ ]\
+-------------------------------------------------\
+\
+Enter a command: toggle 0\
+\
+Enter a command: print 0\
+-------------------------------------------------\
+ruby                            2019-12-04    [
+\f5 \uc0\u10003 
+\f3 ]\
+\
+-------------------------------------------------\
+\
+Enter a command: toggle 0\
+\
+Enter a command: print\
+-------------------------------------------------\
+                COOL-TECH-TO-LEARN\
+-------------------------------------------------\
+Index | Item                 | Deadline   | Done\
+-------------------------------------------------\
+0     | ruby                 | 2019-12-04 | [ ]\
+1     | sql                  | 2019-12-20 | [ ]\
+2     | rails                | 2020-01-06 | [ ]\
+3     | javascript           | 2020-01-08 | [ ]\
+4     | react                | 2020-02-08 | [ ]\
+5     | redux                | 2020-02-15 | [ ]\
+-------------------------------------------------\
+\
+Enter a command: toggle 0\
+\
+Enter a command: toggle 2\
+\
+Enter a command: toggle 3\
+\
+Enter a command: print\
+-------------------------------------------------\
+                COOL-TECH-TO-LEARN\
+-------------------------------------------------\
+Index | Item                 | Deadline   | Done\
+-------------------------------------------------\
+0     | ruby                 | 2019-12-04 | [
+\f5 \uc0\u10003 
+\f3 ]\
+1     | sql                  | 2019-12-20 | [ ]\
+2     | rails                | 2020-01-06 | [
+\f5 \uc0\u10003 
+\f3 ]\
+3     | javascript           | 2020-01-08 | [
+\f5 \uc0\u10003 
+\f3 ]\
+4     | react                | 2020-02-08 | [ ]\
+5     | redux                | 2020-02-15 | [ ]\
+-------------------------------------------------\
+\
+Enter a command: rm 4\
+\
+Enter a command: print\
+-------------------------------------------------\
+                COOL-TECH-TO-LEARN\
+-------------------------------------------------\
+Index | Item                 | Deadline   | Done\
+-------------------------------------------------\
+0     | ruby                 | 2019-12-04 | [
+\f5 \uc0\u10003 
+\f3 ]\
+1     | sql                  | 2019-12-20 | [ ]\
+2     | rails                | 2020-01-06 | [
+\f5 \uc0\u10003 
+\f3 ]\
+3     | javascript           | 2020-01-08 | [
+\f5 \uc0\u10003 
+\f3 ]\
+4     | redux                | 2020-02-15 | [ ]\
+-------------------------------------------------\
+\
+Enter a command: purge\
+\
+Enter a command: print\
+-------------------------------------------------\
+                COOL-TECH-TO-LEARN\
+-------------------------------------------------\
+Index | Item                 | Deadline   | Done\
+-------------------------------------------------\
+0     | sql                  | 2019-12-20 | [ ]\
+1     | redux                | 2020-02-15 | [ ]\
+-------------------------------------------------\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\fs40 \cf2 \cb1 Play with your board for a bit. It's really coming together, huh?\
+\pard\pardeftab720\li840\ri840\sl560\sa400\partightenfactor0
+
+\f0\b\fs48 \cf2 Implementing support for multiple lists\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0\fs40 \cf2 Now it's time for the big one! We've been following some important object oriented practices up until this point and now it's time to get the pay-off. Our goal is to now manage multiple\'a0
+\f2 \cb3 List
+\f1 \cb1 s in our\'a0
+\f2 \cb3 TodoBoard
+\f1 \cb1 . Because we have separated our the logic wisely thus far, we should only have to modify our boards.\
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b \cf2 TodoBoard#initialize\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 Our board should no longer initialize with a single list. Instead, initialize a board to contain an empty hash. We will allow the user to create lists at runtime. This hash will eventually contain list labels as the keys and list instances as the values. A hash is a great choice here because keys are unique, much like how we'll want the user to refer to their different lists with unique labels.\
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b \cf2 TodoBoard#get_command\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 The entirety of this new feature has to do with how the user interfaces with their many lists, so our only task is to refactor this method. It is quite an interesting refactor though. For our existing commands, the user now needs to specify\'a0
+\b which
+\b0 \'a0list to apply the action to.\
+We'll leave it to you to refactor this method. Here are all of the commands you need to support (note that some of these are new):\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl680\sa100\partightenfactor0
+\ls4\ilvl0
+\f2 \cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+mklist <new_list_label>\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sl680\sa100\partightenfactor0
+\ls4\ilvl1
+\f1 \cf2 \cb1 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+make a new list with the given label\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl680\sa100\partightenfactor0
+\ls4\ilvl0
+\f2 \cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+ls\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sl680\sa100\partightenfactor0
+\ls4\ilvl1
+\f1 \cf2 \cb1 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+print the labels of all lists\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl680\sa100\partightenfactor0
+\ls4\ilvl0
+\f2 \cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+showall\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sl680\sa100\partightenfactor0
+\ls4\ilvl1
+\f1 \cf2 \cb1 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+print all lists\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl680\sa100\partightenfactor0
+\ls4\ilvl0
+\f2 \cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+mktodo <list_label> <item_title> <item_deadline> <optional_item_description>\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sl680\sa100\partightenfactor0
+\ls4\ilvl1
+\f1 \cf2 \cb1 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+add a new item to the specified list with the given information\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl680\sa100\partightenfactor0
+\ls4\ilvl0
+\f2 \cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+toggle <list_label> <item_index>\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sl680\sa100\partightenfactor0
+\ls4\ilvl1
+\f1 \cf2 \cb1 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+toggle "done" for the specified item on the given list\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl680\sa100\partightenfactor0
+\ls4\ilvl0
+\f2 \cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+rm <list_label> <item_index>\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sl680\sa100\partightenfactor0
+\ls4\ilvl1
+\f1 \cf2 \cb1 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+remove the specified item on the given list\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl680\sa100\partightenfactor0
+\ls4\ilvl0
+\f2 \cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+purge <list_label>\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sl680\sa100\partightenfactor0
+\ls4\ilvl1
+\f1 \cf2 \cb1 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+remove all "done" items on the given list\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl680\sa100\partightenfactor0
+\ls4\ilvl0
+\f2 \cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+up <list_label> <item_index> <optional_amount>\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sl680\sa100\partightenfactor0
+\ls4\ilvl1
+\f1 \cf2 \cb1 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+move the specified item higher on the given list\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl680\sa100\partightenfactor0
+\ls4\ilvl0
+\f2 \cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+down <list_label> <item_index> <optional_amount>\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sl680\sa100\partightenfactor0
+\ls4\ilvl1
+\f1 \cf2 \cb1 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+move the specified item higher on the given list\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl680\sa100\partightenfactor0
+\ls4\ilvl0
+\f2 \cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+swap <list_label> <item_index_1> <item_index_2>\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sl680\sa100\partightenfactor0
+\ls4\ilvl1
+\f1 \cf2 \cb1 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+swap the positions of the specified items on the given list\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl680\sa100\partightenfactor0
+\ls4\ilvl0
+\f2 \cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+sort <list_label>\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sl680\sa100\partightenfactor0
+\ls4\ilvl1
+\f1 \cf2 \cb1 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+sort the given list by deadline\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl680\sa100\partightenfactor0
+\ls4\ilvl0
+\f2 \cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+priority <list_label>\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sl680\sa100\partightenfactor0
+\ls4\ilvl1
+\f1 \cf2 \cb1 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+print the all information for the item at the top of the given list\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl680\sa100\partightenfactor0
+\ls4\ilvl0
+\f2 \cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+print <list_label> <optional_index>\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sl680\sa100\partightenfactor0
+\ls4\ilvl1
+\f1 \cf2 \cb1 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+print all items of the given list if index is not provided\
+\ls4\ilvl1\kerning1\expnd0\expndtw0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+print the specific item of the given list if index is provided\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl680\sa100\partightenfactor0
+\ls4\ilvl0
+\f2 \cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+quit
+\f1 \cb1 \
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+\cf2 Finish out your application by making it runnable outside of pry. Simply create and\'a0
+\f2 \cb3 #run
+\f1 \cb1 \'a0an instance of TodoBoard at the bottom of\'a0
+\f2 \cb3 todo_board.rb
+\f1 \cb1 . Then you can execute your app with a simple\'a0
+\f2 \cb3 ruby todo_board.rb
+\f1 \cb1 \'a0from the terminal.\
+Here is an example of our final product in action:\
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f3\fs32 \cf4 \cb5 Enter a command: mklist groceries\
+Enter a command: mklist tech\
+Enter a command: ls\
+ groceries\
+ tech\
+\
+Enter a command: mktodo groceries butter 2019-10-24\
+Enter a command: mktodo groceries milk 2019-10-23\
+Enter a command: mktodo groceries candy 2019-10-31 sugar-free\
+Enter a command: mktodo groceries toothpaste 2019-10-29\
+Enter a command: print groceries\
+-------------------------------------------------\
+                GROCERIES\
+-------------------------------------------------\
+Index | Item                 | Deadline   | Done\
+-------------------------------------------------\
+0     | butter               | 2019-10-24 | [ ]\
+1     | milk                 | 2019-10-23 | [ ]\
+2     | candy                | 2019-10-31 | [ ]\
+3     | toothpaste           | 2019-10-29 | [ ]\
+-------------------------------------------------\
+\
+Enter a command: print groceries 2\
+-------------------------------------------------\
+candy                           2019-10-31    [ ]\
+sugar-free\
+-------------------------------------------------\
+\
+Enter a command: mktodo tech ruby 2019-10-24\
+Enter a command: mktodo tech rails 2019-11-02\
+Enter a command: mktodo tech javascript 2019-11-30\
+Enter a command: showall\
+-------------------------------------------------\
+                GROCERIES\
+-------------------------------------------------\
+Index | Item                 | Deadline   | Done\
+-------------------------------------------------\
+0     | butter               | 2019-10-24 | [ ]\
+1     | milk                 | 2019-10-23 | [ ]\
+2     | candy                | 2019-10-31 | [ ]\
+3     | toothpaste           | 2019-10-29 | [ ]\
+-------------------------------------------------\
+-------------------------------------------------\
+                TECH\
+-------------------------------------------------\
+Index | Item                 | Deadline   | Done\
+-------------------------------------------------\
+0     | ruby                 | 2019-10-24 | [ ]\
+1     | rails                | 2019-11-02 | [ ]\
+2     | javascript           | 2019-11-30 | [ ]\
+-------------------------------------------------\
+\
+Enter a command: toggle groceries 1\
+Enter a command: toggle groceries 3\
+Enter a command: toggle tech 2\
+Enter a command: showall\
+-------------------------------------------------\
+                GROCERIES\
+-------------------------------------------------\
+Index | Item                 | Deadline   | Done\
+-------------------------------------------------\
+0     | butter               | 2019-10-24 | [ ]\
+1     | milk                 | 2019-10-23 | [
+\f5 \uc0\u10003 
+\f3 ]\
+2     | candy                | 2019-10-31 | [ ]\
+3     | toothpaste           | 2019-10-29 | [
+\f5 \uc0\u10003 
+\f3 ]\
+-------------------------------------------------\
+-------------------------------------------------\
+                TECH\
+-------------------------------------------------\
+Index | Item                 | Deadline   | Done\
+-------------------------------------------------\
+0     | ruby                 | 2019-10-24 | [ ]\
+1     | rails                | 2019-11-02 | [ ]\
+2     | javascript           | 2019-11-30 | [
+\f5 \uc0\u10003 
+\f3 ]\
+-------------------------------------------------\
+}
