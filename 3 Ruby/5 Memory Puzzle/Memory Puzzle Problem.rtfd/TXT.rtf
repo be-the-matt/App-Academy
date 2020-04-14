@@ -1,0 +1,332 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf610
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Georgia;\f2\fswiss\fcharset0 Helvetica-Light;
+\f3\fmodern\fcharset0 Courier;\f4\fnil\fcharset0 Consolas;\f5\fnil\fcharset0 Menlo-Regular;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red10\green92\blue255;\red0\green0\blue0;
+\red246\green246\blue239;\red34\green34\blue34;\red157\green101\blue255;\red100\green108\blue125;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c0\c46667\c100000;\cssrgb\c0\c0\c0\c7451;
+\cssrgb\c97255\c97255\c94902;\cssrgb\c17647\c17647\c17647;\cssrgb\c68235\c50588\c100000;\cssrgb\c46667\c50196\c56471;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{circle\}}{\leveltext\leveltemplateid202\'01\uc0\u9702 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listname ;}\listid3}
+{\list\listtemplateid4\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid301\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid4}
+{\list\listtemplateid5\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid401\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid5}
+{\list\listtemplateid6\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid501\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid6}
+{\list\listtemplateid7\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid601\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid7}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}{\listoverride\listid5\listoverridecount0\ls5}{\listoverride\listid6\listoverridecount0\ls6}{\listoverride\listid7\listoverridecount0\ls7}}
+\margl1440\margr1440\vieww9240\viewh15500\viewkind0
+\deftab720
+\pard\pardeftab720\li840\ri840\sl860\sa400\partightenfactor0
+
+\f0\b\fs72 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Memory Puzzle\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0\fs40 \cf2 Today we're going to implement a simple command-line version of the classic\'a0{\field{\*\fldinst{HYPERLINK "http://mypuzzle.org/find-the-pair"}}{\fldrslt \cf3 \strokec3 Match 2 memory card game}}.\
+\pard\pardeftab720\sl300\partightenfactor0
+
+\f2\fs21 \cf2 \
+\pard\pardeftab720\li840\ri840\sl720\sa400\partightenfactor0
+
+\f0\b\fs60 \cf2 Learning Goals\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl680\sa100\partightenfactor0
+\ls1\ilvl0
+\f1\b0\fs40 \cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Understand how classes interact in an object-oriented program\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Be able to use\'a0
+\f3 \cb4 require_relative
+\f1 \cb1 \
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Be able to write the methods\'a0
+\f3 \cb4 []
+\f1 \cb1 \'a0and\'a0
+\f3 \cb4 []=
+\f1 \cb1 \'a0and explain how they work\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Develop a workflow that uses pry to test small parts of your code\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Know how to initialize an Array with a default value\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Know how to use duck typing to allow different classes to interact with your program\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+\cf2 Write classes for Card, Board, and Game. Please put each class in its own file and use\'a0
+\f3 \cb4 require_relative
+\f1 \cb1 \'a0to include other files in your program.\
+\pard\pardeftab720\li840\ri840\sl720\sa400\partightenfactor0
+
+\f0\b\fs60 \cf2 Card\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0\fs40 \cf2 A Card has two useful bits of information: its face value, and whether it is face-up or face-down. You'll want instance variables to keep track of this information. You'll also want a method to display information about the card: nothing when face-down, or its value when face-up. I also wrote\'a0
+\f3 \cb4 #hide
+\f1 \cb1 ,\'a0
+\f3 \cb4 #reveal
+\f1 \cb1 ,\'a0
+\f3 \cb4 #to_s
+\f1 \cb1 , and\'a0
+\f3 \cb4 #==
+\f1 \cb1 \'a0methods.\
+Common problem: Having issues with\'a0
+\f3 \cb4 #hide
+\f1 \cb1 \'a0and\'a0
+\f3 \cb4 #reveal
+\f1 \cb1 ? Try\'a0{\field{\*\fldinst{HYPERLINK "https://open.appacademy.io/learn/full-stack-online/ruby/testing-small--from-memory-puzzle-"}}{\fldrslt \cf3 \strokec3 testing small}}.\
+\pard\pardeftab720\li840\ri840\sl720\sa400\partightenfactor0
+
+\f0\b\fs60 \cf2 Board\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0\fs40 \cf2 The Board is responsible for keeping track of all your Cards. You'll want a grid instance variable to contain Cards. Useful methods:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl680\sa100\partightenfactor0
+\ls2\ilvl0
+\f3 \cf2 \cb4 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 #populate
+\f1 \cb1 \'a0should fill the board with a set of shuffled Card pairs\
+\ls2\ilvl0
+\f3 \cb4 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 #render
+\f1 \cb1 \'a0should print out a representation of the Board's current state\
+\ls2\ilvl0
+\f3 \cb4 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 #won?
+\f1 \cb1 \'a0should return true if all cards have been revealed.\
+\ls2\ilvl0
+\f3 \cb4 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 #reveal
+\f1 \cb1 \'a0should reveal a Card at\'a0
+\f3 \cb4 guessed_pos
+\f1 \cb1 \'a0(unless it's already face-up, in which case the method should do nothing). It should also return the value of the card it revealed (you'll see why later).\
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b \cf2 \
+Parallel Assignment\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 In Ruby you can declare and assign multiple variables at once using commas to separate multiple variables and values. For example,\
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f4\fs32 \cf5 \cb6 \strokec5 x
+\f5 ,
+\f4  y
+\f5 ,
+\f4  z 
+\f5 =
+\f4  
+\f5 \cf7 \strokec7 1\cf5 \strokec5 ,
+\f4  
+\f5 \cf7 \strokec7 2\cf5 \strokec5 ,
+\f4  
+\f5 \cf7 \strokec7 3
+\f4 \cf5 \strokec5  
+\f5 \cf8 \strokec8 # x = 1, y = 2, z = 3
+\f4 \cf5 \strokec5 \
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\fs40 \cf2 \cb1 \strokec2 And if there's not the same number of variables and values?\
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f4\fs32 \cf5 \cb6 \strokec5 x
+\f5 ,
+\f4  y 
+\f5 =
+\f4  
+\f5 \cf7 \strokec7 1\cf5 \strokec5 ,
+\f4  
+\f5 \cf7 \strokec7 2\cf5 \strokec5 ,
+\f4  
+\f5 \cf7 \strokec7 3
+\f4 \cf5 \strokec5  
+\f5 \cf8 \strokec8 # x = 1, y = 2, 3 is not assigned
+\f4 \cf5 \strokec5 \
+a
+\f5 ,
+\f4  b
+\f5 ,
+\f4  c 
+\f5 =
+\f4  
+\f5 \cf7 \strokec7 10\cf5 \strokec5 ,
+\f4  
+\f5 \cf7 \strokec7 20
+\f4 \cf5 \strokec5  
+\f5 \cf8 \strokec8 # a = 10, b = 20, c = nil
+\f4 \cf5 \strokec5 \
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\fs40 \cf2 \cb1 \strokec2 When there are multiple variables assigned to an array, Ruby expands the array so that each element becomes its own value! For example,\
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f4\fs32 \cf5 \cb6 \strokec5 x
+\f5 ,
+\f4  y
+\f5 ,
+\f4  z 
+\f5 =
+\f4  
+\f5 [\cf7 \strokec7 1\cf5 \strokec5 ,
+\f4  
+\f5 \cf7 \strokec7 2\cf5 \strokec5 ,
+\f4  
+\f5 \cf7 \strokec7 3\cf5 \strokec5 ]
+\f4  
+\f5 \cf8 \strokec8 # x = 1, y = 2, z = 3
+\f4 \cf5 \strokec5 \
+a
+\f5 ,
+\f4  b
+\f5 ,
+\f4  c 
+\f5 =
+\f4  
+\f5 [\cf7 \strokec7 10\cf5 \strokec5 ,
+\f4  
+\f5 \cf7 \strokec7 20\cf5 \strokec5 ]
+\f4  
+\f5 \cf8 \strokec8 # a = 10, b = 20, c = nil
+\f4 \cf5 \strokec5 \
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\fs40 \cf2 \cb1 \strokec2 This is very helpful to use when writing\'a0
+\f3 \cb4 [](pos)
+\f1 \cb1 \'a0and\'a0
+\f3 \cb4 []=(pos, value)
+\f1 \cb1 \'a0for your Board to access\'a0
+\f3 \cb4 row
+\f1 \cb1 \'a0and\'a0
+\f3 \cb4 col
+\f1 \cb1 . Because the\'a0
+\f3 \cb4 pos
+\f1 \cb1 \'a0exists as an array, it's better to pass it as an array in a method call, relying on the method to index the array.\
+\pard\pardeftab720\li840\ri840\sl720\sa400\partightenfactor0
+
+\f0\b\fs60 \cf2 Game\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0\fs40 \cf2 The Game should have instance variable for the Board and the previously-guessed position (if any). It should also have methods for managing the Board-Player interaction. You may want a\'a0
+\f3 \cb4 play
+\f1 \cb1 \'a0loop that runs until the game is\'a0
+\f3 \cb4 over
+\f1 \cb1 . Inside the loop, you should\'a0
+\f3 \cb4 render
+\f1 \cb1 \'a0the board,\'a0
+\f3 \cb4 prompt
+\f1 \cb1 \'a0the player for input, and get a guessed\'a0
+\f3 \cb4 pos
+\f1 \cb1 . Pass this\'a0
+\f3 \cb4 pos
+\f1 \cb1 \'a0to a\'a0
+\f3 \cb4 make_guess
+\f1 \cb1 \'a0method, where you will handle the actual memory/matching logic. Some tips on implementing this:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl680\sa100\partightenfactor0
+\ls3\ilvl0\cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 If we're not already checking another Card, leave the card at\'a0
+\f3 \cb4 guessed_pos
+\f1 \cb1 \'a0face-up and update the\'a0
+\f3 \cb4 previous_guess
+\f1 \cb1 \'a0variable.\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 If we\'a0
+\b are
+\b0 \'a0checking another card, we should compare the Card at\'a0
+\f3 \cb4 guessed_pos
+\f1 \cb1 \'a0with the one at\'a0
+\f3 \cb4 previous_guess
+\f1 \cb1 .\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sl680\sa100\partightenfactor0
+\ls3\ilvl1\cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 If the cards match, we should leave them both face-up.\
+\ls3\ilvl1\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Else, flip both cards face-down.\
+\ls3\ilvl1\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 In either case, reset\'a0
+\f3 \cb4 previous_guess
+\f1 \cb1 .\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+\cf2 It wouldn't be an interesting game if the player could see their previous moves. Run\'a0
+\f3 \cb4 system("clear")
+\f1 \cb1 \'a0before\'a0
+\f3 \cb4 render
+\f1 \cb1 ing the Board. This will hide any previous output from the player.\'a0
+\f3 \cb4 sleep(n)
+\f1 \cb1 \'a0will pause the program for\'a0
+\f3 \cb4 n
+\f1 \cb1 \'a0seconds. Use this method to (temporarily) show the player an incorrect guess before flipping the Cards face-down again.\
+\pard\pardeftab720\li840\ri840\sl720\sa400\partightenfactor0
+
+\f0\b\fs60 \cf2 AI\
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\fs40 \cf2 Refactor game to include a HumanPlayer class\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 Before actually implementing the computer player, let's make things easier on ourselves and refactor the game to accept player classes. In order to accomplish this, move all of your user input logic into the player class. I moved the following methods out of the Game class into the player:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl680\sa100\partightenfactor0
+\ls4\ilvl0
+\f3 \cf2 \cb4 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 prompt
+\f1 \cb1 \
+\ls4\ilvl0
+\f3 \cb4 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 get_input
+\f1 \cb1 \
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+\cf2 Before moving on, make sure your game runs successfully with a\'a0
+\f3 \cb4 HumanPlayer
+\f1 \cb1 .\
+\pard\pardeftab720\li840\ri840\sl480\sa400\partightenfactor0
+
+\f0\b \cf2 Create a ComputerPlayer class\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0 \cf2 The computer player's strategy should be as follows:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl680\sa100\partightenfactor0
+\ls5\ilvl0\cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 On its first guess, if it knows where 2 matching cards are, guess one of them, otherwise guess randomly among cards it has not yet seen.\
+\ls5\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 On its second guess, if its first guess revealed a card whose value matches a known location, guess that location, otherwise guess randomly among cards it has not yet seen.\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+\cf2 Now comes the tricky part. With the HumanPlayer, we didn't need to explicitly receive the data from the card we're flipping over; we just read it off the terminal output. The computer won't be quite so savvy. Let's write some methods to have it accept the revealed card information from the game:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl680\sa100\partightenfactor0
+\ls6\ilvl0
+\f3 \cf2 \cb4 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 receive_revealed_card
+\f1 \cb1 \'a0should take in a position and the value of the card revealed at that location. It should then store it in a\'a0
+\f3 \cb4 @known_cards
+\f1 \cb1 \'a0hash.\
+\ls6\ilvl0
+\f3 \cb4 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 receive_match
+\f1 \cb1 \'a0should take in two positions which are a successful match. I stored these in an instance variable\'a0
+\f3 \cb4 @matched_cards
+\f1 \cb1 \
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+\cf2 The game should then call these methods on the player in addition to displaying the revealed cards to the terminal.\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\b \cf2 NB:
+\b0 \'a0The game shouldn't have to know whether a human or computer is playing. Instead, it should use\'a0{\field{\*\fldinst{HYPERLINK "http://rubylearning.com/satishtalim/duck_typing.html"}}{\fldrslt \cf3 \strokec3 duck typing}}. This may involve writing some "dummy" methods on the\'a0
+\f3 \cb4 HumanPlayer
+\f1 \cb1 \'a0class. That's ok.\
+\pard\pardeftab720\li840\ri840\sl720\sa400\partightenfactor0
+
+\f0\b\fs60 \cf2 Bonus\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\fs40 \cf2 Come back to this after you finish Sudoku!
+\b0 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl680\sa100\partightenfactor0
+\ls7\ilvl0\cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Implement a simple command-line interface, allowing the user to determine the difficulty of the game (i.e., the size of the board). Do this\'a0
+\b before
+\b0 \'a0the Game is\'a0
+\f3 \cb4 initialize
+\f1 \cb1 d. Remember\'a0
+\f3 \cb4 if __FILE__ == $PROGRAM_NAME
+\f1 \cb1 !\
+\ls7\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Enforce an upper limit on the number of turns played. If the limit is exceeded, the player loses.\
+\ls7\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Let's add a twist: start the game by placing a certain number of "bombs" instead of normal cards. When the game starts, show the bombs for 5 seconds or so; then hide them. If the player reveals a bomb, the game ends. (If you feel this is too harsh, perhaps you can implement "lives" or "hit points"). You might also want to determine the bomb count as a function of board size.\
+\ls7\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 We've already got a working "Match 2" puzzle. What about a "Match 3" or "Match 4"? Generalize your code to work for any number of matching cards.}
