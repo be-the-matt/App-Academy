@@ -1,0 +1,121 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf610
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Georgia;\f2\fmodern\fcharset0 Courier;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red10\green92\blue255;\red0\green0\blue0;
+}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c0\c46667\c100000;\cssrgb\c0\c0\c0\c7451;
+}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{circle\}}{\leveltext\leveltemplateid102\'01\uc0\u9702 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}}
+\margl1440\margr1440\vieww10800\viewh15500\viewkind0
+\deftab720
+\pard\pardeftab720\li840\ri840\sl860\sa400\partightenfactor0
+
+\f0\b\fs72 \cf2 \expnd0\expndtw0\kerning0
+Sudoku\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0\fs40 \cf2 If you're not familiar with Sudoku, please review the\'a0{\field{\*\fldinst{HYPERLINK "https://en.wikipedia.org/wiki/Sudoku"}}{\fldrslt \cf3 Wikipedia page}}\'a0on the subject.\
+Provided for you\'a0{\field{\*\fldinst{HYPERLINK "https://assets.aaonline.io/fullstack/ruby/projects/sudoku/puzzles.zip"}}{\fldrslt \cf3 here}}\'a0are some Sudoku puzzles in .txt format. Download these to a folder on your computer. In the same folder, we're going to write a Ruby program to read in the puzzle files and let us solve them!\
+\pard\pardeftab720\li840\ri840\sl720\sa400\partightenfactor0
+
+\f0\b\fs60 \cf2 Learning Goals\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl680\sa100\partightenfactor0
+\ls1\ilvl0
+\f1\b0\fs40 \cf2 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Understand what factory methods are and how to use them\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Understand how classes interact and how to use\'a0
+\f2 \cb4 require_relative
+\f1 \cb1 \
+\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Be able to write and explain how bracket methods\'a0
+\f2 \cb4 []
+\f1 \cb1 \'a0and\'a0
+\f2 \cb4 []=
+\f1 \cb1 \'a0work\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Be able to use pry to test small parts of your code\
+\pard\pardeftab720\li840\ri840\sl560\sa400\partightenfactor0
+
+\f0\b\fs48 \cf2 \
+Tile\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0\fs40 \cf2 Let's implement a Tile class to represent each position on the Sudoku board. Each Tile has a\'a0
+\b value
+\b0 \'a0and is either\'a0
+\b given
+\b0 \'a0or not. You cannot change the value of any Tile unless it was given (that would be cheating!) The game would be incredibly frustrating if we didn't have some way to distinguish given Tiles from non-givens. You'll want to account for this when writing the\'a0
+\f2 \cb4 Tile#to_s
+\f1 \cb1 \'a0method. If you haven't already, check out the\'a0{\field{\*\fldinst{HYPERLINK "https://github.com/fazibear/colorize"}}{\fldrslt \cf3 colorize gem}}!\
+\pard\pardeftab720\li840\ri840\sl560\sa400\partightenfactor0
+
+\f0\b\fs48 \cf2 Board\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0\fs40 \cf2 A Board should store a\'a0
+\f2 \cb4 grid
+\f1 \cb1 \'a0of Tiles. Define your\'a0
+\f2 \cb4 Board#initialize
+\f1 \cb1 \'a0method to accept such a grid as an argument. Since our puzzles exist as text files, let's write a\'a0
+\f2 \cb4 Board::from_file
+\f1 \cb1 \'a0
+\b factory method
+\b0 \'a0to read a file and parse it into a two-dimensional Array containing Tile instances.\
+The Board class will be doing much of the heavy lifting for our game's logic. It will need the following methods:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl680\sa100\partightenfactor0
+\ls2\ilvl0\cf2 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+A method to update the value of a Tile at the given\'a0
+\f2 \cb4 position
+\f1 \cb1 \
+\ls2\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+A\'a0
+\f2 \cb4 render
+\f1 \cb1 \'a0method to display the current board state\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+A\'a0
+\f2 \cb4 solved?
+\f1 \cb1 \'a0method to let us know if the game is over\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sl680\sa100\partightenfactor0
+\ls2\ilvl1\cf2 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+I used several helper methods here. You will want to know if each row, column, and 3x3 square has been solved.\
+\pard\pardeftab720\li840\ri840\sl560\sa400\partightenfactor0
+
+\f0\b\fs48 \cf2 Game\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0\fs40 \cf2 The Game should have an instance variable for the Board. It should also have methods for managing the Board-Player interaction. You may want a\'a0
+\f2 \cb4 play
+\f1 \cb1 \'a0loop that runs until the puzzle is\'a0
+\f2 \cb4 solved
+\f1 \cb1 . Inside the loop, you should\'a0
+\f2 \cb4 render
+\f1 \cb1 \'a0the board,\'a0
+\f2 \cb4 prompt
+\f1 \cb1 \'a0the player for input, and then get both a\'a0
+\f2 \cb4 pos
+\f1 \cb1 \'a0and a\'a0
+\f2 \cb4 value
+\f1 \cb1 \'a0from the player. It should then update the tile at\'a0
+\f2 \cb4 pos
+\f1 \cb1 \'a0with the new\'a0
+\f2 \cb4 value
+\f1 \cb1 . I wrote helper methods to get and validate input from the user; this should help keep our program from crashing. :)\
+\pard\pardeftab720\li840\ri840\sl560\sa400\partightenfactor0
+
+\f0\b\fs48 \cf2 Bonus\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0\fs40 \cf2 NB: You should finish the day's remaining projects before going on to the bonus\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl680\sa100\partightenfactor0
+\ls3\ilvl0\cf2 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+You've written a Sudoku\'a0
+\b checker
+\b0 ; now write a Sudoku\'a0
+\b solver
+\b0 . This is a harder problem, but there are\'a0{\field{\*\fldinst{HYPERLINK "https://en.wikipedia.org/wiki/Sudoku_solving_algorithms"}}{\fldrslt \cf3 several approaches}}\'a0you might take. As part of your approach, you may want to implement a separate Solver class, as well as a modified Tile class that keeps track of any previously-guessed\'a0
+\f2 \cb4 value
+\f1 \cb1 s.}

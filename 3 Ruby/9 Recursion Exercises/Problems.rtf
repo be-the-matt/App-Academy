@@ -1,0 +1,560 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf610
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Georgia;\f2\fmodern\fcharset0 Courier;
+\f3\fnil\fcharset0 Consolas;\f4\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red0\green0\blue0;\red246\green246\blue239;
+\red34\green34\blue34;\red10\green92\blue255;\red224\green213\blue97;\red100\green108\blue125;\red157\green101\blue255;
+\red255\green255\blue255;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c0\c0\c0\c7451;\cssrgb\c97255\c97255\c94902;
+\cssrgb\c17647\c17647\c17647;\cssrgb\c0\c46667\c100000;\cssrgb\c90196\c85882\c45490;\cssrgb\c46667\c50196\c56471;\cssrgb\c68235\c50588\c100000;
+\cssrgb\c100000\c100000\c100000;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{circle\}}{\leveltext\leveltemplateid2\'01\uc0\u9702 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}
+{\list\listtemplateid4\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid301\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid4}
+{\list\listtemplateid5\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid401\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid5}
+{\list\listtemplateid6\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid501\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid6}
+{\list\listtemplateid7\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid601\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid7}
+{\list\listtemplateid8\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid701\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid8}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}{\listoverride\listid5\listoverridecount0\ls5}{\listoverride\listid6\listoverridecount0\ls6}{\listoverride\listid7\listoverridecount0\ls7}{\listoverride\listid8\listoverridecount0\ls8}}
+\margl1440\margr1440\vieww10860\viewh15500\viewkind0
+\deftab720
+\pard\pardeftab720\li840\ri840\sl860\sa400\partightenfactor0
+
+\f0\b\fs72 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Recursion\
+\pard\pardeftab720\li840\ri840\sl720\sa400\partightenfactor0
+
+\fs60 \cf2 Learning Goals\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl680\sa100\partightenfactor0
+\ls1\ilvl0
+\f1\b0\fs40 \cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Know how to reason about recursive programs\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sl680\sa100\partightenfactor0
+\ls1\ilvl1\cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Be able to write a base case for a recursive method\
+\ls1\ilvl1\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Be able to write the inductive step for a recursive method\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl680\sa100\partightenfactor0
+\ls1\ilvl0\cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Be able to explain the benefits of writing a method recursively vs. iteratively\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Be able to trace a recursive method and figure out how many recursive steps it will take\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Know how to write recursive sorting and searching algorithms\
+\pard\pardeftab720\li840\ri840\sl560\sa400\partightenfactor0
+
+\f0\b\fs48 \cf2 \
+Warmup\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl680\sa100\partightenfactor0
+\ls2\ilvl0
+\f1\b0\fs40 \cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Write a recursive method,\'a0
+\f2 \cb3 range
+\f1 \cb1 , that takes a start and an end and returns an array of all numbers in that range, exclusive. For example,\'a0
+\f2 \cb3 range(1, 5)
+\f1 \cb1 \'a0should return\'a0
+\f2 \cb3 [1, 2, 3, 4]
+\f1 \cb1 . If\'a0
+\f2 \cb3 end < start
+\f1 \cb1 , you can return an empty array.\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Write both a recursive and iterative version of sum of an array.\
+\pard\pardeftab720\li840\ri840\sl560\sa400\partightenfactor0
+
+\f0\b\fs48 \cf2 \
+Exponentiation\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0\fs40 \cf2 Write two versions of exponent that use two different recursions:\
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f3\fs32 \cf4 \cb5 \strokec4 # this is math, not Ruby methods.\
+\
+# recursion 1\
+exp(b, 0) = 1\
+exp(b, n) = b * exp(b, n - 1)\
+\
+# recursion 2\
+exp(b, 0) = 1\
+exp(b, 1) = b\
+exp(b, n) = exp(b, n / 2) ** 2             [for even n]\
+exp(b, n) = b * (exp(b, (n - 1) / 2) ** 2) [for odd n]\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\fs40 \cf2 \cb1 \strokec2 Note that for recursion 2, you will need to square the results of\'a0
+\f2 \cb3 exp(b, n / 2)
+\f1 \cb1 \'a0and\'a0
+\f2 \cb3 (exp(b, (n - 1) / 2)
+\f1 \cb1 . Remember that you don't need to do anything special to square a number, just calculate the value and multiply it by itself.\'a0
+\b So don't cheat and use exponentiation in your solution
+\b0 .\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\b \cf2 Suggestion
+\b0 :\'a0{\field{\*\fldinst{HYPERLINK "https://open.appacademy.io/learn/full-stack-online/ruby/breaking-methods-into-parts"}}{\fldrslt \cf6 \strokec6 Break the methods down into parts.}}.\
+
+\b Suggestion 2
+\b0 : Try walking through your code with\'a0
+\b Simple Examples
+\b0 .\
+If the\'a0
+\f2 \cb3 n == 256
+\f1 \cb1 , about how many nested recursive steps will we run in the first case?\
+How deep will we need to recurse for the second? Keep in mind that the first reduces the exponent by one for each recursion, while the second reduces it by half.\
+In addition to testing your methods by running the code, try the following exercise:\
+On paper, write out the value of each variable for every line in the code:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl680\sa100\partightenfactor0
+\ls3\ilvl0\cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Write out what happens with base 0 and power 0 as inputs (should be easy). e.g., if you had run\'a0
+\f2 \cb3 exp(0,0)
+\f1 \cb1 .\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Write out what happens for base 0 and power 1. e.g., if you had run\'a0
+\f2 \cb3 exp(0,1)
+\f1 \cb1 .\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Write out what happens for base 1 and power 0.\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Write out what happens for base 1 and power 1.\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Write out what happens for base 1 and power 2.\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Write out what happens for base 2 and power 0.\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Write out what happens for base 2 and power 1.\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Write out what happens for base 2 and power 2.\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+\cf2 Make sure you can trace from the very beginning to the very end in these examples.\
+How many examples do you need to walk through to be confident that it works?\
+\pard\pardeftab720\li840\ri840\sl560\sa400\partightenfactor0
+
+\f0\b\fs48 \cf2 \
+Deep dup\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0\fs40 \cf2 The\'a0
+\f2 \cb3 #dup
+\f1 \cb1 \'a0method doesn't make a\'a0
+\b deep copy
+\b0 :\
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f3\fs32 \cf4 \cb5 \strokec4 robot_parts 
+\f4 =
+\f3  
+\f4 [
+\f3 \
+  
+\f4 [\cf7 \strokec7 "nuts"\cf4 \strokec4 ,
+\f3  
+\f4 \cf7 \strokec7 "bolts"\cf4 \strokec4 ,
+\f3  
+\f4 \cf7 \strokec7 "washers"\cf4 \strokec4 ],
+\f3 \
+  
+\f4 [\cf7 \strokec7 "capacitors"\cf4 \strokec4 ,
+\f3  
+\f4 \cf7 \strokec7 "resistors"\cf4 \strokec4 ,
+\f3  
+\f4 \cf7 \strokec7 "inductors"\cf4 \strokec4 ]
+\f3 \
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f4 \cf4 ]
+\f3 \
+\
+robot_parts_copy 
+\f4 =
+\f3  robot_parts
+\f4 .
+\f3 dup\
+\
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f4 \cf8 \strokec8 # shouldn't modify robot_parts
+\f3 \cf4 \strokec4 \
+robot_parts_copy
+\f4 [\cf9 \strokec9 1\cf4 \strokec4 ]
+\f3  
+\f4 <<
+\f3  
+\f4 \cf7 \strokec7 "LEDs"
+\f3 \cf4 \strokec4 \
+
+\f4 \cf8 \strokec8 # but it does
+\f3 \cf4 \strokec4 \
+robot_parts
+\f4 [\cf9 \strokec9 1\cf4 \strokec4 ]
+\f3  
+\f4 \cf8 \strokec8 # => ["capacitors", "resistors", "inductors", "LEDs"]
+\f3 \cf4 \strokec4 \
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\fs40 \cf2 \cb1 \strokec2 When we\'a0
+\f2 \cb3 dup
+\f1 \cb1 \'a0an\'a0
+\f2 \cb3 Array
+\f1 \cb1 , it creates a new array to hold the elements, but doesn't recursively\'a0
+\f2 \cb3 dup
+\f1 \cb1 \'a0any arrays contained therein. So the\'a0
+\f2 \cb3 dup
+\f1 \cb1 \'a0method creates one new array, but just copies over references to the original interior arrays.\
+Sometimes you want a shallow dup and sometimes you want a deep dup. Ruby keeps things simple by giving you shallow dup, and letting you write deep dup yourself.\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\b \cf2 Using recursion and the\'a0
+\f2\b0 \cb3 is_a?
+\f1\b \cb1 \'a0method, write an\'a0
+\f2\b0 \cb3 Array#deep_dup
+\f1\b \cb1 \'a0method that will perform a "deep" duplication of the interior arrays.
+\b0 \
+
+\b Note:
+\b0 \'a0For simplicity's sake, we are only going to ensure the deep duplication of arrays. Don't worry about deep-duping (or regular-duping) other types of mutable objects (like strings, hashes, instances of custom classes, etc.), since this would require that we implement a deep dup method for each of those classes, as well.\
+It's okay to iterate over array elements using the normal\'a0
+\f2 \cb3 each
+\f1 \cb1 \'a0for this one :-)\
+
+\b You should be able to handle "mixed" arrays
+\b0 . For instance:\'a0
+\f2 \cb3 [1, [2], [3, [4]]]
+\f1 \cb1 .\
+\pard\pardeftab720\li840\ri840\sl560\sa400\partightenfactor0
+
+\f0\b\fs48 \cf2 \
+Fibonacci\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0\fs40 \cf2 Write a recursive and an iterative Fibonacci method. The method should take in an integer\'a0
+\f2 \cb3 n
+\f1 \cb1 \'a0and return the first\'a0
+\f2 \cb3 n
+\f1 \cb1 \'a0Fibonacci numbers\'a0
+\b in an array
+\b0 .\
+You shouldn't have to pass any arrays between methods; you should be able to do this just passing a single argument for the number of Fibonacci numbers requested.\
+\pard\pardeftab720\li840\ri840\sl560\sa400\partightenfactor0
+
+\f0\b\fs48 \cf2 \
+Binary Search\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0\fs40 \cf2 The binary search algorithm begins by comparing the target value to the value of the middle element of the sorted array. If the target value is equal to the middle element's value, then the position is returned and the search is finished. If the target value is less than the middle element's value, then the search continues on the lower half of the array; or if the target value is greater than the middle element's value, then the search continues on the upper half of the array. This process continues, eliminating half of the elements, and comparing the target value to the value of the middle element of the remaining elements - until the target value is either found (and its associated element position is returned), or until the entire array has been searched (and "not found" is returned).\
+Write a recursive\'a0{\field{\*\fldinst{HYPERLINK "http://en.wikipedia.org/wiki/Binary_search"}}{\fldrslt \cf6 \strokec6 binary search}}:\'a0
+\f2 \cb3 bsearch(array, target)
+\f1 \cb1 .\'a0
+\b Note that binary search only works on sorted arrays
+\b0 . Make sure to return the location of the found object (or\'a0
+\f2 \cb3 nil
+\f1 \cb1 \'a0if not found!). Hint: you will probably want to use subarrays.\
+Make sure that these test cases are working:\
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f3\fs32 \cf4 \cb5 \strokec4 bsearch
+\f4 ([\cf9 \strokec9 1\cf4 \strokec4 ,
+\f3  
+\f4 \cf9 \strokec9 2\cf4 \strokec4 ,
+\f3  
+\f4 \cf9 \strokec9 3\cf4 \strokec4 ],
+\f3  
+\f4 \cf9 \strokec9 1\cf4 \strokec4 )
+\f3  
+\f4 \cf8 \strokec8 # => 0
+\f3 \cf4 \strokec4 \
+bsearch
+\f4 ([\cf9 \strokec9 2\cf4 \strokec4 ,
+\f3  
+\f4 \cf9 \strokec9 3\cf4 \strokec4 ,
+\f3  
+\f4 \cf9 \strokec9 4\cf4 \strokec4 ,
+\f3  
+\f4 \cf9 \strokec9 5\cf4 \strokec4 ],
+\f3  
+\f4 \cf9 \strokec9 3\cf4 \strokec4 )
+\f3  
+\f4 \cf8 \strokec8 # => 1
+\f3 \cf4 \strokec4 \
+bsearch
+\f4 ([\cf9 \strokec9 2\cf4 \strokec4 ,
+\f3  
+\f4 \cf9 \strokec9 4\cf4 \strokec4 ,
+\f3  
+\f4 \cf9 \strokec9 6\cf4 \strokec4 ,
+\f3  
+\f4 \cf9 \strokec9 8\cf4 \strokec4 ,
+\f3  
+\f4 \cf9 \strokec9 10\cf4 \strokec4 ],
+\f3  
+\f4 \cf9 \strokec9 6\cf4 \strokec4 )
+\f3  
+\f4 \cf8 \strokec8 # => 2
+\f3 \cf4 \strokec4 \
+bsearch
+\f4 ([\cf9 \strokec9 1\cf4 \strokec4 ,
+\f3  
+\f4 \cf9 \strokec9 3\cf4 \strokec4 ,
+\f3  
+\f4 \cf9 \strokec9 4\cf4 \strokec4 ,
+\f3  
+\f4 \cf9 \strokec9 5\cf4 \strokec4 ,
+\f3  
+\f4 \cf9 \strokec9 9\cf4 \strokec4 ],
+\f3  
+\f4 \cf9 \strokec9 5\cf4 \strokec4 )
+\f3  
+\f4 \cf8 \strokec8 # => 3
+\f3 \cf4 \strokec4 \
+bsearch
+\f4 ([\cf9 \strokec9 1\cf4 \strokec4 ,
+\f3  
+\f4 \cf9 \strokec9 2\cf4 \strokec4 ,
+\f3  
+\f4 \cf9 \strokec9 3\cf4 \strokec4 ,
+\f3  
+\f4 \cf9 \strokec9 4\cf4 \strokec4 ,
+\f3  
+\f4 \cf9 \strokec9 5\cf4 \strokec4 ,
+\f3  
+\f4 \cf9 \strokec9 6\cf4 \strokec4 ],
+\f3  
+\f4 \cf9 \strokec9 6\cf4 \strokec4 )
+\f3  
+\f4 \cf8 \strokec8 # => 5
+\f3 \cf4 \strokec4 \
+bsearch
+\f4 ([\cf9 \strokec9 1\cf4 \strokec4 ,
+\f3  
+\f4 \cf9 \strokec9 2\cf4 \strokec4 ,
+\f3  
+\f4 \cf9 \strokec9 3\cf4 \strokec4 ,
+\f3  
+\f4 \cf9 \strokec9 4\cf4 \strokec4 ,
+\f3  
+\f4 \cf9 \strokec9 5\cf4 \strokec4 ,
+\f3  
+\f4 \cf9 \strokec9 6\cf4 \strokec4 ],
+\f3  
+\f4 \cf9 \strokec9 0\cf4 \strokec4 )
+\f3  
+\f4 \cf8 \strokec8 # => nil
+\f3 \cf4 \strokec4 \
+bsearch
+\f4 ([\cf9 \strokec9 1\cf4 \strokec4 ,
+\f3  
+\f4 \cf9 \strokec9 2\cf4 \strokec4 ,
+\f3  
+\f4 \cf9 \strokec9 3\cf4 \strokec4 ,
+\f3  
+\f4 \cf9 \strokec9 4\cf4 \strokec4 ,
+\f3  
+\f4 \cf9 \strokec9 5\cf4 \strokec4 ,
+\f3  
+\f4 \cf9 \strokec9 7\cf4 \strokec4 ],
+\f3  
+\f4 \cf9 \strokec9 6\cf4 \strokec4 )
+\f3  
+\f4 \cf8 \strokec8 # => nil
+\f3 \cf4 \strokec4 \
+\pard\pardeftab720\li840\ri840\sl560\sa400\partightenfactor0
+
+\f0\b\fs48 \cf2 \cb1 \strokec2 \
+Merge Sort\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0\fs40 \cf2 Implement a method\'a0{\field{\*\fldinst{HYPERLINK "http://en.wikipedia.org/wiki/Merge_sort"}}{\fldrslt \cf6 \cb10 \strokec6 merge_sort}}\'a0that sorts an\'a0
+\f2 \cb3 Array
+\f1 \cb1 :\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl680\sa100\partightenfactor0
+\ls4\ilvl0\cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 The base cases are for arrays of length zero or one. Do not use a length-two array as a base case. This is unnecessary.\
+\ls4\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 You'll want to write a\'a0
+\f2 \cb3 merge
+\f1 \cb1 \'a0helper method to merge the sorted halves.\
+\ls4\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 To get a visual idea of how merge sort works, watch\'a0{\field{\*\fldinst{HYPERLINK "https://en.wikipedia.org/wiki/Merge_sort#/media/File:Merge-sort-example-300px.gif"}}{\fldrslt \cf6 \strokec6 this gif}}\'a0and check out\'a0{\field{\*\fldinst{HYPERLINK "https://assets.aaonline.io/fullstack/ruby/assets/merge-sort-diagram.png"}}{\fldrslt \cf6 \strokec6 this diagram}}.\
+\pard\pardeftab720\li840\ri840\sl560\sa400\partightenfactor0
+
+\f0\b\fs48 \cf2 \
+Array Subsets\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0\fs40 \cf2 Write a method\'a0
+\f2 \cb3 subsets
+\f1 \cb1 \'a0that will return all subsets of an array.\
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f3\fs32 \cf4 \cb5 \strokec4 subsets
+\f4 ([])
+\f3  
+\f4 \cf8 \strokec8 # => [[]]
+\f3 \cf4 \strokec4 \
+subsets
+\f4 ([\cf9 \strokec9 1\cf4 \strokec4 ])
+\f3  
+\f4 \cf8 \strokec8 # => [[], [1]]
+\f3 \cf4 \strokec4 \
+subsets
+\f4 ([\cf9 \strokec9 1\cf4 \strokec4 ,
+\f3  
+\f4 \cf9 \strokec9 2\cf4 \strokec4 ])
+\f3  
+\f4 \cf8 \strokec8 # => [[], [1], [2], [1, 2]]
+\f3 \cf4 \strokec4 \
+subsets
+\f4 ([\cf9 \strokec9 1\cf4 \strokec4 ,
+\f3  
+\f4 \cf9 \strokec9 2\cf4 \strokec4 ,
+\f3  
+\f4 \cf9 \strokec9 3\cf4 \strokec4 ])
+\f3 \
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f4 \cf8 \strokec8 # => [[], [1], [2], [1, 2], [3], [1, 3], [2, 3], [1, 2, 3]]
+\f3 \cf4 \strokec4 \
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\fs40 \cf2 \cb1 \strokec2 You can implement this as an Array method if you prefer.\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\b \cf2 Hint
+\b0 : For\'a0
+\f2 \cb3 subsets([1, 2, 3])
+\f1 \cb1 , there are two kinds of subsets:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl680\sa100\partightenfactor0
+\ls5\ilvl0\cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Those that do not contain\'a0
+\f2 \cb3 3
+\f1 \cb1 \'a0(all of these are subsets of\'a0
+\f2 \cb3 [1, 2]
+\f1 \cb1 ).\
+\ls5\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 For every subset that does not contain\'a0
+\f2 \cb3 3
+\f1 \cb1 , there is also a corresponding subset that is the same, except it also\'a0
+\b does
+\b0 \'a0contain\'a0
+\f2 \cb3 3
+\f1 \cb1 .\
+\pard\pardeftab720\li840\ri840\sl560\sa400\partightenfactor0
+
+\f0\b\fs48 \cf2 \
+Permutations\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0\fs40 \cf2 Write a recursive method\'a0
+\f2 \cb3 permutations(array)
+\f1 \cb1 \'a0that calculates all the\'a0{\field{\*\fldinst{HYPERLINK "https://en.wikipedia.org/wiki/Permutation"}}{\fldrslt \cf6 \strokec6 permutations}}\'a0of the given array. For an array of length\'a0
+\f2 \cb3 n
+\f1 \cb1 \'a0there are\'a0
+\f2 \cb3 n!
+\f1 \cb1 \'a0different permutations. So for an array with three elements we will have\'a0
+\f2 \cb3 3 * 2 * 1 = 6
+\f1 \cb1 \'a0different permutations.\
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f3\fs32 \cf4 \cb5 \strokec4 permutations
+\f4 ([\cf9 \strokec9 1\cf4 \strokec4 ,
+\f3  
+\f4 \cf9 \strokec9 2\cf4 \strokec4 ,
+\f3  
+\f4 \cf9 \strokec9 3\cf4 \strokec4 ])
+\f3  
+\f4 \cf8 \strokec8 # => [[1, 2, 3], [1, 3, 2],
+\f3 \cf4 \strokec4 \
+                        
+\f4 \cf8 \strokec8 #     [2, 1, 3], [2, 3, 1],
+\f3 \cf4 \strokec4 \
+                        
+\f4 \cf8 \strokec8 #     [3, 1, 2], [3, 2, 1]]
+\f3 \cf4 \strokec4 \
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\fs40 \cf2 \cb1 \strokec2 You can use Ruby's built in\'a0{\field{\*\fldinst{HYPERLINK "https://ruby-doc.org/core-2.2.0/Array.html#method-i-permutation"}}{\fldrslt \cf6 \cb10 \strokec6 Array#permutation}}\'a0method to get a better understanding of what you will be building.\
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f4\fs32 \cf4 \cb5 \strokec4 [\cf9 \strokec9 1\cf4 \strokec4 ,
+\f3  
+\f4 \cf9 \strokec9 2\cf4 \strokec4 ,
+\f3  
+\f4 \cf9 \strokec9 3\cf4 \strokec4 ].
+\f3 permutation
+\f4 .
+\f3 to_a  
+\f4 \cf8 \strokec8 # => [[1, 2, 3], [1, 3, 2],
+\f3 \cf4 \strokec4 \
+                            
+\f4 \cf8 \strokec8 #     [2, 1, 3], [2, 3, 1],
+\f3 \cf4 \strokec4 \
+                            
+\f4 \cf8 \strokec8 #     [3, 1, 2], [3, 2, 1]]
+\f3 \cf4 \strokec4 \
+\pard\pardeftab720\li840\ri840\sl560\sa400\partightenfactor0
+
+\f0\b\fs48 \cf2 \cb1 \strokec2 \
+Make Change\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0\fs40 \cf2 RubyQuiz:\'a0{\field{\*\fldinst{HYPERLINK "http://web.archive.org/web/20130215052843/http://rubyquiz.com/quiz154.html"}}{\fldrslt \cf6 \strokec6 Make change}}.\
+Here's a game plan for solving the problem:\
+First, write a 'greedy' version called\'a0
+\f2 \cb3 greedy_make_change
+\f1 \cb1 :\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl680\sa100\partightenfactor0
+\ls6\ilvl0\cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Take as many of the biggest coin as possible and add them to your result.\
+\ls6\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Add to the result by recursively calling your method on the remaining amount, leaving out the biggest coin, until the remainder is zero.\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+\cf2 Once you have a working greedy version, talk with your partner about refactoring this to\'a0
+\f2 \cb3 make_better_change
+\f1 \cb1 . What's wrong with\'a0
+\f2 \cb3 greedy_make_change
+\f1 \cb1 ?\
+Consider the case of\'a0
+\f2 \cb3 greedy_make_change(24, [10,7,1])
+\f1 \cb1 . Because it takes as many\'a0
+\f2 \cb3 10
+\f1 \cb1 \'a0pieces as possible,\'a0
+\f2 \cb3 greedy_make_change
+\f1 \cb1 \'a0misses the correct answer of\'a0
+\f2 \cb3 [10,7,7]
+\f1 \cb1 \'a0(try it in pry).\
+To\'a0
+\f2 \cb3 make_better_change
+\f1 \cb1 , we only take one coin at a time and never rule out denominations that we've already used. This allows each coin to be available each time we get a new remainder. By iterating over the denominations and continuing to search for the best change, we assure that we test for 'non-greedy' uses of each denomination.\
+Discuss the following game plan and then work together to implement your new method:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl680\sa100\partightenfactor0
+\ls7\ilvl0\cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Iterate over each coin.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl680\sa100\partightenfactor0
+\ls7\ilvl0
+\b \cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Grab only one
+\b0 \'a0of that one coin and recursively call\'a0
+\f2 \cb3 make_better_change
+\f1 \cb1 \'a0on the remainder using coins less than or equal to the current coin.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl680\sa100\partightenfactor0
+\ls7\ilvl0\cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Add the single coin to the change returned by the recursive call. This will be a possible solution, but maybe not the best one.\
+\ls7\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Keep track of the best solution and return it at the end.\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\b \cf2 N.B.
+\b0 \'a0Don't generate every possible permutation of coins and then compare them. Remember that a permutation is not the same thing as a combination - we\'a0
+\i will
+\i0 \'a0need to check every combination of coins that add up to our\'a0
+\f2 \cb3 target
+\f1 \cb1 , we just don't want to check the same combination in different orders. If you get stuck you can start by writing a solution that calculates and compares all of the permutations without storing them in an array. Then go back and refactor your solution so that it only calculates and compares all of the different combinations. If you and your partner get totally stuck, or would like to compare your answer, feel free to reference\'a0{\field{\*\fldinst{HYPERLINK "https://vimeo.com/91207646"}}{\fldrslt \cf6 \strokec6 this video walkthrough}}\'a0of the problem.\
+Make sure you and your partner understand each line before moving on.\
+\pard\pardeftab720\li840\ri840\sl720\sa400\partightenfactor0
+
+\f0\b\fs60 \cf2 Resources\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl680\sa100\partightenfactor0
+\ls8\ilvl0
+\f1\b0\fs40 \cf6 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}{\field{\*\fldinst{HYPERLINK "http://en.wikipedia.org/wiki/Recursion_(computer_science)"}}{\fldrslt \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec6 Wikipedia: Recursion}}\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+}
