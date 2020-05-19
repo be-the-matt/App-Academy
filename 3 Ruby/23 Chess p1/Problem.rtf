@@ -1,0 +1,217 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf610
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Georgia;\f2\fmodern\fcharset0 Courier;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red10\green92\blue255;\red255\green255\blue255;
+\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c0\c46667\c100000;\cssrgb\c100000\c100000\c100000;
+\cssrgb\c0\c0\c0\c7451;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat0\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid101\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat0\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid201\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid3}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\li840\ri840\sl860\sa400\partightenfactor0
+
+\f0\b\fs72 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Chess\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0\fs40 \cf2 Write a\'a0{\field{\*\fldinst{HYPERLINK "https://en.wikipedia.org/wiki/Rules_of_chess"}}{\fldrslt \cf3 \strokec3 chess game}}\'a0using object-oriented programming.\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\b \cf2 Please read all through the various phases before proceeding.
+\b0 \
+Review the\'a0{\field{\*\fldinst{HYPERLINK "https://assets.aaonline.io/fullstack/ruby/assets/Chess_Diagram.png"}}{\fldrslt \cf3 \strokec3 Chess UML Diagram}}\'a0to get an overview of what you'll be creating. The diagram is beneficial for getting an idea of how different aspects of the project fit together; however, you should\'a0
+\b code your project by following the instructions closely and using the diagram as a reference for what methods we should create and what they should look like
+\b0 . It'll be helpful for clearing up any confusion about how classes inherit from or relate to one another.\
+You must split your program into multiple files. Use\'a0{\field{\*\fldinst{HYPERLINK "http://www.ruby-doc.org/core-2.1.2/Kernel.html#method-i-require_relative"}}{\fldrslt \cf3 \cb4 \strokec3 require_relative}}\'a0to load files. Make separate files for each class. Give files\'a0
+\f2 \cb5 snake_case
+\f1 \cb1 \'a0titles.\
+\pard\pardeftab720\li840\ri840\sl720\sa400\partightenfactor0
+
+\f0\b\fs60 \cf2 Learning Goals\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl680\sa100\partightenfactor0
+\ls1\ilvl0
+\f1\b0\fs40 \cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Know when and why private methods are used\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Be able to read UML and understand the benefits of UML\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Be familiar with how to use the Singleton module\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Know how to use modules\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Know how class inheritance works\
+\pard\pardeftab720\li840\ri840\sl720\sa400\partightenfactor0
+
+\f0\b\fs60 \cf2 Phase I:\'a0
+\f2\b0 \cb5 Board
+\f0\b \cb1 \
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0\fs40 \cf2 Your\'a0
+\f2 \cb5 Board
+\f1 \cb1 \'a0class should hold a 2-dimensional array (an array of arrays). Each position in the board either holds a moving\'a0
+\f2 \cb5 Piece
+\f1 \cb1 \'a0or a\'a0
+\f2 \cb5 NullPiece
+\f1 \cb1 \'a0(
+\f2 \cb5 NullPiece
+\f1 \cb1 \'a0will inherit from\'a0
+\f2 \cb5 Piece
+\f1 \cb1 ).\
+There are many different kinds of pieces in chess, and each moves a specific way. Based on their moves, they can be placed in four categories:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl680\sa100\partightenfactor0
+\ls2\ilvl0\cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	0.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Sliding pieces (Bishop/Rook/Queen)\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	1.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Stepping pieces (Knight/King)\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	2.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Null pieces (occupy the 'empty' spaces)\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	3.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Pawns (we'll do this class last)\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+\cf2 To start off, you'll want to create an empty\'a0
+\f2 \cb5 Piece
+\f1 \cb1 \'a0class as a placeholder for now. Write code for\'a0
+\f2 \cb5 #initialize
+\f1 \cb1 \'a0so we can setup the board with instances of\'a0
+\f2 \cb5 Piece
+\f1 \cb1 \'a0in locations where a\'a0
+\f2 \cb5 Queen
+\f1 \cb1 /
+\f2 \cb5 Rook
+\f1 \cb1 /
+\f2 \cb5 Knight
+\f1 \cb1 / etc. will start and\'a0
+\f2 \cb5 nil
+\f1 \cb1 \'a0where the\'a0
+\f2 \cb5 NullPiece
+\f1 \cb1 \'a0will start.\
+The\'a0
+\f2 \cb5 Board
+\f1 \cb1 \'a0class should have a\'a0
+\f2 \cb5 #move_piece(start_pos, end_pos)
+\f1 \cb1 \'a0method. This should update the 2D grid and also the moved piece's position. You'll want to raise an exception if:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl680\sa100\partightenfactor0
+\ls3\ilvl0\cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	0.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 there is no piece at\'a0
+\f2 \cb5 start_pos
+\f1 \cb1 \'a0or\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	1.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 the piece cannot move to\'a0
+\f2 \cb5 end_pos
+\f1 \cb1 .\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\b \cf2 Time to test!
+\b0 \'a0Open up pry and\'a0
+\f2 \cb5 load 'board.rb'
+\f1 \cb1 . Create an instance of\'a0
+\f2 \cb5 Board
+\f1 \cb1 \'a0and check out different positions with\'a0
+\f2 \cb5 board[pos]
+\f1 \cb1 . Do you get back\'a0
+\f2 \cb5 Piece
+\f1 \cb1 \'a0instances where you expect to? Test out\'a0
+\f2 \cb5 Board#move_piece(start_pos, end_pos)
+\f1 \cb1 , does it raise an error when there is no piece at the start? Does it successfully update the\'a0
+\f2 \cb5 Board
+\f1 \cb1 ?\
+Once you get some of your pieces moving around the board,\'a0
+\b call over your TA for a code-review
+\b0 .\
+\pard\pardeftab720\li840\ri840\sl560\sa400\partightenfactor0
+
+\f0\b\fs48 \cf2 Phase II:\'a0
+\f2\b0 \cb5 Pieces
+\f0\b \cb1 \
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0\fs40 \cf2 Lets populate the\'a0
+\f2 \cb5 Piece
+\f1 \cb1 \'a0parent class that contains the functionality common to all pieces. A key method of\'a0
+\f2 \cb5 Piece
+\f1 \cb1 \'a0is\'a0
+\f2 \cb5 #moves
+\f1 \cb1 , which should return an array of places a\'a0
+\f2 \cb5 Piece
+\f1 \cb1 \'a0can move to. Of course, every piece will move differently, so you can't write (
+\b implement
+\b0 ) the\'a0
+\f2 \cb5 #moves
+\f1 \cb1 \'a0method of\'a0
+\f2 \cb5 Piece
+\f1 \cb1 \'a0without subclasses.\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\i \cf2 NB
+\i0 \'a0You will not implement tricky moves like "en passant". Don't implement castling, draws, or pawn promotion either. You\'a0
+\b will
+\b0 \'a0handle check and check mate, however.\
+You should make\'a0{\field{\*\fldinst{HYPERLINK "https://open.appacademy.io/learn/full-stack-online/ruby/modules"}}{\fldrslt \cf3 \strokec3 modules}}\'a0for\'a0
+\f2 \cb5 Slideable
+\f1 \cb1 \'a0and\'a0
+\f2 \cb5 Stepable
+\f1 \cb1 . The\'a0
+\f2 \cb5 Slideable
+\f1 \cb1 \'a0module can implement\'a0
+\f2 \cb5 #moves
+\f1 \cb1 , but it needs to know what directions a piece can move in (diagonal, horizontally/vertically, both). Classes that\'a0
+\f2 \cb5 include
+\f1 \cb1 \'a0the module\'a0
+\f2 \cb5 Slideable
+\f1 \cb1 \'a0(
+\f2 \cb5 Bishop
+\f1 \cb1 /
+\f2 \cb5 Rook
+\f1 \cb1 /
+\f2 \cb5 Queen
+\f1 \cb1 ) will need to implement a method\'a0
+\f2 \cb5 #move_dirs
+\f1 \cb1 , which\'a0
+\f2 \cb5 #moves
+\f1 \cb1 \'a0will use.\
+Your\'a0
+\f2 \cb5 Piece
+\f1 \cb1 \'a0will need to (1) track its position and (2) hold a reference to the\'a0
+\f2 \cb5 Board
+\f1 \cb1 . Classes that\'a0
+\f2 \cb5 include Slideable
+\f1 \cb1 \'a0in particular need the\'a0
+\f2 \cb5 Board
+\f1 \cb1 \'a0so they know to stop sliding when blocked by another piece. Don't allow a piece to move into a square already occupied by the same color piece, or to move a sliding piece past a piece that blocks it.\
+The\'a0
+\f2 \cb5 NullPiece
+\f1 \cb1 \'a0class should include\'a0{\field{\*\fldinst{HYPERLINK "https://ruby-doc.org/stdlib-2.5.1/libdoc/singleton/rdoc/Singleton.html"}}{\fldrslt \cf3 \strokec3 the\'a0\cb4 singleton\cb1 \'a0module}}. It will not need a reference to the\'a0
+\f2 \cb5 Board
+\f1 \cb1 \'a0- in fact its\'a0
+\f2 \cb5 initialize
+\f1 \cb1 \'a0method should take no arguments. Make sure you have a way to read its\'a0
+\f2 \cb5 color
+\f1 \cb1 \'a0and\'a0
+\f2 \cb5 symbol
+\f1 \cb1 .\
+Lastly, make your\'a0
+\f2 \cb5 Pawn
+\f1 \cb1 \'a0class. Be sure to use the\'a0{\field{\*\fldinst{HYPERLINK "https://assets.aaonline.io/fullstack/ruby/assets/Chess_Diagram.png"}}{\fldrslt \cf3 \strokec3 Chess UML Diagram}}\'a0to guide you on what methods and instance variables to define for this class!\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\b \cf2 After completing each piece
+\b0 \'a0load the file in pry and make sure it moves properly.\'a0
+\b Once you have completed all pieces
+\b0 \'a0refactor your\'a0
+\f2 \cb5 Board#initialize
+\f1 \cb1 \'a0so that all your pieces are placed in their respective starting positions.\
+
+\b Time to test!
+\b0 \'a0Open up pry and\'a0
+\f2 \cb5 load 'board.rb'
+\f1 \cb1 . Create an instance of\'a0
+\f2 \cb5 Board
+\f1 \cb1 \'a0and check out different positions with\'a0
+\f2 \cb5 board[pos]
+\f1 \cb1 . Do you get back instances of the type of pieces you expect? Can you move the pieces around?\
+For now, do not worry if a move leaves a player in check.\
+Once you are finished with phases I & II head over to Part Two.}

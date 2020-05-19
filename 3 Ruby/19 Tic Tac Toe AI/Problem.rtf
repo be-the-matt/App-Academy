@@ -1,0 +1,203 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf610
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Georgia;\f2\fmodern\fcharset0 Courier;
+\f3\fnil\fcharset0 Consolas;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red10\green92\blue255;\red0\green0\blue0;
+\red246\green246\blue239;\red34\green34\blue34;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c0\c46667\c100000;\cssrgb\c0\c0\c0\c7451;
+\cssrgb\c97255\c97255\c94902;\cssrgb\c17647\c17647\c17647;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{circle\}}{\leveltext\leveltemplateid102\'01\uc0\u9702 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{circle\}}{\leveltext\leveltemplateid202\'01\uc0\u9702 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listname ;}\listid3}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\li840\ri840\sl860\sa400\partightenfactor0
+
+\f0\b\fs72 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Tic-tac-toe AI\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0\fs40 \cf2 We're going to write a computer AI that can't be beaten at TicTacToe.\
+\pard\pardeftab720\li840\ri840\sl720\sa400\partightenfactor0
+
+\f0\b\fs60 \cf2 Learning Goals\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl680\sa100\partightenfactor0
+\ls1\ilvl0
+\f1\b0\fs40 \cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Use your knowledge of polytrees to build a tree of all possible outcomes\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Write an AI that uses your nodes to always win at TicTacToe\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+\cf2 Download\'a0{\field{\*\fldinst{HYPERLINK "https://assets.aaonline.io/fullstack/ruby/projects/tic_tac_toe_ai/skeleton.zip"}}{\fldrslt \cf3 \strokec3 the skeleton}}\'a0to get started. In the\'a0
+\f2 \cb4 skeleton
+\f1 \cb1 \'a0is a\'a0
+\f2 \cb4 tic_tac_toe.rb
+\f1 \cb1 \'a0file which contains an improved version of the TTT solution from w2d4 in the App Academy Prepwork. Today, we will be writing a\'a0
+\f2 \cb4 TicTacToeNode
+\f1 \cb1 \'a0class which utilizes the\'a0
+\f2 \cb4 Board
+\f1 \cb1 \'a0class from the TTT solution. We will also be writing a\'a0
+\f2 \cb4 SuperComputerPlayer
+\f1 \cb1 \'a0class which builds on top of the\'a0
+\f2 \cb4 ComputerPlayer
+\f1 \cb1 \'a0class from the TTT solution.\
+Once you've downloaded the files from the repo, check that you can run the specs:\
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f3\fs32 \cf5 \cb6 \strokec5 `bundle exec rspec spec/01_tic_tac_toe_node_spec.rb`\
+`bundle exec rspec spec/02_super_computer_player_spec.rb`\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\fs40 \cf2 \cb1 \strokec2 Of course, they should be failing right now. Call your TA over if you have problems.\
+\pard\pardeftab720\li840\ri840\sl720\sa400\partightenfactor0
+
+\f0\b\fs60 \cf2 Phase I:\'a0
+\f2\b0 \cb4 TicTacToeNode
+\f0\b \cb1 \
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0\fs40 \cf2 Let's create a class\'a0
+\f2 \cb4 TicTacToeNode
+\f1 \cb1 . This will represent a TTT game-state: it will store the current state of the\'a0
+\f2 \cb4 board
+\f1 \cb1 \'a0plus the\'a0
+\f2 \cb4 next_mover_mark
+\f1 \cb1 \'a0of the player who will move next. Also, if given, store the\'a0
+\f2 \cb4 prev_move_pos
+\f1 \cb1 \'a0(this will come in handy later).\
+This doesn't use the\'a0
+\f2 \cb4 TreeNode
+\f1 \cb1 \'a0you made earlier. We are making a completely new class independent of the\'a0
+\f2 \cb4 TreeNode
+\f1 \cb1 .\
+Write a method\'a0
+\f2 \cb4 children
+\f1 \cb1 \'a0that returns nodes representing all the potential game states one move after the current node. To create this method, it will be necessary to iterate through all positions that are\'a0
+\f2 \cb4 empty?
+\f1 \cb1 \'a0on the board object. For each empty position, create a node by duping the board and putting a\'a0
+\f2 \cb4 next_mover_mark
+\f1 \cb1 \'a0in the position. You'll want to alternate\'a0
+\f2 \cb4 next_mover_mark
+\f1 \cb1 \'a0so that next time the other player gets to move. Also, set\'a0
+\f2 \cb4 prev_move_pos
+\f1 \cb1 \'a0to the position you just marked, for reasons that will make sense when we use it later.\
+Next, we want to characterize a node as either a winner or a loser for a particular mark (evaluator). We will write two methods:\'a0
+\f2 \cb4 #losing_node?(evaluator)
+\f1 \cb1 \'a0or\'a0
+\f2 \cb4 #winning_node?(evaluator)
+\f1 \cb1 . These methods are\'a0
+\i not
+\i0 \'a0optional, you will need them both.\
+A\'a0
+\f2 \cb4 #losing_node?
+\f1 \cb1 \'a0is described in the following cases:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl680\sa100\partightenfactor0
+\ls2\ilvl0\cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Base case:\'a0
+\b the board is over
+\b0 \'a0AND\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sl680\sa100\partightenfactor0
+\ls2\ilvl1\cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 If\'a0
+\f2 \cb4 winner
+\f1 \cb1 \'a0is the opponent, this is a losing node.\
+\ls2\ilvl1\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 If\'a0
+\f2 \cb4 winner
+\f1 \cb1 \'a0is\'a0
+\f2 \cb4 nil
+\f1 \cb1 \'a0or us, this is not a losing node.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl680\sa100\partightenfactor0
+\ls2\ilvl0\cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Recursive case:\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sl680\sa100\partightenfactor0
+\ls2\ilvl1\cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 It is the player's turn, and all the children nodes are losers for the player (anywhere they move they still lose), OR\
+\ls2\ilvl1\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 It is the opponent's turn, and one of the children nodes is a losing node for the player (assumes your opponent plays perfectly; they'll force you to lose if they can).\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\b \cf2 NB: a draw (Board#tied?) is NOT a loss, if a node is a draw, losing_node? should return false.
+\b0 \
+Likewise, a winning node means either:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl680\sa100\partightenfactor0
+\ls3\ilvl0\cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Base case:\'a0
+\b the board is over
+\b0 \'a0AND\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sl680\sa100\partightenfactor0
+\ls3\ilvl1\cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 If\'a0
+\f2 \cb4 winner
+\f1 \cb1 \'a0is us, this is a winning node.\
+\ls3\ilvl1\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 If\'a0
+\f2 \cb4 winner
+\f1 \cb1 \'a0is\'a0
+\f2 \cb4 nil
+\f1 \cb1 \'a0or the opponent, this is not a winning node.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl680\sa100\partightenfactor0
+\ls3\ilvl0\cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Recursive case:\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sl680\sa100\partightenfactor0
+\ls3\ilvl1\cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 It is the player's turn, and one of the children nodes is a winning node for the player (we'll be smart and take that move), OR\
+\ls3\ilvl1\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 It is the opponent's turn, and all of the children nodes are winning nodes for the player (even TicTacToeKasparov can't beat you from here).\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+\cf2 Notice that\'a0
+\f2 \cb4 winning_node?
+\f1 \cb1 \'a0and\'a0
+\f2 \cb4 losing_node?
+\f1 \cb1 \'a0are both defined recursively. This is what makes them look at all the ways the game can play out. For instance, a node can be a winning node even though we won't win on the very next turn; it just requires that, assuming we play perfectly, eventually we'll beat the opponent no matter what they do.\
+\pard\pardeftab720\li840\ri840\sl720\sa400\partightenfactor0
+
+\f0\b\fs60 \cf2 Phase II:\'a0
+\f2\b0 \cb4 SuperComputerPlayer
+\f0\b \cb1 \
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0\fs40 \cf2 Write a subclass of\'a0
+\f2 \cb4 ComputerPlayer
+\f1 \cb1 ; we'll override the\'a0
+\f2 \cb4 #move
+\f1 \cb1 \'a0method to use our\'a0
+\f2 \cb4 TicTacToeNode
+\f1 \cb1 .\
+In the\'a0
+\f2 \cb4 #move
+\f1 \cb1 \'a0method, build a\'a0
+\f2 \cb4 TicTacToeNode
+\f1 \cb1 \'a0from the board stored in the\'a0
+\f2 \cb4 game
+\f1 \cb1 \'a0passed in as an argument. Next, iterate through the\'a0
+\f2 \cb4 children
+\f1 \cb1 \'a0of the node we just created. If any of the children is a\'a0
+\f2 \cb4 winning_node?
+\f1 \cb1 \'a0for the mark passed in to the\'a0
+\f2 \cb4 #move
+\f1 \cb1 \'a0method,\'a0
+\f2 \cb4 return
+\f1 \cb1 \'a0that node's\'a0
+\f2 \cb4 prev_move_pos
+\f1 \cb1 \'a0because that is the position that causes a certain victory! I told you we would use that later!\
+If none of the\'a0
+\f2 \cb4 children
+\f1 \cb1 \'a0of the node we created are\'a0
+\f2 \cb4 winning_node?
+\f1 \cb1 s, that's ok. We can just pick one that isn't a\'a0
+\f2 \cb4 losing_node?
+\f1 \cb1 \'a0and return its\'a0
+\f2 \cb4 prev_move_pos
+\f1 \cb1 . That will prevent the opponent from ever winning, and that's almost as good. To make that even more clear: if a winner isn't found, pick one of the children of our node that returns\'a0
+\f2 \cb4 false
+\f1 \cb1 \'a0to\'a0
+\f2 \cb4 losing_node?
+\f1 \cb1 .\
+Finally,\'a0
+\f2 \cb4 raise
+\f1 \cb1 \'a0an error if there are no non-losing nodes. In TTT, if we play perfectly, we should always be able to force a draw.\
+Run your TTT game with the\'a0
+\f2 \cb4 SuperComputerPlayer
+\f1 \cb1 \'a0and weep tears of shame because you can't beat a robot at tic tac toe.\
+}

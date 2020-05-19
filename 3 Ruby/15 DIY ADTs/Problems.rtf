@@ -1,0 +1,126 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf610
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Georgia;\f2\fmodern\fcharset0 Courier;
+\f3\fnil\fcharset0 Consolas;\f4\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;\red0\green0\blue0;
+\red246\green246\blue239;\red34\green34\blue34;\red88\green209\blue235;\red152\green224\blue36;\red100\green108\blue125;
+}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c100000\c100000\c100000;\cssrgb\c0\c0\c0\c7451;
+\cssrgb\c97255\c97255\c94902;\cssrgb\c17647\c17647\c17647;\cssrgb\c40000\c85098\c93725;\cssrgb\c65098\c88627\c18039;\cssrgb\c46667\c50196\c56471;
+}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\li840\ri840\sl860\sa400\partightenfactor0
+
+\f0\b\fs72 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 DIY ADTs\
+\pard\pardeftab720\li840\ri840\sl720\sa400\partightenfactor0
+
+\fs60 \cf2 Exercise 1 - Stack\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0\fs40 \cf2 Let's write a\'a0
+\f2 \cb4 Stack
+\f1 \cb3 \'a0class. To do this, use the following framework:\
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f3\fs32 \cf5 \cb6 \strokec5   
+\f4 \cf7 \strokec7 class
+\f3 \cf5 \strokec5  
+\f4 \cf8 \strokec8 Stack
+\f3 \cf5 \strokec5 \
+    
+\f4 \cf7 \strokec7 def
+\f3 \cf5 \strokec5  
+\f4 \cf8 \strokec8 initialize
+\f3 \cf5 \strokec5 \
+      
+\f4 \cf9 \strokec9 # create ivar to store stack here!
+\f3 \cf5 \strokec5 \
+    
+\f4 \cf7 \strokec7 end
+\f3 \cf5 \strokec5 \
+\
+    
+\f4 \cf7 \strokec7 def
+\f3 \cf5 \strokec5  
+\f4 \cf8 \strokec8 push\cf5 \strokec5 (
+\f3 el
+\f4 )
+\f3 \
+      
+\f4 \cf9 \strokec9 # adds an element to the stack
+\f3 \cf5 \strokec5 \
+    
+\f4 \cf7 \strokec7 end
+\f3 \cf5 \strokec5 \
+\
+    
+\f4 \cf7 \strokec7 def
+\f3 \cf5 \strokec5  
+\f4 \cf8 \strokec8 pop
+\f3 \cf5 \strokec5 \
+      
+\f4 \cf9 \strokec9 # removes one element from the stack
+\f3 \cf5 \strokec5 \
+    
+\f4 \cf7 \strokec7 end
+\f3 \cf5 \strokec5 \
+\
+    
+\f4 \cf7 \strokec7 def
+\f3 \cf5 \strokec5  
+\f4 \cf8 \strokec8 peek
+\f3 \cf5 \strokec5 \
+      
+\f4 \cf9 \strokec9 # returns, but doesn't remove, the top element in the stack
+\f3 \cf5 \strokec5 \
+    
+\f4 \cf7 \strokec7 end
+\f3 \cf5 \strokec5 \
+  
+\f4 \cf7 \strokec7 end
+\f3 \cf5 \strokec5 \
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\fs40 \cf2 \cb3 \strokec2 To test that your code works, create a new instance of the Stack class, and play around with adding and removing elements. Remember, a stack follows the principle of LIFO!\
+\pard\pardeftab720\li840\ri840\sl720\sa400\partightenfactor0
+
+\f0\b\fs60 \cf2 Exercise 2 - Queue\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0\fs40 \cf2 Now let's write a\'a0
+\f2 \cb4 Queue
+\f1 \cb3 \'a0class. We will need the following instance methods:\'a0
+\f2 \cb4 enqueue(el)
+\f1 \cb3 ,\'a0
+\f2 \cb4 dequeue
+\f1 \cb3 , and\'a0
+\f2 \cb4 peek
+\f1 \cb3 .\
+Test your code to ensure it follows the principle of FIFO.\
+\pard\pardeftab720\li840\ri840\sl720\sa400\partightenfactor0
+
+\f0\b\fs60 \cf2 Exercise 3 - Map\
+\pard\pardeftab720\li840\ri840\sl600\sa400\partightenfactor0
+
+\f1\b0\fs40 \cf2 As you saw in the videos for tonight, a map can be implemented using a 2D array. Let's write a Map class (following a similar pattern to\'a0
+\f2 \cb4 Stack
+\f1 \cb3 \'a0and\'a0
+\f2 \cb4 Queue
+\f1 \cb3 ) that implements a map using only arrays.\
+Remember, a map stores information in key-value pairs, where the keys are always unique. When implemented with arrays, a map might look something like this:\'a0
+\f2 \cb4 my_map = [[k1, v1], [k2, v2], [k3, v2], ...]
+\f1 \cb3 .\
+Our Map class should have the following instance methods:\'a0
+\f2 \cb4 set(key, value)
+\f1 \cb3 ,\'a0
+\f2 \cb4 get(key)
+\f1 \cb3 ,\'a0
+\f2 \cb4 delete(key)
+\f1 \cb3 ,\'a0
+\f2 \cb4 show
+\f1 \cb3 . Note that the\'a0
+\f2 \cb4 set
+\f1 \cb3 \'a0method can be used to either create a new key-value pair or update the value for a pre-existing key. It's up to you to check whether a key currently exists!\
+As always, test your code thoroughly to make sure all properties of maps are enforced.\
+}
